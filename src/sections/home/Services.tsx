@@ -7,5 +7,6 @@ const Services = forwardRef<HTMLElement>((_, ref) => {
     </section>
   );
 });
+Services.displayName = "Services";
 
 export default Services;

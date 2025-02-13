@@ -24,5 +24,6 @@ const About = forwardRef<HTMLElement>((_, ref) => {
     </section>
   );
 });
+About.displayName = "About";
 
 export default About;
