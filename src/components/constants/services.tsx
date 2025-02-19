@@ -6,7 +6,7 @@ export const TreatmentsData = [
       icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847605/IVF_jh7rcs.png',
       icon1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856989/IVF_1_dtgfnl.png',
       link: '/treatments/ivf-treatment-in-bangalore',
-      content:['Unlock the doors of parenthood with FertiGenyxs to fulfil your dreams of starting a family.',
+      content:[`Unlock the doors of parenthood with FertiGenyx's to fulfil your dreams of starting a family.`,
         
         'IVF treatment in Bangalore is a multi-step process that involves several stages, including ovarian stimulation, egg retrieval, fertilization, embryo culture, and embryo transfer. The process is carefully monitored by our team of experienced fertility specialists, who work closely with patients to customize a treatment plan that meets their unique needs and maximizes their chances of success.']
       },
@@ -16,9 +16,9 @@ export const TreatmentsData = [
         icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847605/IUI_qipcba.png',
         icon1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856989/IUI_1_l5nqxi.png',
         link: '/treatments/iui-treatment-in-bangalore',
-        content:['Experience the joy of parenthood with FertiGenyxs designed to increase your chances of pregnancy in a natural way.',
+        content:[`Experience the joy of parenthood with FertiGenyx's treatment designed to increase your chances of pregnancy in a natural way.`,
 
-'IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a womans uterus to increase the chance of pregnancy. It is a relatively simple and low-invasive procedure, often used in cases of infertility caused by issues with ovulation, sperm count, or cervical mucus. It may be used alone or in combination with other fertility medications such as ovulation induction medications. The success rate of IUI varies depending on the individual patients circumstances, and it is typically more successful when performed in conjunction with other fertility treatments.']
+`IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy. It is a relatively simple and low-invasive procedure, often used in cases of infertility caused by issues with ovulation, sperm count, or cervical mucus. It may be used alone or in combination with other fertility medications such as ovulation induction medications. The success rate of IUI varies depending on the individual patient's circumstances, and it is typically more successful when performed in conjunction with other fertility treatments.`]
       },
       {
         id: '3',
@@ -53,7 +53,7 @@ export const TreatmentsData = [
         icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847604/Laparoscopy_i808qx.png',
         icon1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856989/Laparoscopy_1_vfrl6c.png',
         link: '/treatments/laparoscopy-treatment-in-bangalore',
-        content:['also known as keyhole surgery, is a surgical technique that uses small incisions and specialized tools to access the inside of the body. FertiGenyx is the best medium to get in touch for Laparoscopic Surgery in Bangaluru.','A laparoscopy is a surgery that checks for problems in a female reproductive system or the abdomen. A doctor recommends laparoscopy to diagnose infertility or to treat some fertility problems. In this surgery, a thin tube called a laparoscope is slid into the affected area through a small incision. The laparoscope has a camera attached to it. The camera sends images to a video monitor.']
+        content:[`also known as keyhole surgery, is a surgical technique that uses small incisions and specialized tools to access the inside of the body. FertiGenyx is the best medium to get in touch for Laparoscopic Surgery in Bangaluru.','A laparoscopy is a surgery that checks for problem's in a female reproductive system or the abdomen. A doctor recommends laparoscopy to diagnose infertility or to treat some fertility problems. In this surgery, a thin tube called a laparoscope is slid into the affected area through a small incision. The laparoscope has a camera attached to it. The camera sends images to a video monitor.`]
       },
       {
         id: '7',
@@ -69,8 +69,8 @@ export const TreatmentsData = [
         icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847606/FET_s97poq.png',
         icon1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856993/FET_1_vfdgtn.png',
         link: '/treatments/frozen-embryo-transfer',
-        content:['Frozen Embryo Transfer (FET) is a process in which a cryopreserved embryo created during a previous IVF cycle is thawed and transferred into a woman’s uterus. This procedure allows couples to use embryos that were previously frozen, avoiding the need for another complete IVF cycle.','Benefits of FET :','1.High Success Rates : Proven high implantation and pregnancy success rates.Utilization of advanced cryopreservation techniques ensures embryo viability.'
-            ,'2.Convenience and Flexibility : Allows for the timing of the transfer to suit the patients schedule.Avoids the need for repeated ovarian stimulation and egg retrieval cycles.',
+        content:[`Frozen Embryo Transfer (FET) is a process in which a cryopreserved embryo created during a previous IVF cycle is thawed and transferred into a woman's uterus. This procedure allows couples to use embryos that were previously frozen, avoiding the need for another complete IVF cycle.`,'Benefits of FET :','1.High Success Rates : Proven high implantation and pregnancy success rates.Utilization of advanced cryopreservation techniques ensures embryo viability.'
+            ,`2.Convenience and Flexibility : Allows for the timing of the transfer to suit the patient's schedule.Avoids the need for repeated ovarian stimulation and egg retrieval cycles.`,
             '3.Reduced Stress : Less invasive and less physically demanding than starting a new IVF cycle.Simplified process focusing only on the embryo transfer and uterine.',
             '4.Cost-Effective : More affordable than undergoing a new IVF cycle.Utilizes embryos from a previous cycle, saving on medication and procedural costs.',
             '5.Comprehensive Support : Personalized care from experienced fertility specialists.Continuous monitoring and support throughout the treatment process.'
@@ -82,7 +82,7 @@ export const TreatmentsData = [
         icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847604/Varicocele_g4beoy.png',
         icon1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856989/Varicocele_1_tclofg.png',
         link: '/treatments/varicocele',
-        content:['Varicocele is a common condition that affects the veins within the scrotum, often leading to pain, swelling, and infertility issues.  In Bangalore, we offer comprehensive and advanced varicocele treatment options tailored to your specific needs.','Varicocele is a condition where the veins in the scrotum become enlarged, similar to varicose veins in the legs. This condition can lead to discomfort, testicular atrophy, and potential fertility problems. It’s important to diagnose and treat varicocele early to avoid complications.','Diagnosis and Consultation: ',' Our expert urologists utilize state-of-the-art diagnostic tools to accurately identify varicocele. During your consultation, our expert doctor will perform a physical examination and may recommend a Doppler ultrasound to assess the severity of the condition.']
+        content:['Varicocele is a common condition that affects the veins within the scrotum, often leading to pain, swelling, and infertility issues.  In Bangalore, we offer comprehensive and advanced varicocele treatment options tailored to your specific needs.',`Varicocele is a condition where the veins in the scrotum become enlarged, similar to varicose veins in the legs. This condition can lead to discomfort, testicular atrophy, and potential fertility problems. It's important to diagnose and treat varicocele early to avoid complications.`,'Diagnosis and Consultation: ',' Our expert urologists utilize state-of-the-art diagnostic tools to accurately identify varicocele. During your consultation, our expert doctor will perform a physical examination and may recommend a Doppler ultrasound to assess the severity of the condition.']
       },
       {
         id: '10',
@@ -90,7 +90,7 @@ export const TreatmentsData = [
         icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847606/Endometrial_Rejuvenation_xitoda.png',
         icon1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856992/Endometrial_Rejuvenation_1_eushrf.png',
         link: '/treatments/endometrial-rejuvenation',
-        content:['Endometrial Rejuvenation is the process to improve the quality of the Endometrium for successful implantation of the embryo by improving the endometrial thickness & blood supply which helps embryos for implantation giving them proper nutrition & hormones.','The innermost lining of the uterus is called the endometrium. The uterus changes its size every month throughout a woman’s fertile years. Constant regeneration is the most unique factor of the endometrium. It is the endometrium where the fertilized egg implants itself if the female conceives. A female’s body prepares the endometrium to host the embryo as a part of the period cycle each month. The endometrial thickness increases and decreases which is influenced by the hormones estrogen and progesterone and progenitor cell populations and inflammatory mediators. If any of these factors are disturbed, the result will be endometrial disorders with intrauterine scar formation, dysregulated proliferation, and heavy menstrual bleeding.','Endometrial thickness plays an important role in pregnancy. An endometrium that is neither too thick nor too thin is linked to chances for a healthy, full-term pregnancy. A normal endometrium allows the embryo to implant successfully and gets the correct nutrition it needs. The endometrium gets thicker during the later phase of the pregnancy. The most common cause of infertility is poor endometrial thickness.']
+        content:['Endometrial Rejuvenation is the process to improve the quality of the Endometrium for successful implantation of the embryo by improving the endometrial thickness & blood supply which helps embryos for implantation giving them proper nutrition & hormones.',`The innermost lining of the uterus is called the endometrium. The uterus changes its size every month throughout a woman's fertile years. Constant regeneration is the most unique factor of the endometrium. It is the endometrium where the fertilized egg implants itself if the female conceives. A female's body prepares the endometrium to host the embryo as a part of the period cycle each month. The endometrial thickness increases and decreases which is influenced by the hormones estrogen and progesterone and progenitor cell populations and inflammatory mediators. If any of these factors are disturbed, the result will be endometrial disorders with intrauterine scar formation, dysregulated proliferation, and heavy menstrual bleeding.`,'Endometrial thickness plays an important role in pregnancy. An endometrium that is neither too thick nor too thin is linked to chances for a healthy, full-term pregnancy. A normal endometrium allows the embryo to implant successfully and gets the correct nutrition it needs. The endometrium gets thicker during the later phase of the pregnancy. The most common cause of infertility is poor endometrial thickness.']
       },
       {
         id: '11',
@@ -106,7 +106,7 @@ export const TreatmentsData = [
         icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847605/Egg_Freezing_qg1fn7.png',
         icon1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856993/Egg_Freezing_1_d6mmg2.png',
         link: '/treatments/ivf-treatment-egg-freezing',
-        content:['Egg freezing, also known as oocyte cryopreservation, is a process where a womans eggs are extracted, frozen, and stored for future use. This procedure provides women with the flexibility to preserve their fertility and plan for future pregnancies.','Why Choose Egg Freezing?','Fertility Preservation : Ideal for women who wish to delay childbirth due to personal or professional reasons.','Medical Reasons : Beneficial for women undergoing treatments like chemotherapy that may affect fertility.','Advanced Age: Allows women to freeze their eggs at a younger age, when they are most viable.']
+        content:[`Egg freezing, also known as oocyte cryopreservation, is a process where a woman's eggs are extracted, frozen, and stored for future use. This procedure provides women with the flexibility to preserve their fertility and plan for future pregnancies.`,'Why Choose Egg Freezing?','Fertility Preservation : Ideal for women who wish to delay childbirth due to personal or professional reasons.','Medical Reasons : Beneficial for women undergoing treatments like chemotherapy that may affect fertility.','Advanced Age: Allows women to freeze their eggs at a younger age, when they are most viable.']
       },
       {
         id: '13',

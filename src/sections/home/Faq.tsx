@@ -33,12 +33,12 @@ export default Faq;
 const data = [
   {
     id: 1,
-    Question: 'Why Choose FertiGynx for Fertility treatment?',
+    Question: 'Why Choose FertiGenyx for Fertility treatment?',
     Answer: 'We offer advanced technology, expert specialists, personalized care, and help in achieving outstanding IVF success rates.',
   },
   {
     id: 2,
-    Question: 'What IVF Treatments are available at FertiGynx?',
+    Question: 'What IVF Treatments are available at FertiGenyx?',
     Answer:
       'We provide IVF, ICSI, IUI, fertility preservation, and tailored treatment plans for every patient.',
   },

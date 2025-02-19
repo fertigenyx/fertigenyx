@@ -64,33 +64,33 @@ const IvfIndications= forwardRef<HTMLElement>((_, ref) =>  {
         </div>
   
         <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:m-6'>
-          {infertilityData.map((data, index) => {
-            const contentArray = data.content.includes(',')
-              ? data.content.split(',').map((item) => item.trim())
-              : [data.content];
-  
-            return (
-              <div
-                key={index}
-                className='rounded-lg bg-gray-100 p-6 shadow-lg hover:shadow-2xl'
-              >
-                <div className='text-lg font-semibold text-brandBrown'>
-                  {data.title}
-                </div>
-                <div className='mb-3 mt-1 h-1 w-1/4 rounded bg-brandBrown'></div>
-                {contentArray.length > 1 ? (
-                  <ol className='list-[lower-alpha] pl-5 text-base'>
-                    {contentArray.map((point, idx) => (
-                      <li key={idx}>{point}</li>
-                    ))}
-                  </ol>
-                ) : (
-                  <div className='text-base'>{contentArray[0]}</div>
-                )}
-              </div>
-            );
-          })}
+  {infertilityData.map((data, index) => {
+    const contentArray = data.content
+      .split('.')
+      .map((item) => item.trim())
+      .filter((item) => item !== '');
+
+    return (
+      <div
+        key={index}
+        className='rounded-lg bg-gray-100 p-6 shadow-lg hover:shadow-2xl'
+      >
+        <div className='text-lg font-semibold text-brandBrown'>
+          {data.title}
         </div>
+        <div className='mb-3 mt-1 h-1 w-1/4 rounded bg-brandBrown'></div>
+        {
+          <ol className='list-[lower-alpha] pl-5 text-base'>
+            {contentArray.map((point, idx) => (
+              <li key={idx}>{point}.</li>
+            ))}
+          </ol>
+  }
+      </div>
+    );
+  })}
+</div>
+
         <CommonCta classname="my-10"/>
         <WhatIsIvf/>
       </section>

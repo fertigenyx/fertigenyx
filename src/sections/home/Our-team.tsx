@@ -68,14 +68,17 @@ const FertilitySpecialists = forwardRef<HTMLElement>((_, ref) => {
                       quality={10}
                     />
                   </div>
-                  <div className='mt-4 flex flex-col items-center justify-center space-y-4 text-center'>
-                    <div className='h-24 space-y-1 text-lg font-medium leading-6'>
+                  <div className='mt-4 flex flex-col items-center justify-center text-center'>
+                    <div className='h-24 space-y-1 text-lg font-medium leading-6 mb-2'>
                       <h3 className='font-content text-brandDark'>{item?.name}</h3>
                       <p className='font-content text-xs text-brandPurpleDark'>
                         {item?.qualification}
                       </p>
-                      <p className='font-content pb-2 text-sm text-brandBrown font-semibold'>
+                      <p className='font-content text-sm text-brandBrown font-semibold'>
                         {item?.designation}
+                      </p>
+                      <p className='font-content text-sm text-brandPurpleDark'>
+                        {item?.position && item?.position}
                       </p>
                     </div>
                     <ContentModal

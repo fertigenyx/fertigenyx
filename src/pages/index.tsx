@@ -37,7 +37,7 @@ export default function Home() {
     <div className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}>
       <Nav sectionRefs={sectionRefs} />
       <main className="grid items-center justify-items-center lg:p-8 lg:pb-20 lg:gap-10 gap-6 bg-gray-100">
-<Banner/>
+       <Banner/>
       <About ref={sectionRefs["about-fertigenyx"]} />
         <Services ref={sectionRefs["services-offered"]} />
         <WhyFertigenyx ref={sectionRefs["why-fertigenyx"]} />
