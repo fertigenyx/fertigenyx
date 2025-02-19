@@ -57,6 +57,6 @@ const data = [
     id: 5,
     Question: 'Does insurance cover IVF cost in India?',
     Answer:
-      'In India, insurance coverage for IVF treatment can vary depending on the policy and insurance provider. Its best to check with your insurance provider to see if IVF treatment is covered under your policy. We offer various financing options to help make IVF treatment more affordable and accessible for our patients.',
+      `In India, insurance coverage for IVF treatment can vary depending on the policy and insurance provider. It's best to check with your insurance provider to see if IVF treatment is covered under your policy. We offer various financing options to help make IVF treatment more affordable and accessible for our patients.`,
   },
 ];

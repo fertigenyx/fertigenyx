@@ -7,8 +7,8 @@ const Terms = () => {
         {/* Primary Tags */}
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>Terms and Conditions |Fertigenyx</title>
-        <meta name='title' content='Terms and Conditions | Fertigenyx' />
+        <title>Terms and Conditions |FertiGenyx</title>
+        <meta name='title' content='Terms and Conditions | FertiGenyx' />
         <meta
           name='description'
           content='FertiGenyx is dedicated to excellence in fertility care, serving as a leading digital partner for fertility treatment providers. We are committed to assisting couples on their journey to parenthood by connecting them with world-class fertility expertise and advanced reproductive treatments.'

@@ -22,7 +22,7 @@ const WhyFertigenyx = forwardRef<HTMLElement>((_, ref) => {
    <div className=" mb-10 flex flex-col justify-center items-center"><h2 className="text-3xl md:text-4xl font-bold mb-6 text-center  text-brandPurpleDark">
    Why <span className="text-white">Choose</span> FertiGenyx?
    </h2>
-   <div className="lg:text-3xl text-xl text-center underline">FertiGenyx, Leading the Way in Infertility Treatment</div></div>
+   <div className="lg:text-3xl text-xl text-center underline text-brandPurpleDark">FertiGenyx, Leading the Way in Infertility Treatment</div></div>
      <div className="flex justify-between mx-3"><div className="lg:w-2/3 grid grid-cols-2 gap-4">
          {whyFertigenyx && whyFertigenyx?.map((menu,index)=>{
              return (

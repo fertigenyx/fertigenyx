@@ -52,7 +52,7 @@ const Services = forwardRef<HTMLElement>((_, ref) => {
                                 width={104}
                                 height={104}
                                 quality={100}
-                                className="scale-x-110 group-hover:-scale-x-100 transition-transform duration-700 origin-center"
+                                className="scale-x-110 group-hover:-scale-x-100 transition-transform duration-500 origin-center"
                             />
 
                             {/* Treatment Name */}

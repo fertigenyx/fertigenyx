@@ -3,7 +3,7 @@ export const doctors=[
         name:'Dr Asha S Vijay',
         qualification: 'MBBS, DGO-DNB',
         designation: 'Senior Fertility Specialist',
-        position:'Medical Director',
+        position:'Medical Director - GarbhaGudi',
         image: {
           url: 'https://media.graphassets.com/tEF3ZeEhSoeekeSEh47v',
         },
