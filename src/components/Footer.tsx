@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -10,14 +10,21 @@ export default function Footer() {
       <h2 id='footerHeading' className='sr-only'>
         Footer
       </h2>
-     
-      <div className='py-8 mx-auto max-w-7xl border-t border-gray-200 dark:border-gray-600'>
-        <div className="flex gap-4 justify-center py-2">
-          <Link href={"/legal/privacy-policy"} className="text-brandPurpleDark hover:underline">Privacy & Policy</Link>
-          <Link href={"/legal/terms-and-conditions"}  className="text-brandPurpleDark hover:underline">Terms & Conditions</Link>
+
+      <div className='mx-auto max-w-7xl border-t border-gray-200 py-8 dark:border-gray-600'>
+        <div className='flex justify-center gap-4 py-2'>
+          <Link href={'/legal/privacy-policy'} className='text-brandPurpleDark hover:underline'>
+            Privacy & Policy
+          </Link>
+          <Link
+            href={'/legal/terms-and-conditions'}
+            className='text-brandPurpleDark hover:underline'
+          >
+            Terms & Conditions
+          </Link>
         </div>
-        
-        <p className=' text-center font-content text-gray-800 dark:text-white'>
+
+        <p className='text-center font-content text-gray-800 dark:text-white'>
           &copy; {new Date().getFullYear()} Fertigenyx, Inc. All rights reserved.
         </p>
       </div>

@@ -18,26 +18,29 @@ const breakpoints = {
 };
 
 const FertilitySpecialists = forwardRef<HTMLElement>((_, ref) => {
-  const swiperRef = useRef<SwiperClass | null>(null); 
+  const swiperRef = useRef<SwiperClass | null>(null);
 
   return (
-    <section className='lg:w-full  w-[20em] bg-gradient-to-br  to-purple-100 pb-6' ref={ref}
-    id="fertility-specialists" >
+    <section
+      className='w-[20em] bg-gradient-to-br to-purple-100 pb-6 lg:w-full'
+      ref={ref}
+      id='fertility-specialists'
+    >
       <div className='mx-auto max-w-7xl px-3 pb-12'>
         <div className='pb-12 text-center'>
-          <h1 className='my-8  font-heading text-3xl font-bold sm:text-4xl text-brandPurpleDark'>
+          <h1 className='my-8 font-heading text-3xl font-bold text-brandPurpleDark sm:text-4xl'>
             Meet our Fertility Specialists
           </h1>
           <p className='mx-auto max-w-prose'>
-            Our team of fertility specialists have been known for their
-            extensive clinical experience and research contributions, as well as
-            for their success in treating the most challenging fertility cases.
+            Our team of fertility specialists have been known for their extensive clinical
+            experience and research contributions, as well as for their success in treating the most
+            challenging fertility cases.
           </p>
         </div>
 
         <div className='mx-auto flex max-w-7xl flex-row items-center justify-center'>
           <button
-            onClick={() => swiperRef.current?.slidePrev()} 
+            onClick={() => swiperRef.current?.slidePrev()}
             className='absolute left-0 z-10 ml-4 rounded-full bg-[#204C6B] p-2 text-white lg:left-10'
           >
             <HiChevronLeft className='text-2xl' />
@@ -57,7 +60,7 @@ const FertilitySpecialists = forwardRef<HTMLElement>((_, ref) => {
               <SwiperSlide key={item.name}>
                 <div className='mb-2 rounded-xl transition-all duration-500'>
                   <div className='relative mx-auto h-52 w-52'>
-                    <div className='animate-rotate bg-[length: 400%] absolute h-full w-full overflow-hidden rounded-full bg-gradient-to-br from-brandBrown/80 to-[#204C6B]/40'></div>
+                    <div className='bg-[length: 400%] absolute h-full w-full animate-rotate overflow-hidden rounded-full bg-gradient-to-br from-brandBrown/80 to-[#204C6B]/40'></div>
                     <Image
                       className='overflow-hidden rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
                       src={item?.image.url}
@@ -69,12 +72,12 @@ const FertilitySpecialists = forwardRef<HTMLElement>((_, ref) => {
                     />
                   </div>
                   <div className='mt-4 flex flex-col items-center justify-center text-center'>
-                    <div className='h-24 space-y-1 text-lg font-medium leading-6 mb-2'>
-                      <h3 className='font-content text-brandDark'>{item?.name}</h3>
+                    <div className='mb-2 h-24 space-y-1 text-lg font-medium leading-6'>
+                      <h3 className='text-brandDark font-content'>{item?.name}</h3>
                       <p className='font-content text-xs text-brandPurpleDark'>
                         {item?.qualification}
                       </p>
-                      <p className='font-content text-sm text-brandBrown font-semibold'>
+                      <p className='font-content text-sm font-semibold text-brandBrown'>
                         {item?.designation}
                       </p>
                       <p className='font-content text-sm text-brandPurpleDark'>
@@ -103,9 +106,9 @@ const FertilitySpecialists = forwardRef<HTMLElement>((_, ref) => {
           </button>
         </div>
       </div>
-      <CommonCta/>
+      <CommonCta />
     </section>
-  )
+  );
 });
-FertilitySpecialists.displayName="FertilitySpecialists"
+FertilitySpecialists.displayName = 'FertilitySpecialists';
 export default FertilitySpecialists;

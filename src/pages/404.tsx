@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 
-
 const FourOhFour = () => {
   return (
     <div>
@@ -18,7 +17,7 @@ const FourOhFour = () => {
           <div className='flex-shrink-0 pt-16'>
             <Image
               className='mx-auto h-16 w-auto'
-              src='https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg'
+              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1739764941/FertiGenyx_Logo_eqykma.png'
               alt='Workflow'
               width={200}
               height={200}
@@ -26,7 +25,7 @@ const FourOhFour = () => {
           </div>
           <div className='mx-auto max-w-xl py-16 sm:py-24'>
             <div className='text-center'>
-              <p className='font-content text-sm font-semibold uppercase tracking-wide text-brandPink'>
+              <p className='font-content text-sm font-semibold uppercase tracking-wide text-brandPurpleDark'>
                 404 error.
               </p>
               <h1 className='mt-4 font-heading text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl'>
@@ -37,13 +36,13 @@ const FourOhFour = () => {
               </p>
             </div>
             <div className='mt-8'>
-                <Link
-                  href='/'
-                  className='font-content text-base font-medium text-brandPink4 hover:text-brandPink'
-                >
-                  Or go back home<span aria-hidden='true'> &rarr;</span>
-                </Link>
-              </div>
+              <Link
+                href='/'
+                className='font-content text-base font-medium text-brandBrown hover:text-brandPurpleDark'
+              >
+                Or go back home<span aria-hidden='true'> &rarr;</span>
+              </Link>
+            </div>
           </div>
         </main>
       </div>

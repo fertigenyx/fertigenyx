@@ -23,11 +23,7 @@ export default function Popup({ title, btnClassName }) {
       </div>
 
       <Transition appear show={isOpen} as={'div'}>
-        <Dialog
-          as='div'
-          className='fixed inset-0 z-[9999]'
-          onClose={closeModal}
-        >
+        <Dialog as='div' className='fixed inset-0 z-[9999]' onClose={closeModal}>
           <TransitionChild
             as={'div'}
             enter='ease-out duration-300'
@@ -52,12 +48,8 @@ export default function Popup({ title, btnClassName }) {
                 leaveTo='opacity-0 scale-95'
               >
                 <Dialog.Panel className='flex w-full max-w-lg transform flex-col items-start justify-start overflow-hidden rounded-lg shadow-lg transition-all'>
-                 
                   <ContactForm />
-                  <div
-                    onClick={closeModal}
-                    className='absolute right-3 top-3 cursor-pointer'
-                  >
+                  <div onClick={closeModal} className='absolute right-3 top-3 cursor-pointer'>
                     <HiX className='block h-6 w-6 text-black hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-100' />
                   </div>
                 </Dialog.Panel>

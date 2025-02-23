@@ -2,13 +2,7 @@ import React from 'react';
 import { HiChevronDown } from 'react-icons/hi';
 import { Transition } from '@headlessui/react';
 
-const AccordionLayout = ({
-  title,
-  children,
-  index,
-  activeIndex,
-  setActiveIndex,
-}) => {
+const AccordionLayout = ({ title, children, index, activeIndex, setActiveIndex }) => {
   const handleSetIndex = (index) => {
     if (activeIndex !== index) {
       setActiveIndex(index);
@@ -21,7 +15,7 @@ const AccordionLayout = ({
         className={
           activeIndex === index
             ? `text-md mt-3 flex items-center justify-between rounded-t-lg bg-brandBrown px-3 py-2 font-heading text-white transition-all duration-500 ease-in-out hover:cursor-pointer sm:px-6 xl:text-xl`
-            : `text-md font-content mt-3 flex  items-center justify-between border-gray-300 px-3 py-1 transition-all duration-500 ease-in-out hover:cursor-pointer hover:rounded-lg hover:border-b-0 hover:bg-brandBrown hover:text-white hover:py-3 sm:px-6 sm:hover:text-lg xl:hover:text-xl`
+            : `text-md mt-3 flex items-center justify-between border-gray-300 px-3 py-1 font-content transition-all duration-500 ease-in-out hover:cursor-pointer hover:rounded-lg hover:border-b-0 hover:bg-brandBrown hover:py-3 hover:text-white sm:px-6 sm:hover:text-lg xl:hover:text-xl`
         }
       >
         <div className='flex items-center justify-center font-semibold'>
@@ -46,7 +40,7 @@ const AccordionLayout = ({
         leaveTo='transform scale-95 opacity-0'
       >
         {activeIndex === index && (
-          <div className='shadow-3xl font-content rounded-b-lg border-2 border-brandBrown p-4'>
+          <div className='shadow-3xl rounded-b-lg border-2 border-brandBrown p-4 font-content'>
             {children}
           </div>
         )}

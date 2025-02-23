@@ -4,8 +4,8 @@ import React from 'react';
 const Faq = () => {
   const [activeIndex1, setActiveIndex1] = React.useState(1);
   return (
-    <div className='  px-1'>
-      <h2 className='lg:pt:8 pt-6 text-center font-heading text-3xl font-bold lg:text-4xl text-brandPurpleDark'>
+    <div className='px-1'>
+      <h2 className='lg:pt:8 pt-6 text-center font-heading text-3xl font-bold text-brandPurpleDark lg:text-4xl'>
         Frequently asked questions
       </h2>
       <div className='px-3 pb-10 lg:pb-16'>
@@ -23,7 +23,6 @@ const Faq = () => {
           ))}
         </div>
       </div>
-  
     </div>
   );
 };
@@ -34,7 +33,8 @@ const data = [
   {
     id: 1,
     Question: 'Why Choose FertiGenyx for Fertility treatment?',
-    Answer: 'We offer advanced technology, expert specialists, personalized care, and help in achieving outstanding IVF success rates.',
+    Answer:
+      'We offer advanced technology, expert specialists, personalized care, and help in achieving outstanding IVF success rates.',
   },
   {
     id: 2,
@@ -56,7 +56,6 @@ const data = [
   {
     id: 5,
     Question: 'Does insurance cover IVF cost in India?',
-    Answer:
-      `In India, insurance coverage for IVF treatment can vary depending on the policy and insurance provider. It's best to check with your insurance provider to see if IVF treatment is covered under your policy. We offer various financing options to help make IVF treatment more affordable and accessible for our patients.`,
+    Answer: `In India, insurance coverage for IVF treatment can vary depending on the policy and insurance provider. It's best to check with your insurance provider to see if IVF treatment is covered under your policy. We offer various financing options to help make IVF treatment more affordable and accessible for our patients.`,
   },
 ];
