@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Popup from './Popup';
-import { HiPhone } from 'react-icons/hi';
+// import Popup from './Popup';
+// import { HiPhone } from 'react-icons/hi';
 
 const CommonCta = ({ classname }: { classname?: string }) => {
   return (
