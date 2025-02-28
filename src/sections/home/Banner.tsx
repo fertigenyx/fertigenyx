@@ -20,7 +20,7 @@ const bannerData = [
     id: '2',
     title: 'Web_Banner_2',
     image: {
-      url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1740378578/FertiGenyx_Feb_25_-_Offer_-_Web_Banner-_Sankalpa-01_jnrodc.jpg',
+      url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1740729911/FertiGenyx_-_March_Web_Banner-01_vdneau.jpg',
     },
   },
 ];
