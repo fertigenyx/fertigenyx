@@ -132,20 +132,6 @@ export const doctors = [
     ],
   },
   {
-    name: 'Dr Deepthi Venkatesh ',
-    qualification: 'MBBS, MS - FRM ',
-    designation: 'Fertility Specialist',
-    image: {
-      url: 'https://media.graphassets.com/kKgEEz2Q4GLNK4wMPIOW',
-    },
-    imageAlt: 'IVF Specialist in Bangalore - Dr Deepthi Venkatesh',
-    bio: [
-      'Dr. Deepthi is a distinguished fertility specialist with over seven years of experience in the field of obstetrics and gynecology. She graduated top of her class from VIMS & RC and pursued her MS OBG from the prestigious Bangalore Medical College & Research Institute. Her dedication to the field is evident through her fellowship in reproductive medicine from RGUHS.',
-      'With a passion for helping couples achieve their dream of parenthood, Dr. Deepthi is an expert in Intra-Uterine Insemination (IUI), In-Vitro Fertilization (IVF), and other such ART techniques. Her personalized approach and exceptional success rates have earned high praise from her patient’s, who appreciate her compassionate nature and approachability.',
-      'Driven by her commitment to providing the very best care, Dr. Deepthi continuously updates her knowledge and skills. She contributes to the Indian Council of Medical Research Program and presents papers at various state and national conferences. She firmly believes in a scientific and ethical approach to her patient issues, and her dedication to her profession is unmatched. With Dr. Deepthi, you can be assured that you are receiving the highest level of expertise and care on your journey toward parenthood.',
-    ],
-  },
-  {
     name: 'Dr Pavithra ',
     qualification: 'MBBS, MS-OBG , FRM',
     designation: 'Fertility Specialist',
