@@ -1,8 +1,8 @@
 import AccordionLayout from '@/components/AccordionLayout';
-import React from 'react';
+import { useState } from 'react';
 
 const Faq = () => {
-  const [activeIndex1, setActiveIndex1] = React.useState(1);
+  const [activeIndex1, setActiveIndex1] = useState(1);
   return (
     <div className='px-1'>
       <h2 className='lg:pt:8 pt-6 text-center font-heading text-3xl font-bold text-brandPurpleDark lg:text-4xl'>

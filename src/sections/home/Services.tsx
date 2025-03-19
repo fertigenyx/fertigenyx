@@ -1,6 +1,6 @@
 import { TreatmentsData } from '@/components/constants/services';
 import Image from 'next/image';
-import React, { forwardRef, useState } from 'react';
+import { forwardRef, useState } from 'react';
 import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react';
 import CommonCta from '@/components/CommonCta';
 

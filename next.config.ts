@@ -1,7 +1,9 @@
 // @ts-check
 /** @type {import('next').NextConfig} */
-
-const nextConfig = {
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+const nextConfig = withBundleAnalyzer({
   reactStrictMode: false,
   experimental: {
     workerThreads: false,
@@ -151,6 +153,9 @@ const nextConfig = {
       },
     ];
   },
-};
+  
+});
 
 export default nextConfig;
+
+

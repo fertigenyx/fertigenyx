@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { HiOutlineMenuAlt3, HiX, HiPhone } from 'react-icons/hi';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -38,7 +38,7 @@ const Nav: React.FC<NavProps> = ({ sectionRefs }) => {
         <div className='mx-auto flex max-w-screen-xl items-center justify-between'>
           <Link href='/' className='py-2'>
             <Image
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1739764941/FertiGenyx_Logo_eqykma.png'
+              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1739764941/FertiGenyx_Logo_eqykma.webp'
               alt='logo'
               width={100}
               height={100}
