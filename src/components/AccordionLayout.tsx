@@ -1,4 +1,3 @@
-import React from 'react';
 import { HiChevronDown } from 'react-icons/hi';
 import { Transition } from '@headlessui/react';
 
