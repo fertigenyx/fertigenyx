@@ -1,4 +1,3 @@
-import React from 'react';
 import '@/styles/globals.css';
 import '@/styles/calendar.css';
 import Head from 'next/head';
@@ -17,6 +16,18 @@ function MyApp({ Component, pageProps }) {
         <meta
           name='robots'
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
+        />
+        {/* Google tag (gtag.js) */}
+        <script async src='https://www.googletagmanager.com/gtag/js?id=AW-16974497189'></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16974497189');
+          `,
+          }}
         />
       </Head>
       <ThemeProvider attribute='class' defaultTheme='light'>
