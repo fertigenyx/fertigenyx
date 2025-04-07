@@ -15,14 +15,6 @@ const bannerData = [
       url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1740047981/FertiGenyx_Web_Banner-02_iaam6l.webp',
     },
   },
-  {
-    url: '/',
-    id: '2',
-    title: 'Web_Banner_2',
-    image: {
-      url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742365954/FertiGenyx_-_March_Web_Banner_1_Lakh_Offer-01_tnrapd.webp',
-    },
-  },
 ];
 const BannerComponent: React.FC = () => {
   const defaultControlsConfig = {
