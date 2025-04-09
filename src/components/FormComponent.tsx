@@ -55,7 +55,9 @@ const FormComponent = ({ title }) => {
         throw new Error('Network response was not ok');
       }
       setLoad(false);
-      responseData?.data[0]?.code === 'SUCCESS' && router.push('/thank-you.html');
+      if (responseData?.data[0]?.code === 'SUCCESS') {
+        router.push('/thank-you.html');
+      }
     } catch (err) {
       setLoad(false);
       console.log(err);
