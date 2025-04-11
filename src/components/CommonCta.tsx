@@ -1,14 +1,18 @@
 import Link from 'next/link';
-// import Popup from './Popup';
 // import { HiPhone } from 'react-icons/hi';
 
 const CommonCta = ({ classname }: { classname?: string }) => {
+  const handleScroll = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <div className={`flex items-center justify-center gap-x-4 ${classname}`}>
-      {/* <Popup
-        title={'Book an Appointment'}
-        btnClassName='text-brandPurpleDark border-2 border-brandPurpleDark rounded-full lg:text-base text-xs py-2 px-4 hover:bg-brandPurpleDark hover:text-white'
-      /> */}
+      <button
+        className='rounded-full border-2 border-brandPurpleDark px-4 py-2 text-xs text-brandPurpleDark hover:bg-brandPurpleDark hover:text-white lg:text-base'
+        onClick={handleScroll}
+      >
+        Book an Appointment
+      </button>
 
       <button className='group rounded-full border-2 border-brandPurpleDark px-4 py-1.5 text-brandPurpleDark hover:bg-brandPurpleDark hover:text-white'>
         <Link
