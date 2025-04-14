@@ -78,6 +78,7 @@ const Nav: React.FC<NavProps> = ({ sectionRefs }) => {
                 className='flex items-center justify-center font-content'
               >
                 <HiPhone className='h-6 w-6 text-brandPurpleDark transition-transform ease-in-out hover:rotate-12 hover:scale-110' />
+                <span> +91 9071 2340 03</span>
               </Link>
             </button>
 
