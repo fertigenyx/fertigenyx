@@ -17,34 +17,6 @@ function MyApp({ Component, pageProps }) {
           name='robots'
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
-
-        {/* Google tag (gtag.js) */}
-        <script async src='https://www.googletagmanager.com/gtag/js?id=AW-16974497189'></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-16974497189');
-
-              function gtag_report_conversion(url) {
-                var callback = function () {
-                  if (typeof(url) != 'undefined') {
-                    window.location = url;
-                  }
-                };
-                gtag('event', 'conversion', {
-                  'send_to': 'AW-16974497189/CvGiCNftzrMaEKWLiZ4_',
-                  'value': 1.0,
-                  'currency': 'INR',
-                  'event_callback': callback
-                });
-                return false;
-              }
-            `,
-          }}
-        />
       </Head>
       <ThemeProvider attribute='class' defaultTheme='light'>
         <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
