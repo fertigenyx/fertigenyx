@@ -8,13 +8,13 @@ const CommonCta = ({ classname }: { classname?: string }) => {
   return (
     <div className={`flex items-center justify-center gap-x-4 ${classname}`}>
       <button
-        className='rounded-full border-2 border-brandPurpleDark px-4 py-2 text-xs text-brandPurpleDark hover:bg-brandPurpleDark hover:text-white lg:text-base'
+        className='rounded-full border-2 border-brandPurpleDark px-2 py-2 text-xs text-brandPurpleDark hover:bg-brandPurpleDark hover:text-white md:px-4 lg:text-base'
         onClick={handleScroll}
       >
         Book an Appointment
       </button>
 
-      <button className='group rounded-full border-2 border-brandPurpleDark px-4 py-1.5 text-brandPurpleDark hover:bg-brandPurpleDark hover:text-white'>
+      <button className='group rounded-full border-2 border-brandPurpleDark px-2 py-1.5 text-brandPurpleDark hover:bg-brandPurpleDark hover:text-white md:px-4'>
         <Link
           href='tel:+919071234003'
           className='flex items-center justify-center gap-2 scroll-smooth font-content text-xs lg:text-lg'
