@@ -13,7 +13,8 @@ const bannerData = [
     id: '1',
     title: 'Web_Banner_1',
     image: {
-      url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1740047981/FertiGenyx_Web_Banner-02_iaam6l.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1740047981/FertiGenyx_Web_Banner-02_iaam6l.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1746258827/FertiGenyx_-_may_Month_Web_Banner-04_iodwpr.webp',
     },
   },
   {
@@ -21,7 +22,8 @@ const bannerData = [
     id: '2',
     title: 'Web_Banner_2',
     image: {
-      url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1744366749/FertiGenyx_-_April_Web_Banner-01_r2ofty.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1746258802/FertiGenyx_-_April_Web_Banner-01_r2ofty.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1746258841/FertiGenyx_-_may_Month_Web_Banner-02_ss73ud.webp',
     },
   },
 ];
@@ -34,7 +36,7 @@ const BannerComponent: React.FC = () => {
   };
 
   return (
-    <div className='flex flex-col gap-y-6 pb-5 md:flex-row md:pb-8'>
+    <div className='flex flex-col gap-y-5 pb-5 md:flex-row md:pb-8'>
       {/* Banner Section */}
       <div className='h-full w-full md:w-2/3'>
         <Carousel
@@ -67,12 +69,22 @@ const BannerComponent: React.FC = () => {
             bannerData.map((banner) => (
               <Link href={banner.url || '#'} target='_blank' rel='noreferrer' key={banner.id}>
                 <Image
-                  src={banner.image.url}
+                  src={banner.image.url1}
+                  width={720}
+                  height={360}
                   alt={banner.title}
-                  width={1920}
-                  height={1080}
-                  className='h-full w-full object-cover'
-                  priority
+                  priority={true}
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                  className='hidden h-full w-full md:block'
+                />
+                <Image
+                  src={banner.image.url2}
+                  width={420}
+                  height={360}
+                  alt={banner.title}
+                  priority={true}
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                  className='h-full w-full md:hidden'
                 />
               </Link>
             ))

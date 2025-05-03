@@ -42,7 +42,7 @@ const Nav: React.FC<NavProps> = ({ sectionRefs }) => {
               alt='logo'
               width={100}
               height={100}
-              className='w-28 lg:h-14 lg:w-full'
+              className='w-20 md:w-28 lg:h-14 lg:w-full'
             />
           </Link>
 
@@ -72,12 +72,12 @@ const Nav: React.FC<NavProps> = ({ sectionRefs }) => {
 
           {/* Mobile Menu Buttons */}
           <div className='flex items-center gap-3'>
-            <button className='rounded-full border-2 border-brandPurpleDark p-2 text-sm text-brandPurpleDark xl:hidden'>
+            <button className='rounded-full border-2 border-brandPurpleDark p-2 text-xs text-brandPurpleDark md:p-2 xl:hidden'>
               <Link
                 href='tel:+919071234003'
                 className='flex items-center justify-center font-content'
               >
-                <HiPhone className='h-6 w-6 text-brandPurpleDark transition-transform ease-in-out hover:rotate-12 hover:scale-110' />
+                <HiPhone className='h-4 w-4 text-brandPurpleDark transition-transform ease-in-out hover:rotate-12 hover:scale-110 md:h-6 md:w-6' />
                 <span> +91 9071 2340 03</span>
               </Link>
             </button>
