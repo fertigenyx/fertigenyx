@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }) {
           name='viewport'
           content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover'
         />
+        <meta name='format-detection' content='telephone=no' />
         <meta httpEquiv='content-language' content='en-gb' />
         <meta
           name='robots'

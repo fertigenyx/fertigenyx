@@ -60,25 +60,33 @@ const Nav: React.FC<NavProps> = ({ sectionRefs }) => {
           </div>
 
           {/* Desktop Call Button */}
-          <button className='hidden rounded-full border-2 border-brandPurpleDark px-4 py-2 text-brandPurpleDark xl:flex'>
+          <button
+            className='hidden rounded-full border-2 border-brandPurpleDark px-4 py-2 text-brandPurpleDark xl:flex'
+            suppressHydrationWarning
+          >
             <Link
               href='tel:+919071234003'
               className='flex items-center justify-center font-content text-lg'
+              suppressHydrationWarning
             >
               <HiPhone className='h-7 w-7 text-brandPurpleDark transition-transform ease-in-out hover:rotate-12 hover:scale-110' />
-              <span> +91 9071 2340 03</span>
+              <span suppressHydrationWarning>{'+91'}&nbsp;9071&nbsp;2340&nbsp;03</span>
             </Link>
           </button>
 
           {/* Mobile Menu Buttons */}
           <div className='flex items-center gap-3'>
-            <button className='rounded-full border-2 border-brandPurpleDark p-2 text-xs text-brandPurpleDark md:p-2 xl:hidden'>
+            <button
+              className='rounded-full border-2 border-brandPurpleDark p-2 text-xs text-brandPurpleDark md:p-2 xl:hidden'
+              suppressHydrationWarning
+            >
               <Link
                 href='tel:+919071234003'
                 className='flex items-center justify-center font-content'
+                suppressHydrationWarning
               >
                 <HiPhone className='h-4 w-4 text-brandPurpleDark transition-transform ease-in-out hover:rotate-12 hover:scale-110 md:h-6 md:w-6' />
-                <span> +91 9071 2340 03</span>
+                <span suppressHydrationWarning>{'+91'}&nbsp;9071&nbsp;2340&nbsp;03</span>
               </Link>
             </button>
 
