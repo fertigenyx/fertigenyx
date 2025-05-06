@@ -38,7 +38,7 @@ const BannerComponent: React.FC = () => {
   return (
     <div className='flex flex-col gap-y-5 pb-5 md:flex-row md:pb-8'>
       {/* Banner Section */}
-      <div className='h-full w-full md:w-2/3'>
+      <div className='h-fit w-full md:w-2/3'>
         <Carousel
           autoplay
           autoplayInterval={5000}
@@ -84,7 +84,7 @@ const BannerComponent: React.FC = () => {
                   alt={banner.title}
                   priority={true}
                   sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                  className='h-full w-full md:hidden'
+                  className='h-[65vh] w-full object-fill md:hidden'
                 />
               </Link>
             ))
