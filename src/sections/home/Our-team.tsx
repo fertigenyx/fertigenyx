@@ -1,5 +1,5 @@
-import { forwardRef, useRef } from 'react';
-import { Swiper as SwiperClass } from 'swiper'; // Import Swiper class
+import { forwardRef, useMemo, useRef } from 'react';
+import { Swiper as SwiperClass } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import Image from '@/components/image';
@@ -8,18 +8,21 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import ContentModal from '@/components/contentModal';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import CommonCta from '@/components/CommonCta';
+import dynamic from 'next/dynamic';
+const CommonCta = dynamic(() => import('@/components/CommonCta'), {
+  ssr: false,
+  loading: () => <div className='py-4 text-center text-white'>Loading CTA...</div>,
+});
 
 const breakpoints = {
-  0: { slidesPerView: 1, spaceBetween: 0 },
-  768: { slidesPerView: 1, spaceBetween: 20 },
+  0: { slidesPerView: 1, spaceBetween: 10 },
+  768: { slidesPerView: 2, spaceBetween: 20 },
   1024: { slidesPerView: 4, spaceBetween: 20 },
-  1601: { slidesPerView: 4, spaceBetween: 20 },
 };
 
 const FertilitySpecialists = forwardRef<HTMLElement>((_, ref) => {
   const swiperRef = useRef<SwiperClass | null>(null);
-
+  const doctorsData = useMemo(() => doctors, []);
   return (
     <section
       className='w-[20em] bg-gradient-to-br to-purple-100 pb-6 lg:w-full'
@@ -48,51 +51,41 @@ const FertilitySpecialists = forwardRef<HTMLElement>((_, ref) => {
 
           <Swiper
             modules={[Navigation]}
-            onBeforeInit={(swiper) => {
-              swiperRef.current = swiper;
-            }}
+            onBeforeInit={(swiper) => (swiperRef.current = swiper)}
             breakpoints={breakpoints}
-            loop={true}
-            pagination={true}
-            autoplay
+            loop
+            spaceBetween={20}
           >
-            {doctors?.map((item) => (
+            {doctorsData.map((item, index) => (
               <SwiperSlide key={item.name}>
-                <div className='mb-2 rounded-xl transition-all duration-500'>
-                  <div className='relative mx-auto h-52 w-52'>
-                    <div className='bg-[length: 400%] absolute h-full w-full animate-rotate overflow-hidden rounded-full bg-gradient-to-br from-brandBrown/80 to-[#204C6B]/40'></div>
+                <div className='flex flex-col items-center justify-center rounded-xl px-2 text-center'>
+                  <div className='relative h-52 w-52'>
+                    <div className='absolute inset-0 animate-rotate rounded-full bg-gradient-to-br from-brandBrown/80 to-[#204C6B]/40 bg-[length:400%]' />
                     <Image
-                      className='overflow-hidden rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
-                      src={item?.image.url}
-                      alt={item?.imageAlt || item?.name}
-                      width={220}
-                      height={220}
-                      loading='lazy'
-                      quality={10}
+                      className='z-10 rounded-full shadow-xl drop-shadow-xl'
+                      src={item.image.url}
+                      alt={item.imageAlt || item.name}
+                      width={208}
+                      height={208}
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                      quality={25}
+                      priority={index === 0}
                     />
                   </div>
-                  <div className='mt-4 flex flex-col items-center justify-center text-center'>
-                    <div className='mb-2 h-24 space-y-1 text-lg font-medium leading-6'>
-                      <h3 className='text-brandDark font-content'>{item?.name}</h3>
-                      <p className='font-content text-xs text-brandPurpleDark'>
-                        {item?.qualification}
-                      </p>
-                      <p className='font-content text-sm font-semibold text-brandBrown'>
-                        {item?.designation}
-                      </p>
-                      <p className='font-content text-sm text-brandPurpleDark'>
-                        {item?.position && item?.position}
-                      </p>
-                    </div>
-                    <ContentModal
-                      title={'Read More'}
-                      classname={
-                        'font-content text-brandPurpleDark text-base px-3 py-1.5 rounded-lg font-medium hover:text-brandBrown border-2 border-brandPurpleDark hover:border-brandBrown transition-all duration-300 ease-linear'
-                      }
-                      content={item?.bio}
-                      heading={item?.name}
-                    />
+                  <div className='mt-4 h-28 space-y-1'>
+                    <h3 className='text-brandDark text-lg font-medium'>{item.name}</h3>
+                    <p className='text-xs text-brandPurpleDark'>{item.qualification}</p>
+                    <p className='text-sm font-semibold text-brandBrown'>{item.designation}</p>
+                    {item.position && (
+                      <p className='text-sm text-brandPurpleDark'>{item.position}</p>
+                    )}
                   </div>
+                  <ContentModal
+                    title='Read More'
+                    classname='font-content text-brandPurpleDark text-base px-3 py-1.5 rounded-lg font-medium hover:text-brandBrown border-2 border-brandPurpleDark hover:border-brandBrown transition-all duration-300 ease-linear'
+                    content={item.bio}
+                    heading={item.name}
+                  />
                 </div>
               </SwiperSlide>
             ))}

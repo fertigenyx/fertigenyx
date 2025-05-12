@@ -1,4 +1,6 @@
-import { HiChevronDown } from 'react-icons/hi';
+'use client';
+import dynamic from 'next/dynamic';
+const HiChevronDown = dynamic(() => import('react-icons/hi').then((mod) => mod.HiChevronDown));
 import { Transition } from '@headlessui/react';
 
 const AccordionLayout = ({ title, children, index, activeIndex, setActiveIndex }) => {
