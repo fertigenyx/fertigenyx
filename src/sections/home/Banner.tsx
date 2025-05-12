@@ -37,7 +37,7 @@ const BannerComponent: React.FC = () => {
       display: 'none',
     },
   };
-
+  const isMobile = useIsMobile();
   return (
     <div className='grid grid-cols-1 gap-y-5 pb-5 md:grid-cols-3 md:pb-8'>
       {/* Banner Section */}
@@ -69,7 +69,6 @@ const BannerComponent: React.FC = () => {
           )}
         >
           {bannerData.map((banner, index) => {
-            const isMobile = useIsMobile();
             const imageUrl = isMobile ? banner.image.url2 : banner.image.url1;
 
             return (
