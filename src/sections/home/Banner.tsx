@@ -2,11 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import dynamic from 'next/dynamic';
+import useIsMobile from '@/components/useIsMobile';
 const FormComponent = dynamic(() => import('@/components/FormComponent'), { ssr: true });
 
 const Carousel = dynamic(() => import('nuka-carousel'), {
   ssr: false,
-  loading: () => <div>Loading...</div>,
+  loading: () => <div className='h-[450px] w-full bg-gray-200 md:h-[400px]'></div>,
 });
 
 const bannerData = [
@@ -36,11 +37,11 @@ const BannerComponent: React.FC = () => {
       display: 'none',
     },
   };
-
+  const isMobile = useIsMobile();
   return (
-    <div className='flex flex-col gap-y-5 pb-5 md:flex-row md:pb-8'>
+    <div className='grid grid-cols-1 gap-y-5 pb-5 md:grid-cols-3 md:pb-8'>
       {/* Banner Section */}
-      <div className='w-full md:w-2/3'>
+      <div className='col-span-2 h-[450px] w-full md:h-[400px]'>
         <Carousel
           autoplay
           autoplayInterval={5000}
@@ -67,35 +68,28 @@ const BannerComponent: React.FC = () => {
             </button>
           )}
         >
-          {bannerData.map((banner, index) => (
-            <Link href={banner.url} key={banner.id}>
-              <div className='relative h-[450px] w-full md:h-[400px]'>
-                {/* Desktop Image */}
-                <Image
-                  src={banner.image.url1}
-                  width={720}
-                  height={360}
-                  alt={banner.title}
-                  priority={index === 0}
-                  sizes='(max-width: 768px) 0px, (max-width: 1200px) 66vw, 50vw'
-                  className='hidden h-full w-full md:block'
-                />
-                <Image
-                  src={banner.image.url2}
-                  width={420}
-                  height={360}
-                  alt={banner.title}
-                  priority={index === 0}
-                  className='object-cover md:hidden'
-                  sizes='100vw'
-                />
-              </div>
-            </Link>
-          ))}
+          {bannerData.map((banner, index) => {
+            const imageUrl = isMobile ? banner.image.url2 : banner.image.url1;
+
+            return (
+              <Link href={banner.url} key={banner.id}>
+                <div className='relative h-[450px] w-full md:h-[400px]'>
+                  <Image
+                    src={imageUrl}
+                    width={isMobile ? 420 : 720}
+                    height={360}
+                    alt={banner.title}
+                    priority={index === 0}
+                    className='h-full w-full'
+                  />
+                </div>
+              </Link>
+            );
+          })}
         </Carousel>
       </div>
       {/* Form Section */}
-      <div className='flex items-center justify-center bg-[#005e7e] shadow-lg md:w-1/3'>
+      <div className='col-span-1 flex items-center justify-center bg-[#005e7e] shadow-lg'>
         <FormComponent title={'Book your Appointment'} />
       </div>
     </div>
