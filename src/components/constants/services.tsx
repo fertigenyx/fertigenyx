@@ -2,8 +2,9 @@ export const TreatmentsData = [
   {
     id: '1',
     name: 'IVF',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847605/IVF_jh7rcs.webp',
-    icon1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856989/IVF_1_dtgfnl.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847605/IVF_jh7rcs.webp',
+    icon1:
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/IVF_1_dtgfnl.webp',
     link: '/treatments/ivf-treatment-in-bangalore',
     content: [
       `Unlock the doors of parenthood with FertiGenyx's to fulfil your dreams of starting a family.`,
@@ -14,8 +15,9 @@ export const TreatmentsData = [
   {
     id: '2',
     name: 'IUI',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847605/IUI_qipcba.webp',
-    icon1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856989/IUI_1_l5nqxi.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847605/IUI_qipcba.webp',
+    icon1:
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/IUI_1_l5nqxi.webp',
     link: '/treatments/iui-treatment-in-bangalore',
     content: [
       `Experience the joy of parenthood with FertiGenyx's treatment designed to increase your chances of pregnancy in a natural way.`,
@@ -26,8 +28,9 @@ export const TreatmentsData = [
   {
     id: '3',
     name: 'ICSI',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847606/ICSI_buxnjt.webp',
-    icon1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856994/ICSI_1_ghpwcc.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847606/ICSI_buxnjt.webp',
+    icon1:
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856994/ICSI_1_ghpwcc.webp',
     link: '/treatments/icsi-treatment-in-bangalore',
     content: [
       'ICSI, or intracytoplasmic sperm injection, is a powerful assisted reproductive technology that has helped many couples overcome male infertility. During ICSI treatment, a single sperm is injected directly into the egg, which increases the chance of fertilization.',
@@ -37,9 +40,9 @@ export const TreatmentsData = [
   {
     id: '4',
     name: 'Infertility',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847605/Infertility_1_ceien8.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847605/Infertility_1_ceien8.webp',
     icon1:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856993/Infertility_2_ytggxm.webp',
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856993/Infertility_2_ytggxm.webp',
     link: '/treatments/infertility-treatment-in-bangalore',
     content: [
       'FertiGenyx - Your Path to Parenthood Begins Here. Discover Advanced infertility solutions Today!',
@@ -51,9 +54,9 @@ export const TreatmentsData = [
   {
     id: '5',
     name: 'Hysteroscopy',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847606/Hysteroscopy_odmrbc.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847606/Hysteroscopy_odmrbc.webp',
     icon1:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856992/Hysteroscopy_1_tqbrjg.webp',
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856992/Hysteroscopy_1_tqbrjg.webp',
     link: '/treatments/hysteroscopy-treatment-in-bangalore',
     content: [
       'Hysteroscopy involves using a thin, lighted tube called a hysteroscope to examine the inside of the uterus. This procedure can be both diagnostic and operative, allowing for a clear view and immediate treatment of issues such as abnormal bleeding, fibroids, and polyps. We have experienced specialists to do this procedure.',
@@ -62,9 +65,9 @@ export const TreatmentsData = [
   {
     id: '6',
     name: 'Laparoscopy',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847604/Laparoscopy_i808qx.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847604/Laparoscopy_i808qx.webp',
     icon1:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856989/Laparoscopy_1_vfrl6c.webp',
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/Laparoscopy_1_vfrl6c.webp',
     link: '/treatments/laparoscopy-treatment-in-bangalore',
     content: [
       `also known as keyhole surgery, is a surgical technique that uses small incisions and specialized tools to access the inside of the body. FertiGenyx is the best medium to get in touch for Laparoscopic Surgery in Bangaluru.','A laparoscopy is a surgery that checks for problem's in a female reproductive system or the abdomen. A doctor recommends laparoscopy to diagnose infertility or to treat some fertility problems. In this surgery, a thin tube called a laparoscope is slid into the affected area through a small incision. The laparoscope has a camera attached to it. The camera sends images to a video monitor.`,
@@ -73,9 +76,9 @@ export const TreatmentsData = [
   {
     id: '7',
     name: 'PESA & TESA',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847605/PESA_TESA_dc3a1z.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847605/PESA_TESA_dc3a1z.webp',
     icon1:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856989/PESA_TESA_1_bzvuly.webp',
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/PESA_TESA_1_bzvuly.webp',
     link: '/treatments/pesa-and-tesa',
     content: [
       'PESA is a simple procedure that involves inserting a needle into the epididymis to extract fluid that contains sperm. ',
@@ -86,8 +89,9 @@ export const TreatmentsData = [
   {
     id: '8',
     name: 'FET',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847606/FET_s97poq.webp',
-    icon1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856993/FET_1_vfdgtn.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847606/FET_s97poq.webp',
+    icon1:
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856993/FET_1_vfdgtn.webp',
     link: '/treatments/frozen-embryo-transfer',
     content: [
       `Frozen Embryo Transfer (FET) is a process in which a cryopreserved embryo created during a previous IVF cycle is thawed and transferred into a woman's uterus. This procedure allows couples to use embryos that were previously frozen, avoiding the need for another complete IVF cycle.`,
@@ -102,9 +106,9 @@ export const TreatmentsData = [
   {
     id: '9',
     name: 'Varicocele',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847604/Varicocele_g4beoy.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847604/Varicocele_g4beoy.webp',
     icon1:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856989/Varicocele_1_tclofg.webp',
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/Varicocele_1_tclofg.webp',
     link: '/treatments/varicocele',
     content: [
       'Varicocele is a common condition that affects the veins within the scrotum, often leading to pain, swelling, and infertility issues.  In Bangalore, we offer comprehensive and advanced varicocele treatment options tailored to your specific needs.',
@@ -116,9 +120,9 @@ export const TreatmentsData = [
   {
     id: '10',
     name: 'Endometrial Rejuvenation',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847606/Endometrial_Rejuvenation_xitoda.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847606/Endometrial_Rejuvenation_xitoda.webp',
     icon1:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856992/Endometrial_Rejuvenation_1_eushrf.webp',
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856992/Endometrial_Rejuvenation_1_eushrf.webp',
     link: '/treatments/endometrial-rejuvenation',
     content: [
       'Endometrial Rejuvenation is the process to improve the quality of the Endometrium for successful implantation of the embryo by improving the endometrial thickness & blood supply which helps embryos for implantation giving them proper nutrition & hormones.',
@@ -129,9 +133,9 @@ export const TreatmentsData = [
   {
     id: '11',
     name: 'Sequential Transfer',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847605/Sequential_Transfer_airme5.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847605/Sequential_Transfer_airme5.webp',
     icon1:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856988/Sequential_Transfer_1_fbgf2r.webp',
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856988/Sequential_Transfer_1_fbgf2r.webp',
     link: '/treatments/sequential-transfer',
     content: [
       'A boon to help infertile couples attain parenthood!',
@@ -142,9 +146,9 @@ export const TreatmentsData = [
   {
     id: '12',
     name: 'Egg Freezing',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847605/Egg_Freezing_qg1fn7.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847605/Egg_Freezing_qg1fn7.webp',
     icon1:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856993/Egg_Freezing_1_d6mmg2.webp',
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856993/Egg_Freezing_1_d6mmg2.webp',
     link: '/treatments/ivf-treatment-egg-freezing',
     content: [
       `Egg freezing, also known as oocyte cryopreservation, is a process where a woman's eggs are extracted, frozen, and stored for future use. This procedure provides women with the flexibility to preserve their fertility and plan for future pregnancies.`,
@@ -157,8 +161,9 @@ export const TreatmentsData = [
   {
     id: '13',
     name: 'MACS',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847605/Macs_s9ca8m.webp',
-    icon1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856989/Macs_1_xiqaqh.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847605/Macs_s9ca8m.webp',
+    icon1:
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/Macs_1_xiqaqh.webp',
     link: '/treatments/macs',
     content: [
       'Magnetic Activated Cell Sorting is a procedure that isolates the healthy sperms from the unhealthy sperms. MACS procedure allows choosing the most viable sperm for successful fertilization.',
@@ -171,9 +176,9 @@ export const TreatmentsData = [
   {
     id: '14',
     name: 'Semen Freezing',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739847604/Semen_Freezing_eqntvb.webp',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847604/Semen_Freezing_eqntvb.webp',
     icon1:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739856989/Semen_Freezing_1_gsh0hj.webp',
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/Semen_Freezing_1_gsh0hj.webp',
     link: '/treatments/semen-freezing',
     content: [
       'Semen freezing is a procedure used to preserve male fertility. Sperm freezing or Semen Cryopreservation is a way for men to conserve their sperm and collect it in a bank so that it may be utilized in the future.',

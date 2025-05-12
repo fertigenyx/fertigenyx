@@ -1,48 +1,39 @@
+'use client';
+
+const relatedSearches = [
+  { id: 1, item: 'Fertility Hospital in Bangalore' },
+  { id: 2, item: 'Fertility Doctor in Bangalore' },
+  { id: 3, item: 'Infertility Treatment in Bangalore' },
+  { id: 4, item: 'Fertility Clinic in Bangalore' },
+  { id: 5, item: 'IVF Treatment in Bangalore' },
+  { id: 6, item: 'Low Cost IVF Treatment in Bangalore' },
+];
+
 const RelatedSearches = () => {
   return (
-    <div className='mx-auto max-w-7xl'>
-      <h2 className='py-8 text-center font-heading text-4xl font-bold text-brandPurpleDark lg:py-14'>
+    <section
+      aria-labelledby='related-searches-heading'
+      className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'
+    >
+      <h2
+        id='related-searches-heading'
+        className='py-8 text-center font-heading text-2xl font-bold text-brandPurpleDark sm:text-3xl lg:py-14'
+      >
         Related Searches
       </h2>
-      <ul className='flex flex-wrap items-center justify-center gap-2 text-center'>
-        {list?.map((item) => (
+
+      <ul className='flex flex-wrap justify-center gap-3 text-center font-content'>
+        {relatedSearches.map((item) => (
           <li
-            key={item?.id}
-            className='cursor-default rounded-lg bg-brandBrown px-3 py-1.5 text-white hover:bg-brandPurpleDark'
+            key={item.id}
+            className='rounded-md bg-brandBrown px-4 py-2 text-sm text-white transition-colors duration-200 hover:bg-brandPurpleDark'
           >
-            {item?.item}
+            {item.item}
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 
 export default RelatedSearches;
-
-const list = [
-  {
-    id: 1,
-    item: 'Fertility Hospital in Bangalore',
-  },
-  {
-    id: 2,
-    item: 'Fertility Doctor in Bangalore',
-  },
-  {
-    id: 3,
-    item: 'Infertility Treatment in Bangalore',
-  },
-  {
-    id: 4,
-    item: 'Fertility Clinic in Bangalore',
-  },
-  {
-    id: 5,
-    item: 'IVF Treatment in Bangalore',
-  },
-  {
-    id: 6,
-    item: 'Low Cost IVF Treatment in Bangalore',
-  },
-];

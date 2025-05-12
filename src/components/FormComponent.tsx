@@ -35,8 +35,8 @@ const FormComponent = ({ title }) => {
       const utmValue = Array.isArray(utm_campaign) ? utm_campaign[0] : utm_campaign;
       setValue('UTM_Campaign', utmValue || 'IVF Treatment 2023');
     }
-    setValue('Page_Visited', `${window.location?.origin}${pageVisit}`);
-  }, [router.query, setValue, pageVisit]);
+    setValue('Page_Visited', `${location.origin}${path}`);
+  }, [router.query, setValue, pageVisit, path]);
 
   const onSubmit = async (data) => {
     setLoad(true);

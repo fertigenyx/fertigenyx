@@ -1,5 +1,11 @@
-import CommonCta from '@/components/CommonCta';
+'use client';
+import dynamic from 'next/dynamic';
 import { forwardRef } from 'react';
+
+const CommonCta = dynamic(() => import('@/components/CommonCta'), {
+  ssr: false,
+  loading: () => <div className='py-6 text-center text-white'>Loading...</div>,
+});
 
 const About = forwardRef<HTMLElement>((_, ref) => {
   return (
