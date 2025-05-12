@@ -15,8 +15,8 @@ const bannerData = [
     id: '1',
     title: 'Web_Banner_1',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1740047981/FertiGenyx_Web_Banner-02_iaam6l.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1746258827/FertiGenyx_-_may_Month_Web_Banner-04_iodwpr.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1740047981/FertiGenyx_Web_Banner-02_iaam6l.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1746258827/FertiGenyx_-_may_Month_Web_Banner-04_iodwpr.webp',
     },
   },
   {
@@ -24,8 +24,8 @@ const bannerData = [
     id: '2',
     title: 'Web_Banner_2',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1746258802/FertiGenyx_-_April_Web_Banner-01_r2ofty.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1746258841/FertiGenyx_-_may_Month_Web_Banner-02_ss73ud.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1746258802/FertiGenyx_-_April_Web_Banner-01_r2ofty.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1746258841/FertiGenyx_-_may_Month_Web_Banner-02_ss73ud.webp',
     },
   },
 ];
