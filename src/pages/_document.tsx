@@ -4,6 +4,16 @@ export default function Document() {
   return (
     <Html lang='en'>
       <Head>
+        <link
+          rel='preload'
+          as='image'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1740047981/FertiGenyx_Web_Banner-02_iaam6l.webp'
+        />
+        <link
+          rel='preload'
+          as='image'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1746258827/FertiGenyx_-_may_Month_Web_Banner-04_iodwpr.webp'
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
