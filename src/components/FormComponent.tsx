@@ -157,7 +157,7 @@ const FormComponent = ({ title }) => {
                   Please select your Query?
                 </option>
                 <option value="I'm having problem in conceiving">
-                  I'm having problem in conceiving
+                  I&apos;m having problem in conceiving
                 </option>
                 <option value='I had failed IVF cycles in past'>
                   I had failed IVF cycles in past
@@ -165,7 +165,9 @@ const FormComponent = ({ title }) => {
                 <option value='I want to understand treatment options'>
                   I want to understand treatment options
                 </option>
-                <option value="I'm facing infertility issues">I'm facing infertility issues</option>
+                <option value="I'm facing infertility issues">
+                  I&apos;m facing infertility issues
+                </option>
                 <option value='Other'>Other</option>
               </select>
             </label>
