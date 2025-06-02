@@ -14,7 +14,7 @@ const Faq = dynamic(() => import('@/sections/home/Faq'), {
   loading: () => <p>Loading Faq...</p>,
   ssr: false,
 });
-const IuiTreatmentIndication = dynamic(() => import('./IuiTreatmentIndication'), {
+const IuiTreatmentIndication = dynamic(() => import('../../../components/IuiTreatmentIndication'), {
   loading: () => <p>Loading Male treatement indications...</p>,
   ssr: false,
 });

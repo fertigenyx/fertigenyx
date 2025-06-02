@@ -14,10 +14,13 @@ const Faq = dynamic(() => import('@/sections/home/Faq'), {
   loading: () => <p>Loading Faq...</p>,
   ssr: false,
 });
-const MaleTreatmentIndication = dynamic(() => import('./MaleTreatmentIndication'), {
-  loading: () => <p>Loading Male treatement indications...</p>,
-  ssr: false,
-});
+const MaleTreatmentIndication = dynamic(
+  () => import('../../../components/MaleTreatmentIndication'),
+  {
+    loading: () => <p>Loading Male treatement indications...</p>,
+    ssr: false,
+  }
+);
 const FertilitySpecialists = dynamic(() => import('@/sections/home/Our-team'), {
   loading: () => <p>Loading our teams...</p>,
   ssr: false,

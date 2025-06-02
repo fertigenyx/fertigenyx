@@ -2,9 +2,9 @@
 module.exports = {
   siteUrl: 'https://www.fertigenyx.com',
   generateRobotsTxt: true,
-  sitemapSize: 7000,
-  changefreq: 'weekly',
-  priority: 0.7,
+  generateIndexSitemap: false,
+  sitemapBaseFileName: 'sitemap',
+  sitemapSize: 10000,
   exclude: ['/404', '/500'],
   robotsTxtOptions: {
     policies: [

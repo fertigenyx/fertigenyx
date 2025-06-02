@@ -18,10 +18,13 @@ const Services = dynamic(() => import('@/sections/home/Services'), {
   loading: () => <p>Loading Faq...</p>,
   ssr: false,
 });
-const FertilityClinicIndication = dynamic(() => import('./FertilityClinicIndication'), {
-  loading: () => <p>Loading Male treatement indications...</p>,
-  ssr: false,
-});
+const FertilityClinicIndication = dynamic(
+  () => import('../../../components/FertilityClinicIndication'),
+  {
+    loading: () => <p>Loading Male treatement indications...</p>,
+    ssr: false,
+  }
+);
 const FertilitySpecialists = dynamic(() => import('@/sections/home/Our-team'), {
   loading: () => <p>Loading our teams...</p>,
   ssr: false,
