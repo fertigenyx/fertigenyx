@@ -24,6 +24,7 @@ const FormComponent = ({ title }) => {
       Lead_Sub_Source: 'Fertigenyx',
       UTM_Campaign: '',
       Page_Visited: pageVisit,
+      QueryType: '',
     },
   });
 
@@ -92,7 +93,6 @@ const FormComponent = ({ title }) => {
               </p>
             )}
           </div>
-
           <div className='mx-auto max-w-sm'>
             <label htmlFor='Phone' className='flex items-center justify-start'>
               <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
@@ -116,7 +116,6 @@ const FormComponent = ({ title }) => {
               <p className='absolute ml-[1.2em] text-sm text-red-500'>{errors.Phone?.message}</p>
             )}
           </div>
-
           <div className='mx-auto max-w-sm'>
             <label htmlFor='Email' className='flex items-center justify-start'>
               <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
@@ -138,6 +137,42 @@ const FormComponent = ({ title }) => {
             </label>
             {errors.Email && (
               <p className='absolute ml-[1.2em] text-sm text-red-500'>{errors.Email?.message}</p>
+            )}
+          </div>
+          <div className='mx-auto max-w-sm'>
+            <label htmlFor='Query' className='flex items-center justify-start'>
+              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
+                Query
+              </span>
+              <select
+                id='Query'
+                {...register('QueryType', {
+                  required: 'Please select your Query',
+                })}
+                className='h-8 w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
+                defaultValue=''
+                required
+              >
+                <option value='' disabled>
+                  Please select your Query?
+                </option>
+                <option value="I'm having problem in conceiving">
+                  I'm having problem in conceiving
+                </option>
+                <option value='I had failed IVF cycles in past'>
+                  I had failed IVF cycles in past
+                </option>
+                <option value='I want to understand treatment options'>
+                  I want to understand treatment options
+                </option>
+                <option value="I'm facing infertility issues">I'm facing infertility issues</option>
+                <option value='Other'>Other</option>
+              </select>
+            </label>
+            {errors.QueryType && (
+              <p className='absolute ml-[1.2em] text-sm text-red-500'>
+                {errors.QueryType?.message}
+              </p>
             )}
           </div>
         </div>
