@@ -3,7 +3,17 @@ import '@/styles/calendar.css';
 import Head from 'next/head';
 import ThemeProvider from '@/styles/theme-provider';
 import RootLayout from '@/components/Layout';
+import { Geist, Geist_Mono } from 'next/font/google';
 
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
 function MyApp({ Component, pageProps }) {
   return (
     <RootLayout>
@@ -20,7 +30,9 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <ThemeProvider attribute='class' defaultTheme='light'>
-        <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
+        <div
+          className={`${geistSans.variable} ${geistMono.variable} min-h-screen font-[family-name:var(--font-geist-sans)] selection:bg-gg-500 selection:text-white dark:bg-gray-800`}
+        >
           <Component {...pageProps} />
         </div>
       </ThemeProvider>

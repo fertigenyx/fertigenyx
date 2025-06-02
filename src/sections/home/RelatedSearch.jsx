@@ -1,15 +1,5 @@
 'use client';
-
-const relatedSearches = [
-  { id: 1, item: 'Fertility Hospital in Bangalore' },
-  { id: 2, item: 'Fertility Doctor in Bangalore' },
-  { id: 3, item: 'Infertility Treatment in Bangalore' },
-  { id: 4, item: 'Fertility Clinic in Bangalore' },
-  { id: 5, item: 'IVF Treatment in Bangalore' },
-  { id: 6, item: 'Low Cost IVF Treatment in Bangalore' },
-];
-
-const RelatedSearches = () => {
+const RelatedSearches = ({ data }) => {
   return (
     <section
       aria-labelledby='related-searches-heading'
@@ -23,7 +13,7 @@ const RelatedSearches = () => {
       </h2>
 
       <ul className='flex flex-wrap justify-center gap-3 text-center font-content'>
-        {relatedSearches.map((item) => (
+        {data.map((item) => (
           <li
             key={item.id}
             className='rounded-md bg-brandBrown px-4 py-2 text-sm text-white transition-colors duration-200 hover:bg-brandPurpleDark'
