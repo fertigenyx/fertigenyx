@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.fertigenyx.com
+
+# Sitemaps
+Sitemap: https://www.fertigenyx.com/sitemap.xml
