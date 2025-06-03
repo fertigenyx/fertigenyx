@@ -8,14 +8,13 @@ import WhyFertigenyx from '@/sections/home/WhyFertigenyx';
 import FertilitySpecialists from '@/sections/home/Our-team';
 import Faq from '@/sections/home/Faq';
 import Cta from '@/sections/home/Cta';
-import RelatedSearches from '@/sections/home/RelatedSearch';
 import Banner from '@/sections/home/Banner';
 import IVFTreatmentFAQs from '@/db/IVFTreatmentFAQs';
-import { IVF_RelatedSearches } from '@/db/relatedSearchesDB';
 import Head from 'next/head';
 import { SEOData } from '@/db/SEOData';
 import HomePageIndication from '@/sections/home/HomePageIndication';
 import VersatileApproach from '@/sections/home/VersatileApproach';
+import CausesOfInfertility from '@/sections/home/CausesOfInfertility';
 
 export default function Home() {
   const sectionRefs = {
@@ -42,9 +41,9 @@ export default function Home() {
         <FertilitySpecialists ref={sectionRefs['fertility-specialists']} />
         <VersatileApproach ref={sectionRefs['versatile-approach']} />
         <HomePageIndication ref={sectionRefs['built-on-trust']} />
+        <CausesOfInfertility />
         <Faq data={IVFTreatmentFAQs} />
         <Cta />
-        <RelatedSearches data={IVF_RelatedSearches} />
       </main>
       <Footer />
     </div>

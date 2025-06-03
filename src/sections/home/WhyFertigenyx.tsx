@@ -22,14 +22,25 @@ const WhyFertigenyx = forwardRef<HTMLElement>((_, ref) => {
         <div className='relative z-10 text-black'>
           <div className='mb-10 flex flex-col items-center justify-center'>
             <h2 className='mb-6 text-center text-3xl font-bold text-brandPurpleDark md:text-4xl'>
-              Why <span className='text-white'>Choose</span> FertiGenyx?
+              Why Choose FertiGenyx?
             </h2>
             <div className='text-center text-xl text-brandPurpleDark underline lg:text-3xl'>
               FertiGenyx, Leading the Way in Infertility Treatment
             </div>
           </div>
-          <div className='mx-3 flex justify-between'>
-            <div className='grid grid-cols-2 gap-4 lg:w-2/3'>
+          <div className='mx-3 flex flex-col items-center gap-5'>
+            <div className='ml-4'>
+              <Image
+                src={
+                  'https://res.cloudinary.com/garbhagudiivf/image/upload/v1748942250/546bb6d2-213a-4df4-b0e8-b03d1931344e.webp'
+                }
+                alt={'why-fertigenyx-image'}
+                width={600}
+                height={1000}
+                className='h-fit rounded'
+              />
+            </div>
+            <div className='grid grid-cols-2 gap-4'>
               {whyFertigenyx &&
                 whyFertigenyx?.map((menu, index) => {
                   return (
@@ -41,17 +52,6 @@ const WhyFertigenyx = forwardRef<HTMLElement>((_, ref) => {
                     </div>
                   );
                 })}
-            </div>
-            <div className='ml-4 hidden justify-end xl:flex'>
-              <Image
-                src={
-                  'https://res.cloudinary.com/garbhagudiivf/image/upload/v1748942250/546bb6d2-213a-4df4-b0e8-b03d1931344e.webp'
-                }
-                alt={'why-fertigenyx-image'}
-                width={600}
-                height={1000}
-                className='h-fit rounded'
-              />
             </div>
           </div>
         </div>

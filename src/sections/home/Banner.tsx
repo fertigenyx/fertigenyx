@@ -39,58 +39,65 @@ const BannerComponent: React.FC = () => {
   };
   const isMobile = useIsMobile();
   return (
-    <div className='grid grid-cols-1 gap-y-5 pb-5 md:grid-cols-3 md:pb-8'>
-      {/* Banner Section */}
-      <div className='col-span-2 h-[450px] w-full md:h-[400px]'>
-        <Carousel
-          autoplay
-          autoplayInterval={5000}
-          className='border-0 shadow-md'
-          defaultControlsConfig={defaultControlsConfig}
-          wrapAround
-          dragging
-          enableKeyboardControls
-          pauseOnHover
-          renderCenterLeftControls={({ previousSlide }) => (
-            <button
-              onClick={previousSlide}
-              className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition hover:bg-opacity-100 md:flex'
-            >
-              <HiChevronLeft className='mr-1' />
-            </button>
-          )}
-          renderCenterRightControls={({ nextSlide }) => (
-            <button
-              onClick={nextSlide}
-              className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition hover:bg-opacity-100 md:flex'
-            >
-              <HiChevronRight className='ml-1' />
-            </button>
-          )}
-        >
-          {bannerData.map((banner, index) => {
-            const imageUrl = isMobile ? banner.image.url2 : banner.image.url1;
+    <div className='flex flex-col gap-y-6'>
+      <div className='grid grid-cols-1 gap-y-5 md:grid-cols-3'>
+        {/* Banner Section */}
+        <div className='col-span-2 h-[450px] w-full md:h-[400px]'>
+          <Carousel
+            autoplay
+            autoplayInterval={5000}
+            className='border-0 shadow-md'
+            defaultControlsConfig={defaultControlsConfig}
+            wrapAround
+            dragging
+            enableKeyboardControls
+            pauseOnHover
+            renderCenterLeftControls={({ previousSlide }) => (
+              <button
+                onClick={previousSlide}
+                className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition hover:bg-opacity-100 md:flex'
+              >
+                <HiChevronLeft className='mr-1' />
+              </button>
+            )}
+            renderCenterRightControls={({ nextSlide }) => (
+              <button
+                onClick={nextSlide}
+                className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition hover:bg-opacity-100 md:flex'
+              >
+                <HiChevronRight className='ml-1' />
+              </button>
+            )}
+          >
+            {bannerData.map((banner, index) => {
+              const imageUrl = isMobile ? banner.image.url2 : banner.image.url1;
 
-            return (
-              <Link href={banner.url} key={banner.id}>
-                <div className='relative h-[450px] w-full md:h-[400px]'>
-                  <Image
-                    src={imageUrl}
-                    width={isMobile ? 420 : 720}
-                    height={360}
-                    alt={banner.title}
-                    priority={index === 0}
-                    className='h-full w-full'
-                  />
-                </div>
-              </Link>
-            );
-          })}
-        </Carousel>
+              return (
+                <Link href={banner.url} key={banner.id}>
+                  <div className='relative h-[450px] w-full md:h-[400px]'>
+                    <Image
+                      src={imageUrl}
+                      width={isMobile ? 420 : 720}
+                      height={360}
+                      alt={banner.title}
+                      priority={index === 0}
+                      className='h-full w-full'
+                    />
+                  </div>
+                </Link>
+              );
+            })}
+          </Carousel>
+        </div>
+        {/* Form Section */}
+        <div className='col-span-1 flex items-center justify-center bg-[#005e7e] shadow-lg'>
+          <FormComponent title={'Book your Appointment'} />
+        </div>
       </div>
-      {/* Form Section */}
-      <div className='col-span-1 flex items-center justify-center bg-[#005e7e] shadow-lg'>
-        <FormComponent title={'Book your Appointment'} />
+      <div className='flex w-full justify-center'>
+        <h2 className='w-fit rounded-md bg-brandPink2 p-5 py-1.5 text-center text-base font-bold text-white md:py-2.5 lg:text-xl'>
+          Trusted by over 11,000 couples across the Globe for over 14 years
+        </h2>
       </div>
     </div>
   );
