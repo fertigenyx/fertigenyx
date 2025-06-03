@@ -94,5 +94,5 @@ const HomePageIndication = forwardRef<HTMLElement>((_, ref) => {
     </section>
   );
 });
-
+HomePageIndication.displayName = 'HomePageIndication';
 export default HomePageIndication;
