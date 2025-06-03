@@ -6,8 +6,6 @@ import About from '@/sections/home/About';
 import Services from '@/sections/home/Services';
 import WhyFertigenyx from '@/sections/home/WhyFertigenyx';
 import FertilitySpecialists from '@/sections/home/Our-team';
-import CausesOfInfertility from '@/sections/home/CausesOfInfertility';
-import IvfIndications from '@/sections/home/IvfIndications';
 import Faq from '@/sections/home/Faq';
 import Cta from '@/sections/home/Cta';
 import RelatedSearches from '@/sections/home/RelatedSearch';
@@ -16,6 +14,8 @@ import IVFTreatmentFAQs from '@/db/IVFTreatmentFAQs';
 import { IVF_RelatedSearches } from '@/db/relatedSearchesDB';
 import Head from 'next/head';
 import { SEOData } from '@/db/SEOData';
+import HomePageIndication from '@/sections/home/HomePageIndication';
+import VersatileApproach from '@/sections/home/VersatileApproach';
 
 export default function Home() {
   const sectionRefs = {
@@ -23,8 +23,8 @@ export default function Home() {
     'services-offered': useRef<HTMLElement>(null),
     'why-fertigenyx': useRef<HTMLElement>(null),
     'fertility-specialists': useRef<HTMLElement>(null),
-    'causes-of-infertility': useRef<HTMLElement>(null),
-    'ivf-and-its-indications': useRef<HTMLElement>(null),
+    'versatile-approach': useRef<HTMLElement>(null),
+    'built-on-trust': useRef<HTMLElement>(null),
   };
 
   return (
@@ -40,8 +40,8 @@ export default function Home() {
         <Services ref={sectionRefs['services-offered']} />
         <WhyFertigenyx ref={sectionRefs['why-fertigenyx']} />
         <FertilitySpecialists ref={sectionRefs['fertility-specialists']} />
-        <CausesOfInfertility ref={sectionRefs['causes-of-infertility']} />
-        <IvfIndications ref={sectionRefs['ivf-and-its-indications']} />
+        <VersatileApproach ref={sectionRefs['versatile-approach']} />
+        <HomePageIndication ref={sectionRefs['built-on-trust']} />
         <Faq data={IVFTreatmentFAQs} />
         <Cta />
         <RelatedSearches data={IVF_RelatedSearches} />

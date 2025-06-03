@@ -24,17 +24,19 @@ const About = forwardRef<HTMLElement>((_, ref) => {
             About FertiGenyx
           </h2>
           <p className='text-sm sm:text-base md:text-lg'>
-            FertiGenyx is dedicated to excellence in fertility care, serving as a leading digital
-            partner for fertility treatment providers. We are committed to assisting couples on
-            their journey to parenthood by connecting them with world-class fertility expertise and
-            advanced reproductive treatments.
+            FertiGenyx fertility care service provider, is dedicated to giving excellent treatment
+            protocols based on individual patients’ requirements. We have expert fertility
+            consultants who are available upon booking an appointment. They are committed to guiding
+            you every step of the way in your parenthood journey. Treatment is given through the
+            latest technology, ensuring the best possible results are achieved. Financial assistance
+            is also provided by way of 0% interest EMI.
           </p>
           <br />
           <p className='text-sm sm:text-base md:text-lg'>
-            Modern fertility treatments integrate scientific advancements with personalized care.
-            Innovative techniques such as IVF, IUI, and embryo freezing provide precise, tailored
-            solutions to enhance conception success while ensuring the best outcomes for both mother
-            and baby.
+            The treatments provided are integrated with scientific advancements and personalized
+            care. Innovative techniques are used in treatments like IUI, IVF, ICSI, and other
+            surgical procedures like Laparoscopy, Hysteroscopy, etc so that best outcomes are
+            achieved.
           </p>
         </div>
       </section>

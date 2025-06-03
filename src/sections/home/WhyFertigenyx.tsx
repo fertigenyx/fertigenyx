@@ -13,7 +13,7 @@ const WhyFertigenyx = forwardRef<HTMLElement>((_, ref) => {
         className='relative flex items-start justify-start overflow-hidden p-6 text-white md:p-10 lg:rounded lg:px-6 lg:pb-10'
       >
         {/* Background Image */}
-        <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739774813/ivf-treatment-in-bangalore-baby-right_vuml7b.webp')] lg:bg-cover lg:bg-center"></div>
+        <div className='absolute inset-0 lg:bg-cover lg:bg-center'></div>
 
         {/* Semi-transparent Color Overlay */}
         <div className='absolute inset-0 bg-[#E6D6CD] bg-opacity-80'></div>
@@ -42,15 +42,15 @@ const WhyFertigenyx = forwardRef<HTMLElement>((_, ref) => {
                   );
                 })}
             </div>
-            <div className='ml-4 hidden w-1/3 xl:flex'>
+            <div className='ml-4 hidden justify-end xl:flex'>
               <Image
                 src={
-                  'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739774813/ivf-treatment-in-bangalore-baby-right_vuml7b.webp'
+                  'https://res.cloudinary.com/garbhagudiivf/image/upload/v1748942250/546bb6d2-213a-4df4-b0e8-b03d1931344e.webp'
                 }
                 alt={'why-fertigenyx-image'}
                 width={600}
                 height={1000}
-                className='rounded'
+                className='h-fit rounded'
               />
             </div>
           </div>
