@@ -8,8 +8,8 @@ const menu = [
   { id: 2, option: 'Services', slug: 'services-offered' },
   { id: 3, option: 'Why FertiGenyx?', slug: 'why-fertigenyx' },
   { id: 4, option: 'Fertility Specialists', slug: 'fertility-specialists' },
-  { id: 5, option: 'Causes of Infertility', slug: 'causes-of-infertility' },
-  { id: 6, option: 'IVF and Its Indications', slug: 'ivf-and-its-indications' },
+  { id: 5, option: 'Versatile Approach', slug: 'versatile-approach' },
+  { id: 6, option: 'Built-on Trust', slug: 'built-on-trust' },
 ];
 
 interface NavProps {

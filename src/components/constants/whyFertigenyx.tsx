@@ -1,60 +1,62 @@
 export const whyFertigenyx = [
   {
     id: 1,
-    title: 'Authoritative & Trustworthy',
-    description: 'We are rooted in cutting-edge scientific advancements.',
+    title: 'You can trust our scientific Expertise',
+    description:
+      'Our foundation is strong, and we provide treatments with utmost care using the latest technology.  Our panel of expert fertility specialists has experience of more than 15 years in treating various reproductive-related issues.',
   },
   {
     id: 2,
-    title: 'Supportive & Empathetic',
+    title: 'Doctors are compassionate and Empathetic',
     description:
-      'Our expert doctors provide compassionate care, guiding you through the emotional journey of fertility with dedication and responsibility.',
+      'Our expert fertility doctors are not only highly skilled but also empathetic towards their patients. The emotional quotient is considered, and we do not make the patient feel stressed during the treatment.  Support is provided at every stage through proper counselling sessions.',
   },
   {
     id: 3,
-    title: 'Futuristic & Progressive',
+    title: 'Future of Fertility',
     description:
-      'We offer next-generation reproductive solutions designed for the future of fertility care.',
+      'We have all the facilities to handle the most complex fertility cases.  The diagnosis process and treatment are done using state-of-the-art equipment.  We aim to deliver positive results and create happy families.',
   },
   {
     id: 4,
-    title: 'More than 15 Years of Experience',
+    title: 'Experienced Fertility Specialists',
     description:
-      'Our team of fertility experts has more than 15 years of experience so that you can have the highest quality care.',
+      'With over 20 years of clinical expertise, our fertility professionals bring a wealth of knowledge and insight to every case. Our extensive experience translates into better outcomes and a higher standard of care for every couple we support.',
   },
   {
     id: 5,
-    title: 'Advanced Technology',
+    title: 'Infrastructure to match with the latest Technology',
     description:
-      'Our clinic has the most advanced facilities and technologies, which enables us to perform the most effective fertility treatments – State-of-the-art-Lab.',
+      'Our centre is equipped with the most advanced technologies and modern laboratory facilities. From high-precision equipment to sterile environments, we ensure every treatment is performed with maximum efficacy and safety.',
   },
   {
     id: 6,
-    title: 'Personalised Treatment',
+    title: 'Tailored Treatments for Every Journey',
     description:
-      'Every individual requires something different, so the treatment we develop is planned & tailored to specific needs.',
+      'Fertility treatments are unique to each patient.  Hence, treatments are given here suited to an individual after all necessary diagnoses are done.  From the first consultation to the final treatment each and every detail is customized to get the best possible results.',
   },
   {
     id: 7,
-    title: 'IVF, IUI, ICSI',
+    title: 'Fertility Services at FertiGenyx are Comprehensive',
     description:
-      'We offer a full array of services to cater to all fertility needs, from simple fertility checkups to advanced treatments like IVF and IUI.',
+      'Whether you are beginning with basic fertility evaluations or considering advanced treatments, we offer a complete range of services, including IVF, IUI, and ICSI. We believe in giving holistic care to all our patients with regular yoga sessions. Meditation practice and dietary advice.',
   },
   {
     id: 8,
-    title: 'Egg, Semen, Embryo Freezing Options',
-    description: 'We have in house ART bank where egg, semen and embryo freezing made possible.',
+    title: 'Cryopreservation Services are available at our ART Bank',
+    description:
+      'Our media partner, GarbhaGudi IVF Centre, has its own ART bank.  Patients can take the option of safe freezing of their eggs or semen at our bank. This offers flexibility and security for those who are planning for a family at a later date.',
   },
   {
     id: 9,
-    title: 'Affordable and Transparent Pricing',
+    title: 'Transparent Pricing',
     description:
-      'Unlike everyone else, there is nothing hidden in our pricing and the fees you see are the ones you will be paying.',
+      'The costs mentioned at the time of consultation of treatment is absolutely transparent with no hidden costs.  We also give the patients an option of 0% interest EMI.',
   },
   {
     id: 10,
-    title: 'Compassionate, Supportive Environment',
+    title: 'A Supportive Environment',
     description:
-      'We recognize that infertility can be emotional and we want to be there for our patients throughout this journey by providing a nurturing, supportive environment.',
+      'We know the importance of fertility treatments and the emotional aspect attached to it.  Our counsellors and doctors are truly aware of this and give an empathetic listening and treat according to the comfort of the patient. Full support is provided through the journey of their treatment.',
   },
 ];
