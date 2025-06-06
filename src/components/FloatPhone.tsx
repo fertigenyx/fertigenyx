@@ -38,7 +38,9 @@ const FloatPhone = () => {
           className='flex flex-col items-center gap-y-1 border-l p-2.5'
         >
           <HiPhone className='h-5 w-5' />
-          <div className='text-sm'>+91 9071 2340 03</div>
+          <div className='text-sm' suppressHydrationWarning>
+            <span suppressHydrationWarning>{'+91'}&nbsp;9071&nbsp;2340&nbsp;03</span>
+          </div>
         </Link>
       </div>
 
