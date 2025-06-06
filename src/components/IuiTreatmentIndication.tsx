@@ -38,7 +38,7 @@ const IuiTreatmentIndication = () => {
         What is IUI Treatment?
       </h2>
 
-      <div className='text-brandDark mx-auto mb-8 flex flex-col gap-2.5 text-justify font-content text-base leading-relaxed'>
+      <div className='mx-auto mb-8 flex flex-col gap-2.5 text-justify font-content text-base leading-relaxed'>
         <p>
           IUI (Intrauterine insemination) is a simple procedure used in fertility treatment to help
           couples achieve parenthood. Healthy sperm are directly deposited into a woman&apos;s
@@ -82,7 +82,7 @@ const IuiTreatmentIndication = () => {
             >
               <h3 className='text-lg font-semibold text-brandBrown'>{title}</h3>
               <div className='my-2 h-1 w-1/4 rounded bg-brandBrown'></div>
-              <ol className='text-brandDark list-decimal space-y-1 pl-5 text-sm'>
+              <ol className='list-decimal space-y-1 pl-5 text-sm'>
                 {contentPoints.map((point, idx) => (
                   <li key={idx}>{point}.</li>
                 ))}
@@ -103,7 +103,7 @@ const IuiTreatmentIndication = () => {
         <article className='rounded-lg bg-gray-100 p-6 shadow-md transition-shadow duration-300 hover:shadow-xl'>
           <h3 className='text-lg font-semibold text-brandBrown'>Women, if they have</h3>
           <div className='my-2 h-1 w-1/4 rounded bg-brandBrown'></div>
-          <ol className='text-brandDark list-disc space-y-1 pl-5 text-sm'>
+          <ol className='list-disc space-y-1 pl-5 text-sm'>
             <li>Ovulation problems, such as Polycystic Ovary Syndrome (PCOS).</li>
             <li>Mild endometriosis.</li>
             <li>Unexplained infertility.</li>
@@ -117,10 +117,10 @@ const IuiTreatmentIndication = () => {
             Men who may be advised to go for IUI in the following situations:
           </h3>
           <div className='my-2 h-1 w-1/4 rounded bg-brandBrown'></div>
-          <ol className='text-brandDark list-disc space-y-1 pl-5 text-sm'>
+          <ol className='list-disc space-y-1 pl-5 text-sm'>
             <li>
               Ovulation problems, such as Polycystic Ovary Syndrome (PCOS).
-              <ul className='text-brandDark list-disc space-y-1 pl-5 text-sm'>
+              <ul className='list-disc space-y-1 pl-5 text-sm'>
                 <li>Low sperm count</li>
                 <li>Poor sperm motility</li>
                 <li>Abnormal sperm shape (morphology)</li>

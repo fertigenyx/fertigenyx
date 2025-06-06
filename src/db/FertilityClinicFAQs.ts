@@ -1,31 +1,31 @@
 const FertilityClinicFAQs= [
     {
       id: 1,
-      Question: 'What are the services provided in fertility clinics?',
-      Answer:
+      question : 'What are the services provided in fertility clinics?',
+      answer:
         'They offer tests, counselling, and treatments like IUI, IVF, egg donation, and more.',
     },
     {
       id: 2,
-      Question: 'How many centres does GarbhaGudi have across Bangalore?',
-      Answer:
+      question : 'How many centres does GarbhaGudi have across Bangalore?',
+      answer:
         ' GarbhaGudi has eight centers across Bengaluru for easy accessibility.',
     },
     {
       id: 3,
-      Question: 'Can we book an appointment online?',
-      Answer:
+      question : 'Can we book an appointment online?',
+      answer:
         'Appointments can be booked online or by calling the center directly - numbers are available on our website.',
     },
     {
       id: 4,
-      Question: 'What are the costs for fertility treatment at GarbhaGudi?',
-      Answer: `GarbhaGudi offers cost-effective treatment plans and financing options to make fertility care accessible for everyone. It provides 0% interest EMP options.`,
+      question : 'What are the costs for fertility treatment at GarbhaGudi?',
+      answer: `GarbhaGudi offers cost-effective treatment plans and financing options to make fertility care accessible for everyone. It provides 0% interest EMP options.`,
     },
     {
       id: 5,
-      Question: 'What is the success rate of fertility treatments at GarbhaGudi?',
-      Answer: `GarbhaGudi is known for its high success rates because of its experienced doctors, latest technology, and personalized care.`,
+      question : 'What is the success rate of fertility treatments at GarbhaGudi?',
+      answer: `GarbhaGudi is known for its high success rates because of its experienced doctors, latest technology, and personalized care.`,
     },
   ];
   export default FertilityClinicFAQs;

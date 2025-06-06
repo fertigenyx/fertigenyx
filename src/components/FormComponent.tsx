@@ -9,7 +9,6 @@ const FormComponent = ({ title }) => {
   const router = useRouter();
   const path = usePathname();
   const pageVisit = router?.query?.pageVisit || path;
-
   const {
     register,
     handleSubmit,
@@ -156,19 +155,18 @@ const FormComponent = ({ title }) => {
                 <option value='' disabled>
                   Please select your Query?
                 </option>
-                <option value="I'm having problem in conceiving">
-                  I&apos;m having problem in conceiving
+                <option value='Struggling to get pregnant?'>Struggling to get pregnant?</option>
+                <option value='Faced failed IVF attempts?'>Faced failed IVF attempts?</option>
+                <option value='Exploring fertility treatment options?'>
+                  Exploring fertility treatment options?
                 </option>
-                <option value='I had failed IVF cycles in past'>
-                  I had failed IVF cycles in past
+                <option value='Experienced multiple miscarriages?'>
+                  Experienced multiple miscarriages?
                 </option>
-                <option value='I want to understand treatment options'>
-                  I want to understand treatment options
+                <option value='Facing other fertility challenges?'>
+                  Facing other fertility challenges?
                 </option>
-                <option value="I'm facing infertility issues">
-                  I&apos;m facing infertility issues
-                </option>
-                <option value='Other'>Other</option>
+                <option value='Looking for IUI?'>Looking for IUI?</option>
               </select>
             </label>
             {errors.QueryType && (
@@ -182,7 +180,7 @@ const FormComponent = ({ title }) => {
         <div className='mb-6 mt-6 flex items-center justify-center space-x-4'>
           <button
             type='submit'
-            className='flex items-center justify-center gap-2 rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88]'
+            className='flex items-center justify-center gap-2 rounded-md bg-gg-500 px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88]'
             disabled={load}
           >
             Get a Call Back

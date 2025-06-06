@@ -70,7 +70,7 @@ const IvfIndications = forwardRef<HTMLElement>((_, ref) => {
         Who Should Look for IVF Treatment?
       </h2>
 
-      <div className='text-brandDark mx-auto mb-8 max-w-4xl text-center font-content text-base leading-relaxed'>
+      <div className='mx-auto mb-8 max-w-4xl text-center font-content text-base leading-relaxed'>
         <p>
           The first step towards overcoming infertility is a correct diagnosis—not just treatment.
           IVF is often recommended in the following situations:
@@ -91,7 +91,7 @@ const IvfIndications = forwardRef<HTMLElement>((_, ref) => {
             >
               <h3 className='text-lg font-semibold text-brandBrown'>{title}</h3>
               <div className='my-2 h-1 w-1/4 rounded bg-brandBrown'></div>
-              <ol className='text-brandDark list-[lower-alpha] space-y-1 pl-5 text-sm'>
+              <ol className='list-[lower-alpha] space-y-1 pl-5 text-sm'>
                 {contentPoints.map((point, idx) => (
                   <li key={idx}>{point}.</li>
                 ))}

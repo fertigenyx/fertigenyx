@@ -1,15 +1,21 @@
+import { RichText } from '@graphcms/rich-text-react-renderer';
 import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-export default function ContentModal({ title, content, classname, heading }) {
+export default function ContentModal({ title, content, classname, heading, slug, isLP }) {
   const [isOpen, setIsOpen] = useState(false);
-
+  const router = useRouter();
   function closeModal() {
     setIsOpen(false);
   }
 
   function openModal() {
-    setIsOpen(true);
+    if (isLP) {
+      setIsOpen(true);
+    } else {
+      router.push(`/fertility-experts/${slug}`);
+    }
   }
 
   return (
@@ -50,9 +56,7 @@ export default function ContentModal({ title, content, classname, heading }) {
                     {heading}
                   </h1>
                   <div>
-                    {content.map((item, index) => (
-                      <div key={index}>{item}</div>
-                    ))}
+                    <RichText content={content} />
                   </div>
                   <div
                     className='mx-auto my-4 hidden w-20 cursor-pointer items-center justify-center rounded-lg bg-brandPurpleDark px-3 py-1 font-semibold text-white sm:block'

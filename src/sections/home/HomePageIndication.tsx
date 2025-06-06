@@ -64,7 +64,7 @@ const HomePageIndication = forwardRef<HTMLElement>((_, ref) => {
         FertiGenyx: Built on Trust, Delivered with Care
       </h2>
 
-      <div className='text-brandDark mb-8 text-justify font-content text-base leading-relaxed'>
+      <div className='mb-8 text-justify font-content text-base leading-relaxed'>
         <p>
           When someone walks into our hospital, they’re not just coming for treatment - they’re
           placing their trust in us when they are facing one of the most vulnerable journeys of
@@ -82,7 +82,7 @@ const HomePageIndication = forwardRef<HTMLElement>((_, ref) => {
             >
               <h3 className='text-lg font-semibold text-brandBrown'>{title}</h3>
               <div className='my-2 h-1 w-1/4 rounded bg-brandBrown'></div>
-              <p className='text-brandDark space-y-1 pl-5 text-sm'>{content}</p>
+              <p className='space-y-1 pl-5 text-sm'>{content}</p>
             </article>
           );
         })}

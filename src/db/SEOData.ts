@@ -29,4 +29,29 @@ export const SEOData ={
         description: "Consult the best fertility specialists in Bangalore. Expert care, best treatments, and personalized plans to help you start your family.",
         keywords: "Best Fertility Specialist Bangalore, Fertility Doctor Bangalore, Fertility Expert Bangalore, Fertility Centre Bangalore, Infertility Specialist Bangalore"
     },
+    Blog:{
+        title: "IVF Insights & Updates | Fertility Blog | FertiGenyx | Bangalore",
+        description: "Stay informed about fertility treatments, IVF success stories, and the latest advancements in reproductive health. Read our blog for expert insights and advice",
+        keywords: "Fertility Blog, IVF Insights, Reproductive Health, Fertility Treatments, Blogs, Fertility Articles"
+    },
+    FertilityExperts:{
+        title: "Meet Our Fertility Experts | IVF Specialists | FertiGenyx | Bangalore",
+        description: "Our experienced fertility specialists are dedicated to helping you achieve parenthood. Meet our team of experts and learn about their qualifications and expertise",
+        keywords: "Fertility Specialists, IVF Experts, Reproductive Endocrinologists, Fertility Doctors"
+    },
+    ContactUs:{
+        title: "Contact Fertility Experts for Expert care | Get in Touch with Us",
+        description: "Have questions about fertility treatments or want to schedule a consultation? Contact us today to get in touch with our team of experts.",
+        keywords: "Contact IVF Centre, Fertility Clinic Contact, Reproductive Health Services, Get in Touch"
+    },
+    Treatment:{
+        title: "IVF & Fertility Treatments | Expert Care | Advanced Fertility Treatment",
+        description: "Discover a range of fertility treatments at [Centre Name], including IVF, IUI, ICSI, and more. Get expert care and personalized support for your journey to parenthood",
+        keywords: "Fertility Treatments, IVF, IUI, ICSI, Reproductive Health, Fertility Care, Infertility treatment"
+    },
+    Home:{
+        title: "Expert IVF Treatment in India | Best Fertility Care at FertiGenyx",
+        description: "Get personalized IVF treatment in India with high success rates. Our expert fertility specialists provide comprehensive care, including IUI, ICSI, egg freezing, and more. Book an appointment today",
+        keywords: "IVF Treatment, Fertility Care, Infertility Solutions, IUI, ICSI, Egg Freezing, Fertility Specialists, Reproductive Health, Fertility Clinics, Best IVF Centre"
+    },
 }

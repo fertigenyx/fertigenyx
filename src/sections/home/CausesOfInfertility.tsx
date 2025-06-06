@@ -18,7 +18,7 @@ const CausesOfInfertility = forwardRef<HTMLElement>((_, ref) => {
         Causes of Infertility – Understanding Key Factors
       </h2>
 
-      <div className='text-brandDark space-y-6 font-content text-base leading-relaxed lg:text-lg'>
+      <div className='space-y-6 font-content text-base leading-relaxed lg:text-lg'>
         <p>
           Infertility arises from various factors affecting both men and women, including hormonal
           imbalances, ovulation disorders, uterine or fallopian tube abnormalities, sperm issues,
@@ -45,7 +45,7 @@ const CausesOfInfertility = forwardRef<HTMLElement>((_, ref) => {
         </p>
       </div>
 
-      <ul className='text-brandDark mt-6 list-inside list-disc space-y-4 px-4 font-content text-base lg:px-16'>
+      <ul className='mt-6 list-inside list-disc space-y-4 px-4 font-content text-base lg:px-16'>
         {serviceList.map((service) => (
           <li key={service.id}>
             <strong className='text-brandPurpleDark'>

@@ -25,7 +25,7 @@ const MaleTreatmentIndication = () => {
         What is Male Fertility?
       </h2>
 
-      <div className='text-brandDark space-y-6 font-content text-base leading-relaxed lg:text-lg'>
+      <div className='space-y-6 font-content text-base leading-relaxed lg:text-lg'>
         <p>
           Male fertility is the ability of a man to cause pregnancy in a fertile female. It depends
           on healthy sperm production and proper function of the reproductive organs. Male
@@ -39,15 +39,15 @@ const MaleTreatmentIndication = () => {
           Understanding the Male Reproductive System and Fertility Challenges
         </h3>
       </div>
-      <div className='text-brandDark mt-6 space-y-6 font-content text-base leading-relaxed lg:text-lg'>
+      <div className='mt-6 space-y-6 font-content text-base leading-relaxed lg:text-lg'>
         <h4 className='text-base font-bold md:text-lg'>
           The male reproductive system consists of the following key organs:
         </h4>
-        <ul className='text-brandDark list-inside px-2.5 text-base lg:px-5'>
+        <ul className='list-inside px-2.5 text-base lg:px-5'>
           {services.map((service) => (
             <li key={service.id}>
               <strong className='text-brandPurpleDark'>
-                {service.id}. {service.title}
+                {service?.id}. {service?.title}
               </strong>
               : {service.description}
             </li>
@@ -92,7 +92,7 @@ const MaleTreatmentIndication = () => {
             >
               <h3 className='text-lg font-semibold text-brandBrown'>{title}</h3>
               <div className='my-2 h-1 w-1/4 rounded bg-brandBrown'></div>
-              <ol className='text-brandDark list-decimal space-y-1 pl-5 text-sm'>
+              <ol className='list-decimal space-y-1 pl-5 text-sm'>
                 {contentPoints.map((point, idx) => (
                   <li key={idx}>{point}.</li>
                 ))}

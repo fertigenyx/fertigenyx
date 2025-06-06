@@ -19,7 +19,7 @@ const FertilityClinicIndication = () => {
         What is a Fertility Clinic?
       </h2>
 
-      <div className='text-brandDark space-y-6 font-content text-base leading-relaxed lg:text-lg'>
+      <div className='space-y-6 font-content text-base leading-relaxed lg:text-lg'>
         <p>
           A fertility clinic is a specialized healthcare center that helps couples who are
           struggling to conceive. These clinics offer testing, counselling, and treatments like IUI,
@@ -66,7 +66,7 @@ const FertilityClinicIndication = () => {
             >
               <h3 className='text-lg font-semibold text-brandBrown'>{title}</h3>
               <div className='my-2 h-1 w-1/4 rounded bg-brandBrown'></div>
-              <ol className='text-brandDark list-decimal space-y-1 pl-5 text-sm'>
+              <ol className='list-decimal space-y-1 pl-5 text-sm'>
                 {contentPoints.map((point, idx) => (
                   <li key={idx}>{point}.</li>
                 ))}
