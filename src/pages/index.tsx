@@ -1,19 +1,51 @@
 'use client';
-import About from '@/sections/home/About';
-import Services from '@/sections/home/Services';
-import WhyFertigenyx from '@/sections/home/WhyFertigenyx';
-import Faq from '@/sections/home/Faq';
-import Cta from '@/sections/home/Cta';
-import Banner from '@/sections/home/Banner';
-import IVFTreatmentFAQs from '@/db/IVFTreatmentFAQs';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import { SEOData } from '@/db/SEOData';
-import HomePageIndication from '@/sections/home/HomePageIndication';
-import VersatileApproach from '@/sections/home/VersatileApproach';
-import CausesOfInfertility from '@/sections/home/CausesOfInfertility';
-import FertilitySpecialists from '@/sections/home/Our-team';
-import { throttledFetch } from '@/_lib/throttle';
 import graphcms from '@/_lib/graphcms';
+import { throttledFetch } from '@/_lib/throttle';
+import { SEOData } from '@/db/SEOData';
+import IVFTreatmentFAQs from '@/db/IVFTreatmentFAQs';
+const About = dynamic(() => import('@/sections/home/About'), {
+  loading: () => <div>Loading About...</div>,
+  ssr: true,
+});
+const Services = dynamic(() => import('@/sections/home/Services'), {
+  loading: () => <div>Loading Services...</div>,
+  ssr: false,
+});
+const WhyFertigenyx = dynamic(() => import('@/sections/home/WhyFertigenyx'), {
+  loading: () => <div>Loading Why Fertigenyx...</div>,
+  ssr: false,
+});
+const Faq = dynamic(() => import('@/sections/home/Faq'), {
+  loading: () => <div>Loading FAQs...</div>,
+  ssr: false,
+});
+const Cta = dynamic(() => import('@/sections/home/Cta'), {
+  loading: () => <div>Loading Call to Action...</div>,
+  ssr: false,
+});
+
+const Banner = dynamic(() => import('@/sections/home/Banner'), {
+  loading: () => <div>Loading Banner...</div>,
+  ssr: true,
+});
+const HomePageIndication = dynamic(() => import('@/sections/home/HomePageIndication'), {
+  loading: () => <div>Loading Indications...</div>,
+  ssr: false,
+});
+const VersatileApproach = dynamic(() => import('@/sections/home/VersatileApproach'), {
+  loading: () => <div>Loading Approach...</div>,
+  ssr: false,
+});
+const CausesOfInfertility = dynamic(() => import('@/sections/home/CausesOfInfertility'), {
+  loading: () => <div>Loading Causes of Infertility...</div>,
+  ssr: false,
+});
+const FertilitySpecialists = dynamic(() => import('@/sections/home/Our-team'), {
+  loading: () => <div>Loading Fertility Specialists...</div>,
+  ssr: false,
+});
 
 export const getStaticProps = async () => {
   const fetchDoctors = async () => {

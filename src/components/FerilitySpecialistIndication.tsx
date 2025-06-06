@@ -1,4 +1,9 @@
-import CommonCta from '@/components/CommonCta';
+'use client';
+import dynamic from 'next/dynamic';
+const CommonCta = dynamic(() => import('@/components/CommonCta'), {
+  loading: () => <div>Loading CTA...</div>,
+  ssr: false,
+});
 import { useMemo } from 'react';
 
 const FerilitySpecialistIndication = () => {

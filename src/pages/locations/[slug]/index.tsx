@@ -1,9 +1,21 @@
 import graphcms from '@/_lib/graphcms';
 import { throttledFetch } from '@/_lib/throttle';
-import LocationBanner from '@/components/LocationBanner';
-import LocationPageInner from '@/components/LocationPageInner';
-import TreatmentOptions from '@/components/TreatmentOptions';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
+const LocationBanner = dynamic(() => import('@/components/LocationBanner'), {
+  loading: () => <div>Loading banner...</div>,
+  ssr: true,
+});
+
+const LocationPageInner = dynamic(() => import('@/components/LocationPageInner'), {
+  loading: () => <div>Loading content...</div>,
+  ssr: false,
+});
+
+const TreatmentOptions = dynamic(() => import('@/components/TreatmentOptions'), {
+  loading: () => <div>Loading treatments...</div>,
+  ssr: false,
+});
 
 export const getStaticProps = async ({ params }) => {
   const fetchBranch = async ({ slug }) => {
