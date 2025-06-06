@@ -1,20 +1,25 @@
 import Script from 'next/script';
 
-const SalesIQ = (props) => {
-  const hasCode = props.hasOwnProperty('widgetCode');
-
-  return hasCode ? (
-    <Script
-      strategy='lazyOnload'
-      id='zsiqchat'
-      dangerouslySetInnerHTML={{
-        __html: `
-                    var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"${props.widgetCode}", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="${props.domain}";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);
-                `,
-      }}
-    />
-  ) : (
-    <div style={{ color: 'red' }}>Need to pass widget code</div>
+const SalesIQ = () => {
+  return (
+    <>
+      <Script
+        id='zoho-salesiq-init'
+        strategy='beforeInteractive'
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.$zoho = window.$zoho || {};
+            $zoho.salesiq = $zoho.salesiq || { ready: function(){} };
+          `,
+        }}
+      />
+      <Script
+        id='zsiqscript'
+        src='https://salesiq.zohopublic.com/widget?wc=siqb961b7fbbf66f28142e579968e8d092fdd6a5bfad51b4d5a4031f9d248da3a4e'
+        defer
+        strategy='afterInteractive'
+      />
+    </>
   );
 };
 

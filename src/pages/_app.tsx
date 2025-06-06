@@ -50,11 +50,7 @@ function MyApp({ Component, pageProps }) {
         >
           {!isLP && <Nav />}
           <Component {...pageProps} />
-
-          <SalesIQ
-            widgetCode='93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
-            domain='https://salesiq.zoho.com/widget'
-          />
+          <SalesIQ />
           <FloatRequestCallBack />
           <FloatWhatsApp />
           <FloatPhone />
