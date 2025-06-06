@@ -135,7 +135,11 @@ const FertilityExpertPage = ({ doctor }) => {
         <div className='mt-7 min-h-fit w-full md:mt-14'>
           <div className='prose mb-4 text-justify text-gray-800'>
             <Suspense fallback={<p>Loading content...</p>}>
-              <RichText content={doctor?.bio?.raw?.children} />
+              {doctor?.bio?.raw ? (
+                <RichText content={doctor?.bio?.raw} />
+              ) : (
+                <p>No description available.</p>
+              )}
             </Suspense>
           </div>
         </div>

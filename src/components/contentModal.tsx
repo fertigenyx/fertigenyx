@@ -56,7 +56,7 @@ export default function ContentModal({ title, content, classname, heading, slug,
                     {heading}
                   </h1>
                   <div>
-                    <RichText content={content} />
+                    {content ? <RichText content={content} /> : <p>No description available.</p>}
                   </div>
                   <div
                     className='mx-auto my-4 hidden w-20 cursor-pointer items-center justify-center rounded-lg bg-brandPurpleDark px-3 py-1 font-semibold text-white sm:block'
