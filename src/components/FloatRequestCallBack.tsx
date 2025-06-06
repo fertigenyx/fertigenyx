@@ -21,7 +21,7 @@ const FloatRequestCallBack = () => {
   return (
     <>
       <div
-        className='fixed -left-16 top-2/3 rotate-90 cursor-pointer rounded-md bg-brandPurpleDark p-1.5 px-5 text-white shadow-md'
+        className='fixed -left-16 top-2/3 z-50 rotate-90 cursor-pointer rounded-md bg-brandPurpleDark p-1.5 px-5 text-white shadow-md'
         onClick={open}
       >
         <p className='text-base font-bold'>Request Call Back</p>

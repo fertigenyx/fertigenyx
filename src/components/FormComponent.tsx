@@ -72,7 +72,7 @@ const FormComponent = ({ title }) => {
         <div className='mx-auto flex flex-col space-y-5 px-3'>
           <div className='mx-auto max-w-sm'>
             <label htmlFor='Last_Name' className='flex items-center justify-start'>
-              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
+              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-2 py-1 text-left'>
                 Full Name
               </span>
               <input

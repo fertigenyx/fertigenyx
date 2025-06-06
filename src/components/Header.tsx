@@ -121,7 +121,7 @@ const Nav = () => {
                 Home
               </Link>
               <span className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'>
-                <Link href='/fertility-experts-bangalore'>Fertility Experts</Link>
+                <Link href='/fertility-specialist-bangalore'>Fertility Experts</Link>
               </span>
               <span className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'>
                 <TreatmentsMenu />
