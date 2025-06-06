@@ -27,16 +27,6 @@ export const getStaticProps = async ({ params }) => {
                   raw
                   text
                 }
-                educationCredentials {
-                  raw
-                  text
-                }
-                experienceExpertise {
-                  raw
-                  text
-                }
-                approachToIvfTreatment
-                keyFeaturesOfTreatment
                 metaTitle
                 metaDescription
               }
