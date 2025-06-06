@@ -32,8 +32,8 @@ const Nav = () => {
               Home
             </Link>
             <Link
-              className={`${path?.includes('/fertility-experts') ? 'bg-brandPurpleDark text-white hover:text-white' : ''} cursor-pointer rounded-full px-5 py-2.5 text-sm font-semibold text-brandPurpleDark transition-all duration-200 hover:text-brandBrown`}
-              href='/fertility-experts'
+              className={`${path?.includes('/fertility-specialist-bangalore') ? 'bg-brandPurpleDark text-white hover:text-white' : ''} cursor-pointer rounded-full px-5 py-2.5 text-sm font-semibold text-brandPurpleDark transition-all duration-200 hover:text-brandBrown`}
+              href='/fertility-specialist-bangalore'
             >
               Fertility Experts
             </Link>
@@ -49,13 +49,13 @@ const Nav = () => {
               Blogs
             </Link>
             <span
-              className={`${path?.includes('/locations') ? 'bg-brandPurpleDark text-white hover:text-white' : ''} cursor-pointer rounded-full px-5 py-2.5 text-sm font-semibold text-brandPurpleDark transition-all duration-200 hover:text-brandBrown`}
+              className={`${path?.includes('/fertility-centre-bangalore') ? 'bg-brandPurpleDark text-white hover:text-white' : ''} cursor-pointer rounded-full px-5 py-2.5 text-sm font-semibold text-brandPurpleDark transition-all duration-200 hover:text-brandBrown`}
             >
               <LocationsMenu />
             </span>
             <Link
-              className={`${path === '/contact' ? 'bg-brandPurpleDark text-white hover:text-white' : ''} cursor-pointer rounded-full px-5 py-2.5 text-sm font-semibold text-brandPurpleDark transition-all duration-200 hover:text-brandBrown`}
-              href={`/contact?pageVisit=${path}`}
+              className={`${path === '/contact-us' ? 'bg-brandPurpleDark text-white hover:text-white' : ''} cursor-pointer rounded-full px-5 py-2.5 text-sm font-semibold text-brandPurpleDark transition-all duration-200 hover:text-brandBrown`}
+              href={`/contact-us?pageVisit=${path}`}
             >
               Contact Us
             </Link>
@@ -113,7 +113,7 @@ const Nav = () => {
                   Home
                 </Link>
                 <Link
-                  href='/fertility-experts'
+                  href='/fertility-specialist-bangalore'
                   className='w-full rounded-md px-3 py-3 text-left font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'
                 >
                   Fertility Experts
@@ -128,13 +128,13 @@ const Nav = () => {
                   Blogs
                 </Link>
                 <Link
-                  href='/locations'
+                  href='/fertility-centre-bangalore'
                   className='w-full rounded-md px-3 py-3 text-left font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'
                 >
                   Locations
                 </Link>
                 <Link
-                  href='/contact'
+                  href={`/contact-us?pageVisit=${path}`}
                   className='w-full rounded-md px-3 py-3 text-left font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'
                 >
                   Contact Us

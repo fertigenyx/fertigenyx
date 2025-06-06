@@ -2,7 +2,7 @@ import { SiGooglemaps } from 'react-icons/si';
 export const LocationsDB = [
   {
     name: 'Hanumanthanagar',
-    href: '/locations/hanumanthanagar',
+    href: '/fertility-centre-bangalore/hanumanthanagar',
     icon: <SiGooglemaps />,
     short: 'HN',
     image: 'https://media.graphassets.com/pzLEWknQ9GG46x1mErBM',
@@ -21,7 +21,7 @@ export const LocationsDB = [
   },
   {
     name: 'Kalyan Nagar',
-    href: '/locations/kalyan-nagar',
+    href: '/fertility-centre-bangalore/kalyan-nagar',
     icon: <SiGooglemaps />,
     short: 'KN',
     image: 'https://media.graphassets.com/jP2NLCi0TQyEZcZYgmtK',
@@ -40,7 +40,7 @@ export const LocationsDB = [
   },
   {
     name: 'Jayanagar',
-    href: '/locations/jayanagar',
+    href: '/fertility-centre-bangalore/jayanagar',
     icon: <SiGooglemaps />,
     short: 'JN',
     image: 'https://media.graphassets.com/3gyLPQfGQcqlK1OegwGz',
@@ -59,7 +59,7 @@ export const LocationsDB = [
   },
   {
     name: 'Electronic City',
-    href: '/locations/electronic-city',
+    href: '/fertility-centre-bangalore/electronic-city',
     icon: <SiGooglemaps />,
     short: 'EC',
     image: 'https://media.graphassets.com/gQZguDjlSHWnPqkwmtCx',
@@ -78,7 +78,7 @@ export const LocationsDB = [
   },
   {
     name: 'Marathahalli',
-    href: '/locations/marathahalli',
+    href: '/fertility-centre-bangalore/marathahalli',
     icon: <SiGooglemaps />,
     short: 'MH',
     image: 'https://media.graphassets.com/GqmL79ASSZeiU6wyL4cQ',
@@ -98,7 +98,7 @@ export const LocationsDB = [
   },
   {
     name: 'New Bel Road',
-    href: '/locations/new-bel-road',
+    href: '/fertility-centre-bangalore/new-bel-road',
     icon: <SiGooglemaps />,
     short: 'NBR',
     image: 'https://media.graphassets.com/pZ8Jm4ZLTv2HWLUycBvH',
@@ -117,7 +117,7 @@ export const LocationsDB = [
   },
   {
     name: 'Nagarabhavi',
-    href: '/locations/nagarabhavi',
+    href: '/fertility-centre-bangalore/nagarabhavi',
     icon: <SiGooglemaps />,
     short: 'NBV',
     image: 'https://media.graphassets.com/UK6hOwG1Q02lMszniXIE',
@@ -133,7 +133,7 @@ export const LocationsDB = [
   },
   {
     name: 'Yelahanka',
-    href: '/locations/yelahanka',
+    href: '/fertility-centre-bangalore/yelahanka',
     icon: <SiGooglemaps />,
     short: 'YH',
     image: 'https://media.graphassets.com/9pZ6WLkfT3qBNpJGDzD4',

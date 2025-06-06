@@ -51,7 +51,7 @@ function generateSiteMap(branches, doctors, treatments, blogs) {
   // Static URLs
   pages.push({ loc: `${BASE_URL}/`, lastmod: new Date().toISOString() });
   pages.push({
-    loc: `${BASE_URL}/fertility-experts`,
+    loc: `${BASE_URL}/fertility-specialist-bangalore`,
     lastmod: new Date().toISOString(),
   });
   pages.push({
@@ -59,7 +59,7 @@ function generateSiteMap(branches, doctors, treatments, blogs) {
     lastmod: new Date().toISOString(),
   });
   pages.push({
-    loc: `${BASE_URL}/contact`,
+    loc: `${BASE_URL}/contact-us`,
     lastmod: new Date().toISOString(),
   });
   pages.push({
@@ -81,14 +81,14 @@ function generateSiteMap(branches, doctors, treatments, blogs) {
   // Add fertility-experts
   doctors.forEach(({ slug }) => {
     pages.push({
-      loc: `${BASE_URL}/fertility-experts/${slug}`,
+      loc: `${BASE_URL}/fertility-specialist-bangalore/${slug}`,
       lastmod: new Date().toISOString(),
     });
   });
   // Add branches
   branches.forEach(({ slug }) => {
     pages.push({
-      loc: `${BASE_URL}/locations/${slug}`,
+      loc: `${BASE_URL}/fertility-centre-bangalore/${slug}`,
       lastmod: new Date().toISOString(),
     });
   });
