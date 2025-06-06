@@ -8,7 +8,7 @@ const DoctorsList = ({ doctors }) => {
         <Link
           className='flex flex-col items-center justify-center rounded-xl px-2 text-center'
           key={item.id}
-          href={`/fertility-experts/${item.slug}`}
+          href={`/fertility-specialist-bangalore/${item.slug}`}
         >
           <div className='relative'>
             <div className='absolute inset-0 rounded-full bg-gradient-to-br from-brandBrown/80 to-[#204C6B]/40 bg-[length:400%]' />

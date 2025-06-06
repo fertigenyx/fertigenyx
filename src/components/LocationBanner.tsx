@@ -25,7 +25,7 @@ const LocationBanner = ({ branchTitle }: { branchTitle: string }) => {
               </div>
               <div className='text-center lg:px-3 lg:text-left'>
                 <button className='mt-4 rounded-lg bg-brandPink px-4 py-2 font-semibold text-white'>
-                  <Link href={`/contact?pageVisit=${path}`}>Contact Us</Link>
+                  <Link href={`/contact-us?pageVisit=${path}`}>Contact Us</Link>
                 </button>
               </div>
             </div>

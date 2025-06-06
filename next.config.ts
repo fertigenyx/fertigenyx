@@ -53,12 +53,12 @@ const nextConfig = withBundleAnalyzer({
     return [
       {
         source: '/doctors',
-        destination: '/fertility-experts',
+        destination: '/fertility-specialist-bangalore',
         permanent: true,
       },
       {
         source: '/doctors/:slug',
-        destination: '/fertility-experts/:slug', // Matched parameters can be used in the destination
+        destination: '/fertility-specialist-bangalore/:slug', // Matched parameters can be used in the destination
         permanent: true,
       },
       {

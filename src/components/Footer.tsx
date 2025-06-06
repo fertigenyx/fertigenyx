@@ -9,14 +9,14 @@ const navigation = {
     { name: 'Home', href: '/' },
     {
       name: 'Fertility Experts',
-      href: '/fertility-experts',
+      href: '/fertility-specialist-bangalore',
     },
     {
       name: 'Treatments',
       href: '/treatments',
     },
     { name: 'Blogs', href: '/blogs' },
-    { name: 'Contact us', href: '/contact' },
+    { name: 'Contact us', href: '/contact-us' },
   ],
   legal: [
     { name: 'Privacy', href: '/legal/privacy-policy' },

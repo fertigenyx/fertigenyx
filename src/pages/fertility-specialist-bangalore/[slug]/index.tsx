@@ -116,7 +116,7 @@ const FertilityExpertPage = ({ doctor }) => {
             {/* Call to Action */}
             <div className='my-5 flex w-full justify-between space-x-3'>
               <Link
-                href={`/contact?pageVisit=${path}`}
+                href={`/contact-us?pageVisit=${path}`}
                 className='cursor-pointer rounded-md bg-brandPurpleDark px-4 py-2 text-white hover:bg-brandPurpleDark/80'
               >
                 Book Appointment

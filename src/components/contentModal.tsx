@@ -14,7 +14,7 @@ export default function ContentModal({ title, content, classname, heading, slug,
     if (isLP) {
       setIsOpen(true);
     } else {
-      router.push(`/fertility-experts/${slug}`);
+      router.push(`/fertility-specialist-bangalore/${slug}`);
     }
   }
 
