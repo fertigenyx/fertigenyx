@@ -1,12 +1,32 @@
+'use client';
 import graphcms from '@/_lib/graphcms';
 import { throttledFetch } from '@/_lib/throttle';
-import TreatmentIndication from '@/components/TreatmentIndication';
-import About from '@/sections/home/About';
-import BannerComponent from '@/sections/home/Banner';
-import Cta from '@/sections/home/Cta';
-import Faq from '@/sections/home/Faq';
-import FertilitySpecialists from '@/sections/home/Our-team';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
+const About = dynamic(() => import('@/sections/home/About'), {
+  loading: () => <div>Loading about section...</div>,
+  ssr: true,
+});
+const BannerComponent = dynamic(() => import('@/sections/home/Banner'), {
+  loading: () => <div>Loading banner...</div>,
+  ssr: true,
+});
+const TreatmentIndication = dynamic(() => import('@/components/TreatmentIndication'), {
+  loading: () => <div>Loading treatment info...</div>,
+  ssr: false,
+});
+const Cta = dynamic(() => import('@/sections/home/Cta'), {
+  loading: () => <div>Loading call to action...</div>,
+  ssr: false,
+});
+const Faq = dynamic(() => import('@/sections/home/Faq'), {
+  loading: () => <div>Loading FAQs...</div>,
+  ssr: false,
+});
+const FertilitySpecialists = dynamic(() => import('@/sections/home/Our-team'), {
+  loading: () => <div>Loading team info...</div>,
+  ssr: false,
+});
 
 export const getStaticProps = async ({ params }) => {
   const fetchTreatment = async ({ slug }) => {

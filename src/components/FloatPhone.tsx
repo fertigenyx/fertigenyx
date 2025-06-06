@@ -1,3 +1,9 @@
+'use client';
+import dynamic from 'next/dynamic';
+const FormComponent = dynamic(() => import('./FormComponent'), {
+  loading: () => <div>Loading form...</div>,
+  ssr: false,
+});
 import { CloseButton, Dialog, DialogPanel } from '@headlessui/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -5,7 +11,6 @@ import { useState } from 'react';
 import { HiPhone } from 'react-icons/hi';
 import { IoIosCloseCircleOutline } from 'react-icons/io';
 import { MdCalendarMonth } from 'react-icons/md';
-import FormComponent from './FormComponent';
 
 const FloatPhone = () => {
   const [isOpen, setIsOpen] = useState(false);

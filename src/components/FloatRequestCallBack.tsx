@@ -1,8 +1,13 @@
+'use client';
+import dynamic from 'next/dynamic';
+const FormComponent = dynamic(() => import('./FormComponent'), {
+  loading: () => <div>Loading form...</div>,
+  ssr: false,
+});
 import { CloseButton, Dialog, DialogPanel } from '@headlessui/react';
 import Image from 'next/image';
 import { useState } from 'react';
 import { IoIosCloseCircleOutline } from 'react-icons/io';
-import FormComponent from './FormComponent';
 
 const FloatRequestCallBack = () => {
   const [isOpen, setIsOpen] = useState(false);

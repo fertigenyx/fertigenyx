@@ -4,9 +4,12 @@ import Head from 'next/head';
 import ThemeProvider from '@/styles/theme-provider';
 import RootLayout from '@/components/Layout';
 import { Geist, Geist_Mono } from 'next/font/google';
-import Nav from '@/components/Header';
-import Footer from '@/components/Footer';
+import dynamic from 'next/dynamic';
 import { usePathname } from 'next/navigation';
+import Nav from '@/components/Header';
+const Footer = dynamic(() => import('@/components/Footer'), {
+  loading: () => <div>Loading Footer...</div>,
+});
 import FloatRequestCallBack from '@/components/FloatRequestCallBack';
 import FloatPhone from '@/components/FloatPhone';
 import FloatWhatsApp from '@/components/FloatWhatsapp';
@@ -47,7 +50,7 @@ function MyApp({ Component, pageProps }) {
         >
           {!isLP && <Nav />}
           <Component {...pageProps} />
-          {!isLP && <Footer />}
+
           <SalesIQ
             widgetCode='93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
             domain='https://salesiq.zoho.com/widget'
@@ -55,6 +58,7 @@ function MyApp({ Component, pageProps }) {
           <FloatRequestCallBack />
           <FloatWhatsApp />
           <FloatPhone />
+          {!isLP && <Footer />}
         </div>
       </ThemeProvider>
     </RootLayout>
