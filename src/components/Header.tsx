@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { TreatmentsMenu } from './TreatmentsMenu';
 import { usePathname } from 'next/navigation';
 import { LocationsMenu } from './LocationsMenu';
+import { Transition } from '@headlessui/react';
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -102,47 +103,42 @@ const Nav = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
-          <div className='absolute left-0 top-16 w-full bg-white py-4 shadow-md dark:bg-gray-800 xl:hidden'>
-            <ul className='flex flex-col space-y-2 px-6'>
-              <li>
-                <Link
-                  href='/'
-                  className='w-full rounded-md px-3 py-3 text-left font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'
-                >
-                  Home
-                </Link>
-                <Link
-                  href='/fertility-specialist-bangalore'
-                  className='w-full rounded-md px-3 py-3 text-left font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'
-                >
-                  Fertility Experts
-                </Link>
-                <span className='w-full rounded-md px-3 py-3 text-left font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'>
-                  <TreatmentsMenu />
-                </span>
-                <Link
-                  href='/blogs'
-                  className='w-full rounded-md px-3 py-3 text-left font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'
-                >
-                  Blogs
-                </Link>
-                <Link
-                  href='/fertility-centre-bangalore'
-                  className='w-full rounded-md px-3 py-3 text-left font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'
-                >
-                  Locations
-                </Link>
-                <Link
-                  href={`/contact-us?pageVisit=${path}`}
-                  className='w-full rounded-md px-3 py-3 text-left font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'
-                >
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
+        <Transition
+          show={isOpen}
+          enter='transition ease-out duration-100 transform'
+          enterFrom='opacity-0 scale-95'
+          enterTo='opacity-100 scale-100'
+          leave='transition ease-in duration-75 transform'
+          leaveFrom='opacity-100 scale-100'
+          leaveTo='opacity-0 scale-95'
+        >
+          <div className='xl:hidden' id='mobile-menu'>
+            <div className='space-y-1 px-2 pb-3 pt-2 sm:px-3'>
+              <Link
+                href={'/'}
+                className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'
+              >
+                Home
+              </Link>
+              <span className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'>
+                <Link href='/fertility-experts-bangalore'>Fertility Experts</Link>
+              </span>
+              <span className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'>
+                <TreatmentsMenu />
+              </span>
+              <span className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'>
+                <Link href='/blogs'>Blogs</Link>
+              </span>
+              <span className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'>
+                <LocationsMenu />
+              </span>
+
+              <span className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'>
+                <Link href={`/contact-us?pageVisit=${path}`}>Contact us</Link>
+              </span>
+            </div>
           </div>
-        )}
+        </Transition>
       </nav>
     </div>
   );

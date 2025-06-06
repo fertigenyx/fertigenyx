@@ -78,7 +78,7 @@ export const Treatments={
       {
         id: 12,
         title: 'Semen Freezing',
-        slug: '/treatments/sperm-freezing',
+        slug: '/treatments/semen-freezing',
         url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/Semen_Freezing_1_gsh0hj.webp',
         desc: "Discover how semen freezing can help men preserve their fertility for future use. Learn about the process, benefits, and who can benefit from this technology.",
         imgURL:"https://ap-south-1.graphassets.com/cm9u8fdbt026x07po4h2fcbpc/cmam3q1pq0jz007pkdknyv0ho"

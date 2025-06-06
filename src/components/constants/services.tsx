@@ -179,7 +179,7 @@ export const TreatmentsData = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847604/Semen_Freezing_eqntvb.webp',
     icon1:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/Semen_Freezing_1_gsh0hj.webp',
-    link: '/treatments/sperm-freezing',
+    link: '/treatments/semen-freezing',
     content: [
       'Semen freezing is a procedure used to preserve male fertility. Sperm freezing or Semen Cryopreservation is a way for men to conserve their sperm and collect it in a bank so that it may be utilized in the future.',
       'Men can choose to freeze their sperm before getting any medical treatments which may damage sperm quality, like several types of cancer treatment like chemotherapy and radiation.',
