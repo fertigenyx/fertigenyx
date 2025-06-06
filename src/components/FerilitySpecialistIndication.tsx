@@ -19,7 +19,7 @@ const FerilitySpecialistIndication = () => {
         Who Are Fertility Specialists?
       </h2>
 
-      <div className='text-brandDark space-y-6 font-content text-base leading-relaxed lg:text-lg'>
+      <div className='space-y-6 font-content text-base leading-relaxed lg:text-lg'>
         <p>
           Doctors trained in diagnosing and treating infertility are Fertility Specialists.
           Different methods are used to identify the underlying cause of infertility. Scans, blood
@@ -103,7 +103,7 @@ const FerilitySpecialistIndication = () => {
             >
               <h3 className='text-lg font-semibold text-brandBrown'>{title}</h3>
               <div className='my-2 h-1 w-1/4 rounded bg-brandBrown'></div>
-              <ol className='text-brandDark list-decimal space-y-1 pl-5 text-sm'>
+              <ol className='list-decimal space-y-1 pl-5 text-sm'>
                 {contentPoints.map((point, idx) => (
                   <li key={idx}>{point}.</li>
                 ))}
@@ -112,7 +112,7 @@ const FerilitySpecialistIndication = () => {
           );
         })}
       </div>
-      <div className='text-brandDark space-y-2 font-content text-base leading-relaxed lg:text-lg'>
+      <div className='space-y-2 font-content text-base leading-relaxed lg:text-lg'>
         <h4 className='text-base font-bold text-brandBrown md:text-lg'>
           GarbhaGudi’s Team of Experts
         </h4>

@@ -2,39 +2,42 @@
 
 import { TreatmentsData } from '@/components/constants/services';
 import Image from 'next/image';
-import { forwardRef, useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react';
 import dynamic from 'next/dynamic';
+import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 const CommonCta = dynamic(() => import('@/components/CommonCta'), {
   ssr: false,
   loading: () => <div className='py-4 text-center text-white'>Loading...</div>,
 });
 
-const Services = forwardRef<HTMLElement>((_, ref) => {
+const Services = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [content, setContent] = useState<string[]>([]);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
-
+  const path = usePathname();
+  const router = useRouter();
+  const isLP = useMemo(() => {
+    return path?.includes('/lp');
+  }, [path]);
   const openModal = useCallback(() => setIsOpen(true), []);
   const closeModal = useCallback(() => setIsOpen(false), []);
 
-  const handleTreatmentClick = useCallback(
-    (treatmentContent: string[]) => {
+  const handleTreatmentClick = (treatmentContent, link) => {
+    if (isLP) {
       setContent(treatmentContent);
       openModal();
-    },
-    [openModal]
-  );
+    } else {
+      router.push(link);
+    }
+  };
 
   const treatments = useMemo(() => TreatmentsData || [], []);
 
   return (
-    <section
-      ref={ref}
-      id='services-offered'
-      className='flex flex-col items-center justify-center px-4 pb-8'
-    >
+    <section id='services-offered' className='flex flex-col items-center justify-center px-4 pb-8'>
       <h2 className='my-6 text-2xl font-bold text-brandPurpleDark md:text-3xl'>
         Advanced Fertility Services
       </h2>
@@ -42,12 +45,12 @@ const Services = forwardRef<HTMLElement>((_, ref) => {
       <div className='flex flex-wrap justify-center gap-6'>
         {treatments.map((treatment) => (
           <div
-            key={treatment.id}
-            className='group relative flex h-48 w-40 flex-col items-center justify-center overflow-hidden rounded-xl bg-white shadow-md transition-transform duration-300 hover:scale-105 md:h-48 md:w-72'
-            title={treatment.name}
-            onMouseEnter={() => setHoveredId(treatment.id)}
+            key={treatment?.id}
+            className='group relative flex h-48 w-40 cursor-pointer flex-col items-center justify-center overflow-hidden rounded-xl bg-white shadow-md transition-transform duration-300 hover:scale-105 md:h-48 md:w-72'
+            title={treatment?.name}
+            onMouseEnter={() => setHoveredId(treatment?.id)}
             onMouseLeave={() => setHoveredId(null)}
-            onClick={() => handleTreatmentClick(treatment.content)}
+            onClick={() => handleTreatmentClick(treatment?.content, treatment.link)}
           >
             <div className='absolute inset-0 origin-center scale-x-0 bg-brandPurpleDark transition-transform duration-700 group-hover:scale-x-110' />
 
@@ -119,7 +122,6 @@ const Services = forwardRef<HTMLElement>((_, ref) => {
       <CommonCta classname='mt-8' />
     </section>
   );
-});
+};
 
-Services.displayName = 'Services';
 export default Services;

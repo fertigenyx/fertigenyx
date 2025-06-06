@@ -14,7 +14,7 @@ const VersatileApproach = forwardRef<HTMLElement>((_, ref) => {
         Our Versatile Approach
       </h2>
 
-      <div className='text-brandDark space-y-6 font-content text-base leading-relaxed lg:text-lg'>
+      <div className='space-y-6 font-content text-base leading-relaxed lg:text-lg'>
         <p>
           Our approach to treatment is highly appreciated by the patients who have come to us with
           various reproductive-related issues. Ours is considered the best fertility treatment

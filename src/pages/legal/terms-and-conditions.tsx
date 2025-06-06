@@ -4,18 +4,14 @@ const Terms = () => {
   return (
     <div>
       <Head>
-        {/* Primary Tags */}
-
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Terms and Conditions |FertiGenyx</title>
         <meta name='title' content='Terms and Conditions | FertiGenyx' />
         <meta
           name='description'
           content='FertiGenyx is dedicated to excellence in fertility care, serving as a leading digital partner for fertility treatment providers. We are committed to assisting couples on their journey to parenthood by connecting them with world-class fertility expertise and advanced reproductive treatments.'
         />
-
       </Head>
-    
+
       <div className='relative overflow-hidden bg-white py-8'>
         <div className='hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full'>
           <div className='relative mx-auto h-full max-w-prose text-lg' aria-hidden='true'>
@@ -113,7 +109,9 @@ const Terms = () => {
               </span>
             </h1>
             <p className='text-gray-00 mt-8 font-content text-xl font-semibold leading-8'>
-            The following terms and conditions will be deemed to have been accepted by the User on usage of the website www.fertigenyx.com. You are requested to read them carefully before you use the content and services of this site.
+              The following terms and conditions will be deemed to have been accepted by the User on
+              usage of the website www.fertigenyx.com. You are requested to read them carefully
+              before you use the content and services of this site.
             </p>
             <p className='mt-8 font-content text-lg text-gray-800'>
               By using the Site, you agree to follow and be bound by the following terms and

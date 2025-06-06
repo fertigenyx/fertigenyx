@@ -36,8 +36,46 @@ const WhyFertigenyx = dynamic(() => import('@/sections/home/WhyFertigenyx'), {
 import { Female_Fertility_RelatedSearches } from '@/db/relatedSearchesDB';
 import { SEOData } from '@/db/SEOData';
 import FemaleFertilityFAQs from '@/db/FemaleFertilityFAQs';
+import { throttledFetch } from '@/_lib/throttle';
+import graphcms from '@/_lib/graphcms';
 
-const index = () => {
+export const getStaticProps = async () => {
+  const fetchDoctors = async () => {
+    return graphcms.request(
+      `{
+          doctors{
+              id
+              name
+              slug
+              image {
+                  url
+              }
+              imageAlt
+              qualification
+              designation
+              bio {
+                  raw
+                  text
+              }
+              
+          }
+      }`
+    );
+  };
+  const { doctors } = await throttledFetch(fetchDoctors);
+
+  if (!doctors)
+    return {
+      notFound: true,
+    };
+  return {
+    props: {
+      doctors,
+    },
+    revalidate: 180,
+  };
+};
+const index = ({ doctors }) => {
   return (
     <div>
       <Head>
@@ -50,7 +88,7 @@ const index = () => {
         <BannerComponent />
         <About />
         <WhyFertigenyx />
-        <FertilitySpecialists />
+        <FertilitySpecialists doctors={doctors} />
         <FemaleTreatmentIndication />
         <Faq data={FemaleFertilityFAQs} />
         <Cta />

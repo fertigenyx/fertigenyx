@@ -24,7 +24,7 @@ const FemaleTreatmentIndication = () => {
         What is Female Fertility?
       </h2>
 
-      <div className='text-brandDark space-y-6 font-content text-base leading-relaxed lg:text-lg'>
+      <div className='space-y-6 font-content text-base leading-relaxed lg:text-lg'>
         <p>
           A woman is fertile if she can conceive and bring a pregnancy through to term. Female
           fertility depends on several factors, like age, hormone levels, ovarian function, and
@@ -91,7 +91,7 @@ const FemaleTreatmentIndication = () => {
             >
               <h3 className='text-lg font-semibold text-brandBrown'>{title}</h3>
               <div className='my-2 h-1 w-1/4 rounded bg-brandBrown'></div>
-              <ol className='text-brandDark list-decimal space-y-1 pl-5 text-sm'>
+              <ol className='list-decimal space-y-1 pl-5 text-sm'>
                 {contentPoints.map((point, idx) => (
                   <li key={idx}>{point}.</li>
                 ))}

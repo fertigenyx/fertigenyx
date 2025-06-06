@@ -5,7 +5,7 @@ export const TreatmentsData = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847605/IVF_jh7rcs.webp',
     icon1:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/IVF_1_dtgfnl.webp',
-    link: '/treatments/ivf-treatment-in-bangalore',
+    link: '/treatments/ivf-treatment-cost-in-bangalore',
     content: [
       `Unlock the doors of parenthood with FertiGenyx's to fulfil your dreams of starting a family.`,
 
@@ -18,7 +18,7 @@ export const TreatmentsData = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847605/IUI_qipcba.webp',
     icon1:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/IUI_1_l5nqxi.webp',
-    link: '/treatments/iui-treatment-in-bangalore',
+    link: '/treatments/iui-treatment-cost-in-bangalore',
     content: [
       `Experience the joy of parenthood with FertiGenyx's treatment designed to increase your chances of pregnancy in a natural way.`,
 
@@ -31,7 +31,7 @@ export const TreatmentsData = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847606/ICSI_buxnjt.webp',
     icon1:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856994/ICSI_1_ghpwcc.webp',
-    link: '/treatments/icsi-treatment-in-bangalore',
+    link: '/treatments/icsi-treatment-cost-in-bangalore',
     content: [
       'ICSI, or intracytoplasmic sperm injection, is a powerful assisted reproductive technology that has helped many couples overcome male infertility. During ICSI treatment, a single sperm is injected directly into the egg, which increases the chance of fertilization.',
       'Our team of experienced and compassionate doctors will guide you through the ICSI process, answering any questions you may have along the way. Trust us to help you achieve your dream of parenthood with ICSI treatment in Bangalore.',
@@ -43,7 +43,7 @@ export const TreatmentsData = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847605/Infertility_1_ceien8.webp',
     icon1:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856993/Infertility_2_ytggxm.webp',
-    link: '/treatments/infertility-treatment-in-bangalore',
+    link: '/treatments/infertility-treatments',
     content: [
       'FertiGenyx - Your Path to Parenthood Begins Here. Discover Advanced infertility solutions Today!',
 
@@ -57,7 +57,7 @@ export const TreatmentsData = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847606/Hysteroscopy_odmrbc.webp',
     icon1:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856992/Hysteroscopy_1_tqbrjg.webp',
-    link: '/treatments/hysteroscopy-treatment-in-bangalore',
+    link: '/treatments/hysteroscopy-treatment-cost-in-bangalore',
     content: [
       'Hysteroscopy involves using a thin, lighted tube called a hysteroscope to examine the inside of the uterus. This procedure can be both diagnostic and operative, allowing for a clear view and immediate treatment of issues such as abnormal bleeding, fibroids, and polyps. We have experienced specialists to do this procedure.',
     ],
@@ -68,7 +68,7 @@ export const TreatmentsData = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847604/Laparoscopy_i808qx.webp',
     icon1:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/Laparoscopy_1_vfrl6c.webp',
-    link: '/treatments/laparoscopy-treatment-in-bangalore',
+    link: '/treatments/laparoscopy-treatment-cost-in-bangalore',
     content: [
       `also known as keyhole surgery, is a surgical technique that uses small incisions and specialized tools to access the inside of the body. FertiGenyx is the best medium to get in touch for Laparoscopic Surgery in Bangaluru.','A laparoscopy is a surgery that checks for problem's in a female reproductive system or the abdomen. A doctor recommends laparoscopy to diagnose infertility or to treat some fertility problems. In this surgery, a thin tube called a laparoscope is slid into the affected area through a small incision. The laparoscope has a camera attached to it. The camera sends images to a video monitor.`,
     ],
@@ -79,7 +79,7 @@ export const TreatmentsData = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847605/PESA_TESA_dc3a1z.webp',
     icon1:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/PESA_TESA_1_bzvuly.webp',
-    link: '/treatments/pesa-and-tesa',
+    link: '/treatments/tesa-pesa',
     content: [
       'PESA is a simple procedure that involves inserting a needle into the epididymis to extract fluid that contains sperm. ',
       'TESE: Similar to PESA, testicular sperm aspiration (TESA) is also one of the newest methods used in the treatment of infertility in men. ',
@@ -92,7 +92,7 @@ export const TreatmentsData = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847606/FET_s97poq.webp',
     icon1:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856993/FET_1_vfdgtn.webp',
-    link: '/treatments/frozen-embryo-transfer',
+    link: '/treatments/frozen-embryo-transfer-fet-treatment-in-bangalore',
     content: [
       `Frozen Embryo Transfer (FET) is a process in which a cryopreserved embryo created during a previous IVF cycle is thawed and transferred into a woman's uterus. This procedure allows couples to use embryos that were previously frozen, avoiding the need for another complete IVF cycle.`,
       'Benefits of FET :',
@@ -109,7 +109,7 @@ export const TreatmentsData = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847604/Varicocele_g4beoy.webp',
     icon1:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/Varicocele_1_tclofg.webp',
-    link: '/treatments/varicocele',
+    link: '/treatments/varicocele-treatment',
     content: [
       'Varicocele is a common condition that affects the veins within the scrotum, often leading to pain, swelling, and infertility issues.  In Bangalore, we offer comprehensive and advanced varicocele treatment options tailored to your specific needs.',
       `Varicocele is a condition where the veins in the scrotum become enlarged, similar to varicose veins in the legs. This condition can lead to discomfort, testicular atrophy, and potential fertility problems. It's important to diagnose and treat varicocele early to avoid complications.`,
@@ -149,7 +149,7 @@ export const TreatmentsData = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847605/Egg_Freezing_qg1fn7.webp',
     icon1:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856993/Egg_Freezing_1_d6mmg2.webp',
-    link: '/treatments/ivf-treatment-egg-freezing',
+    link: '/treatments/egg-freezing',
     content: [
       `Egg freezing, also known as oocyte cryopreservation, is a process where a woman's eggs are extracted, frozen, and stored for future use. This procedure provides women with the flexibility to preserve their fertility and plan for future pregnancies.`,
       'Why Choose Egg Freezing?',
@@ -179,7 +179,7 @@ export const TreatmentsData = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739847604/Semen_Freezing_eqntvb.webp',
     icon1:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739856989/Semen_Freezing_1_gsh0hj.webp',
-    link: '/treatments/semen-freezing',
+    link: '/treatments/sperm-freezing',
     content: [
       'Semen freezing is a procedure used to preserve male fertility. Sperm freezing or Semen Cryopreservation is a way for men to conserve their sperm and collect it in a bank so that it may be utilized in the future.',
       'Men can choose to freeze their sperm before getting any medical treatments which may damage sperm quality, like several types of cancer treatment like chemotherapy and radiation.',
