@@ -81,14 +81,20 @@ const BlogPage = ({ blog }) => {
                   {blog?.title}
                 </span>
               </h1>
-              <Image
-                className='my-8 w-full rounded-lg'
-                src={blog?.image?.url}
-                alt={blog?.title}
-                width={500}
-                height={500}
-                priority={true}
-              />
+              {blog?.image?.url ? (
+                <Image
+                  className='my-8 w-full rounded-lg'
+                  src={blog.image.url}
+                  alt={blog.imageAlt || blog.title || 'Blog image'}
+                  width={500}
+                  height={500}
+                  priority={true}
+                />
+              ) : (
+                <div className='my-8 w-full rounded-lg bg-gray-100 text-center text-gray-400'>
+                  No image available
+                </div>
+              )}
               <div className='text-gray-800 dark:text-gray-200'>
                 {blog?.description?.raw ? (
                   <RichText content={blog?.description?.raw} />
