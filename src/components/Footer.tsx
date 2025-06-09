@@ -84,8 +84,9 @@ export default function Footer() {
               <Link
                 href='tel:+91 9071 2340 03'
                 className='text-xs text-brandPurpleDark hover:font-semibold hover:underline md:text-sm'
+                suppressHydrationWarning
               >
-                +91 9071 2340 03
+                {'+91'}&nbsp;9071&nbsp;2340&nbsp;03
               </Link>
             </li>
             <li className='flex items-center gap-2.5'>
