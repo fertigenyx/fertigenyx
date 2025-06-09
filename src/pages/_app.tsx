@@ -50,7 +50,9 @@ function MyApp({ Component, pageProps }) {
         >
           {!isLP && <Nav />}
           <Component {...pageProps} />
-          <SalesIQ />
+          <div className='absolute top-0'>
+            <SalesIQ />
+          </div>
           <FloatRequestCallBack />
           <FloatWhatsApp />
           <FloatPhone />
