@@ -1,8 +1,8 @@
 export const SEOData ={
     IVFTreatment:{
-        title: "Best IUI Clinic/Centre | Fertility Treatment | Bangalore",
-        description: "Discover the best IUI Clinic in Bangalore. Our fertility specialists provide personalized IUI treatment with proven results. Book your appointment today.",
-        keywords: "Best IUI Centre Bangalore, Fertility Treatment Bangalore, IUI Clinic Bangalore, Intrauterine Insemination Bangalore, IUI Fertility Centre"
+        title: "Best IVF Clinic/Centre | Fertility Treatment | Bangalore",
+        description: "Discover the best IVF Clinic in Bangalore. Our fertility specialists provide personalized IVF treatment with proven results. Book your appointment today.",
+        keywords: "Best IVF Centre Bangalore, Fertility Treatment Bangalore, IVF Clinic Bangalore, Intrauterine Insemination Bangalore, IVF Fertility Centre"
     },
     IUITreatment:{
         title: "Best IUI Clinic/Centre | Fertility Treatment | Bangalore ",
