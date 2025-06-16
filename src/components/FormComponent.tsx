@@ -1,5 +1,4 @@
 'use client';
-
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -9,7 +8,6 @@ const FormComponent = ({ title }) => {
   const router = useRouter();
   const path = usePathname();
   const pageVisit = router?.query?.pageVisit || path;
-
   const {
     register,
     handleSubmit,
@@ -24,6 +22,7 @@ const FormComponent = ({ title }) => {
       Lead_Sub_Source: 'Fertigenyx',
       UTM_Campaign: '',
       Page_Visited: pageVisit,
+      QueryType: '',
     },
   });
 
@@ -35,8 +34,8 @@ const FormComponent = ({ title }) => {
       const utmValue = Array.isArray(utm_campaign) ? utm_campaign[0] : utm_campaign;
       setValue('UTM_Campaign', utmValue || 'IVF Treatment 2023');
     }
-    setValue('Page_Visited', `${window.location?.origin}${pageVisit}`);
-  }, [router.query, setValue, pageVisit]);
+    setValue('Page_Visited', `${location.origin}${path}`);
+  }, [router.query, setValue, pageVisit, path]);
 
   const onSubmit = async (data) => {
     setLoad(true);
@@ -73,7 +72,7 @@ const FormComponent = ({ title }) => {
         <div className='mx-auto flex flex-col space-y-5 px-3'>
           <div className='mx-auto max-w-sm'>
             <label htmlFor='Last_Name' className='flex items-center justify-start'>
-              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
+              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-2 py-1 text-left'>
                 Full Name
               </span>
               <input
@@ -92,7 +91,6 @@ const FormComponent = ({ title }) => {
               </p>
             )}
           </div>
-
           <div className='mx-auto max-w-sm'>
             <label htmlFor='Phone' className='flex items-center justify-start'>
               <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
@@ -116,7 +114,6 @@ const FormComponent = ({ title }) => {
               <p className='absolute ml-[1.2em] text-sm text-red-500'>{errors.Phone?.message}</p>
             )}
           </div>
-
           <div className='mx-auto max-w-sm'>
             <label htmlFor='Email' className='flex items-center justify-start'>
               <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
@@ -140,12 +137,49 @@ const FormComponent = ({ title }) => {
               <p className='absolute ml-[1.2em] text-sm text-red-500'>{errors.Email?.message}</p>
             )}
           </div>
+          <div className='mx-auto max-w-sm'>
+            <label htmlFor='Query' className='flex items-center justify-start'>
+              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
+                Query
+              </span>
+              <select
+                id='Query'
+                {...register('QueryType', {
+                  required: 'Please select your Query',
+                })}
+                className='h-8 w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
+                defaultValue=''
+                required
+              >
+                <option value='' disabled>
+                  Please select your Query?
+                </option>
+                <option value='Struggling to get pregnant?'>Struggling to get pregnant?</option>
+                <option value='Faced failed IVF attempts?'>Faced failed IVF attempts?</option>
+                <option value='Exploring fertility treatment options?'>
+                  Exploring fertility treatment options?
+                </option>
+                <option value='Experienced multiple miscarriages?'>
+                  Experienced multiple miscarriages?
+                </option>
+                <option value='Facing other fertility challenges?'>
+                  Facing other fertility challenges?
+                </option>
+                <option value='Looking for IUI?'>Looking for IUI?</option>
+              </select>
+            </label>
+            {errors.QueryType && (
+              <p className='absolute ml-[1.2em] text-sm text-red-500'>
+                {errors.QueryType?.message}
+              </p>
+            )}
+          </div>
         </div>
 
         <div className='mb-6 mt-6 flex items-center justify-center space-x-4'>
           <button
             type='submit'
-            className='flex items-center justify-center gap-2 rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88]'
+            className='flex items-center justify-center gap-2 rounded-md bg-gg-500 px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88]'
             disabled={load}
           >
             Get a Call Back

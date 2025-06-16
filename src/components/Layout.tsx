@@ -1,4 +1,3 @@
-import React from 'react';
 import { Lexend, Nunito, B612, Benne, Nunito_Sans, Figtree } from 'next/font/google';
 
 const lexend = Lexend({

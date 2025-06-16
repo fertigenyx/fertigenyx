@@ -257,3 +257,8 @@ body {
 .dna:nth-child(16) {
   animation-delay: -2.3s;
 }
+@media (max-width: 480px) {
+.zsiq-float{
+  bottom: 74px !important;
+}
+}

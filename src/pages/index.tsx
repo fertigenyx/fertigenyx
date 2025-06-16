@@ -1,56 +1,110 @@
-import { Geist, Geist_Mono } from 'next/font/google';
-import { useRef } from 'react';
-import Nav from '@/components/Header';
-import Footer from '@/components/Footer';
-import About from '@/sections/home/About';
-import Services from '@/sections/home/Services';
-import WhyFertigenyx from '@/sections/home/WhyFertigenyx';
-import FertilitySpecialists from '@/sections/home/Our-team';
-import CausesOfInfertility from '@/sections/home/CausesOfInfertility';
-import IvfIndications from '@/sections/home/IvfIndications';
-import Faq from '@/sections/home/Faq';
-import Cta from '@/sections/home/Cta';
-import RelatedSearches from '@/sections/home/RelatedSearch';
-import Banner from '@/sections/home/Banner';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+'use client';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import graphcms from '@/_lib/graphcms';
+import { throttledFetch } from '@/_lib/throttle';
+import { SEOData } from '@/db/SEOData';
+import IVFTreatmentFAQs from '@/db/IVFTreatmentFAQs';
+const About = dynamic(() => import('@/sections/home/About'), {
+  loading: () => <div>Loading About...</div>,
+  ssr: true,
+});
+const Services = dynamic(() => import('@/sections/home/Services'), {
+  loading: () => <div>Loading Services...</div>,
+  ssr: false,
+});
+const WhyFertigenyx = dynamic(() => import('@/sections/home/WhyFertigenyx'), {
+  loading: () => <div>Loading Why Fertigenyx...</div>,
+  ssr: false,
+});
+const Faq = dynamic(() => import('@/sections/home/Faq'), {
+  loading: () => <div>Loading FAQs...</div>,
+  ssr: false,
+});
+const Cta = dynamic(() => import('@/sections/home/Cta'), {
+  loading: () => <div>Loading Call to Action...</div>,
+  ssr: false,
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const Banner = dynamic(() => import('@/sections/home/Banner'), {
+  loading: () => <div>Loading Banner...</div>,
+  ssr: true,
+});
+const HomePageIndication = dynamic(() => import('@/sections/home/HomePageIndication'), {
+  loading: () => <div>Loading Indications...</div>,
+  ssr: false,
+});
+const VersatileApproach = dynamic(() => import('@/sections/home/VersatileApproach'), {
+  loading: () => <div>Loading Approach...</div>,
+  ssr: false,
+});
+const CausesOfInfertility = dynamic(() => import('@/sections/home/CausesOfInfertility'), {
+  loading: () => <div>Loading Causes of Infertility...</div>,
+  ssr: false,
+});
+const FertilitySpecialists = dynamic(() => import('@/sections/home/Our-team'), {
+  loading: () => <div>Loading Fertility Specialists...</div>,
+  ssr: false,
 });
 
-export default function Home() {
-  const sectionRefs = {
-    'about-fertigenyx': useRef<HTMLElement>(null),
-    'services-offered': useRef<HTMLElement>(null),
-    'why-fertigenyx': useRef<HTMLElement>(null),
-    'fertility-specialists': useRef<HTMLElement>(null),
-    'causes-of-infertility': useRef<HTMLElement>(null),
-    'ivf-and-its-indications': useRef<HTMLElement>(null),
+export const getStaticProps = async () => {
+  const fetchDoctors = async () => {
+    return graphcms.request(
+      `{
+          doctors{
+              id
+              name
+              slug
+              image {
+                  url
+              }
+              imageAlt
+              qualification
+              designation
+              bio {
+                  raw
+                  text
+              }
+              
+          }
+      }`
+    );
   };
+  const { doctors } = await throttledFetch(fetchDoctors);
 
+  if (!doctors)
+    return {
+      notFound: true,
+    };
+  return {
+    props: {
+      doctors,
+    },
+    revalidate: 180,
+  };
+};
+export default function Home({ doctors }) {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
-    >
-      <Nav sectionRefs={sectionRefs} />
+    <div>
+      <Head>
+        <title>{SEOData.Home.title}</title>
+        <meta name='title' content={SEOData.Home.title} />
+        <meta name='description' content={SEOData.Home.description} />
+        <meta name='keywords' content={SEOData.Home.keywords} />
+      </Head>
+
       <main className='grid items-center justify-items-center gap-6 bg-gray-100 lg:gap-10 lg:p-8 lg:pb-20'>
         <Banner />
-        <About ref={sectionRefs['about-fertigenyx']} />
-        <Services ref={sectionRefs['services-offered']} />
-        <WhyFertigenyx ref={sectionRefs['why-fertigenyx']} />
-        <FertilitySpecialists ref={sectionRefs['fertility-specialists']} />
-        <CausesOfInfertility ref={sectionRefs['causes-of-infertility']} />
-        <IvfIndications ref={sectionRefs['ivf-and-its-indications']} />
-        <Faq />
+        <About />
+        <Services />
+        <WhyFertigenyx />
+        <FertilitySpecialists doctors={doctors} />
+        <VersatileApproach />
+        <HomePageIndication />
+        <CausesOfInfertility />
+        <Faq data={IVFTreatmentFAQs} />
         <Cta />
-        <RelatedSearches />
       </main>
-      <Footer />
     </div>
   );
 }

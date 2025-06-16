@@ -2,36 +2,14 @@ import { useState } from 'react';
 import { HiOutlineMenuAlt3, HiX, HiPhone } from 'react-icons/hi';
 import Link from 'next/link';
 import Image from 'next/image';
+import { TreatmentsMenu } from './TreatmentsMenu';
+import { usePathname } from 'next/navigation';
+import { LocationsMenu } from './LocationsMenu';
+import { Transition } from '@headlessui/react';
 
-const menu = [
-  { id: 1, option: 'About', slug: 'about-fertigenyx' },
-  { id: 2, option: 'Services', slug: 'services-offered' },
-  { id: 3, option: 'Why FertiGenyx?', slug: 'why-fertigenyx' },
-  { id: 4, option: 'Fertility Specialists', slug: 'fertility-specialists' },
-  { id: 5, option: 'Causes of Infertility', slug: 'causes-of-infertility' },
-  { id: 6, option: 'IVF and Its Indications', slug: 'ivf-and-its-indications' },
-];
-
-interface NavProps {
-  sectionRefs: { [key: string]: React.RefObject<HTMLElement> };
-}
-
-const Nav: React.FC<NavProps> = ({ sectionRefs }) => {
+const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  // Function to handle smooth scrolling with offset adjustment
-  const handleScroll = (slug: string) => {
-    const element = sectionRefs[slug]?.current;
-    if (element) {
-      const offset = window.innerWidth < 768 ? 70 : 100; // More offset on mobile
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: elementPosition - offset,
-        behavior: 'smooth',
-      });
-    }
-  };
-
+  const path = usePathname();
   return (
     <div className='sticky top-0 z-50 bg-white bg-opacity-90 shadow-xl backdrop-blur-2xl dark:border-b dark:border-gray-600 dark:bg-gray-800 dark:bg-opacity-90'>
       <nav className='px-4 py-2 shadow-lg'>
@@ -47,16 +25,41 @@ const Nav: React.FC<NavProps> = ({ sectionRefs }) => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className='hidden space-x-2 xl:flex'>
-            {menu.map((item) => (
-              <button
-                key={item.id}
-                className='cursor-pointer rounded-lg px-1 py-2 font-semibold text-brandPurpleDark transition-all duration-200 hover:text-brandBrown'
-                onClick={() => handleScroll(item.slug)}
-              >
-                {item.option}
-              </button>
-            ))}
+          <div className='hidden flex-1 justify-evenly md:flex'>
+            <Link
+              className={`${path === '/' ? 'bg-brandPurpleDark text-white hover:text-white' : ''} cursor-pointer rounded-full px-5 py-2.5 text-sm font-semibold text-brandPurpleDark transition-all duration-200 hover:text-brandBrown`}
+              href='/'
+            >
+              Home
+            </Link>
+            <Link
+              className={`${path?.includes('/fertility-specialist-bangalore') ? 'bg-brandPurpleDark text-white hover:text-white' : ''} cursor-pointer rounded-full px-5 py-2.5 text-sm font-semibold text-brandPurpleDark transition-all duration-200 hover:text-brandBrown`}
+              href='/fertility-specialist-bangalore'
+            >
+              Fertility Experts
+            </Link>
+            <span
+              className={`${path?.includes('/treatment') ? 'bg-brandPurpleDark text-white hover:text-white' : ''} cursor-pointer rounded-full px-5 py-2.5 text-sm font-semibold text-brandPurpleDark transition-all duration-200 hover:text-brandBrown`}
+            >
+              <TreatmentsMenu />
+            </span>
+            <Link
+              className={`${path?.includes('/blogs') ? 'bg-brandPurpleDark text-white hover:text-white' : ''} cursor-pointer rounded-full px-5 py-2.5 text-sm font-semibold text-brandPurpleDark transition-all duration-200 hover:text-brandBrown`}
+              href='/blogs'
+            >
+              Blogs
+            </Link>
+            <span
+              className={`${path?.includes('/fertility-centre-bangalore') ? 'bg-brandPurpleDark text-white hover:text-white' : ''} cursor-pointer rounded-full px-5 py-2.5 text-sm font-semibold text-brandPurpleDark transition-all duration-200 hover:text-brandBrown`}
+            >
+              <LocationsMenu />
+            </span>
+            <Link
+              className={`${path === '/contact-us' ? 'bg-brandPurpleDark text-white hover:text-white' : ''} cursor-pointer rounded-full px-5 py-2.5 text-sm font-semibold text-brandPurpleDark transition-all duration-200 hover:text-brandBrown`}
+              href={`/contact-us?pageVisit=${path}`}
+            >
+              Contact Us
+            </Link>
           </div>
 
           {/* Desktop Call Button */}
@@ -100,25 +103,42 @@ const Nav: React.FC<NavProps> = ({ sectionRefs }) => {
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
-          <div className='absolute left-0 top-16 w-full bg-white py-4 shadow-md dark:bg-gray-800 xl:hidden'>
-            <ul className='flex flex-col space-y-2 px-6'>
-              {menu.map((item) => (
-                <li key={item.id}>
-                  <button
-                    className='w-full rounded-md px-3 py-3 text-left font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'
-                    onClick={() => {
-                      setIsOpen(false);
-                      handleScroll(item.slug);
-                    }}
-                  >
-                    {item.option}
-                  </button>
-                </li>
-              ))}
-            </ul>
+        <Transition
+          show={isOpen}
+          enter='transition ease-out duration-100 transform'
+          enterFrom='opacity-0 scale-95'
+          enterTo='opacity-100 scale-100'
+          leave='transition ease-in duration-75 transform'
+          leaveFrom='opacity-100 scale-100'
+          leaveTo='opacity-0 scale-95'
+        >
+          <div className='xl:hidden' id='mobile-menu'>
+            <div className='space-y-1 px-2 pb-3 pt-2 sm:px-3'>
+              <Link
+                href={'/'}
+                className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'
+              >
+                Home
+              </Link>
+              <span className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'>
+                <Link href='/fertility-specialist-bangalore'>Fertility Experts</Link>
+              </span>
+              <span className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'>
+                <TreatmentsMenu />
+              </span>
+              <span className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'>
+                <Link href='/blogs'>Blogs</Link>
+              </span>
+              <span className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'>
+                <LocationsMenu />
+              </span>
+
+              <span className='block rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-brandPurpleDark hover:text-white dark:text-gray-200'>
+                <Link href={`/contact-us?pageVisit=${path}`}>Contact us</Link>
+              </span>
+            </div>
           </div>
-        )}
+        </Transition>
       </nav>
     </div>
   );

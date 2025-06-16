@@ -1,11 +1,14 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import dynamic from 'next/dynamic';
-import FormComponent from '@/components/FormComponent';
+import useIsMobile from '@/components/useIsMobile';
+const FormComponent = dynamic(() => import('@/components/FormComponent'), { ssr: true });
 
-const Carousel = dynamic(() => import('nuka-carousel'), { ssr: false });
+const Carousel = dynamic(() => import('nuka-carousel'), {
+  ssr: false,
+  loading: () => <div className='h-[450px] w-full bg-gray-200 md:h-[400px]'></div>,
+});
 
 const bannerData = [
   {
@@ -34,68 +37,67 @@ const BannerComponent: React.FC = () => {
       display: 'none',
     },
   };
-
+  const isMobile = useIsMobile();
   return (
-    <div className='flex flex-col gap-y-5 pb-5 md:flex-row md:pb-8'>
-      {/* Banner Section */}
-      <div className='h-fit w-full md:w-2/3'>
-        <Carousel
-          autoplay
-          autoplayInterval={5000}
-          className='border-0 shadow-2xl drop-shadow-2xl'
-          defaultControlsConfig={defaultControlsConfig}
-          wrapAround
-          dragging
-          enableKeyboardControls
-          pauseOnHover
-          renderCenterLeftControls={({ previousSlide }) => (
-            <button
-              onClick={previousSlide}
-              className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
-            >
-              <HiChevronLeft className='mr-1' />
-            </button>
-          )}
-          renderCenterRightControls={({ nextSlide }) => (
-            <button
-              onClick={nextSlide}
-              className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
-            >
-              <HiChevronRight className='ml-1' />
-            </button>
-          )}
-        >
-          {bannerData.length > 0 ? (
-            bannerData.map((banner) => (
-              <Link href={banner.url || '#'} target='_blank' rel='noreferrer' key={banner.id}>
-                <Image
-                  src={banner.image.url1}
-                  width={720}
-                  height={360}
-                  alt={banner.title}
-                  priority={true}
-                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                  className='hidden h-full w-full md:block'
-                />
-                <Image
-                  src={banner.image.url2}
-                  width={420}
-                  height={360}
-                  alt={banner.title}
-                  priority={true}
-                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                  className='h-[65vh] w-full object-fill md:hidden'
-                />
-              </Link>
-            ))
-          ) : (
-            <div>No banners available</div>
-          )}
-        </Carousel>
+    <div className='flex flex-col gap-y-6'>
+      <div className='grid grid-cols-1 gap-y-5 md:grid-cols-3'>
+        {/* Banner Section */}
+        <div className='col-span-2 h-[450px] w-full md:h-[400px]'>
+          <Carousel
+            autoplay
+            autoplayInterval={5000}
+            className='border-0 shadow-md'
+            defaultControlsConfig={defaultControlsConfig}
+            wrapAround
+            dragging
+            enableKeyboardControls
+            pauseOnHover
+            renderCenterLeftControls={({ previousSlide }) => (
+              <button
+                onClick={previousSlide}
+                className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition hover:bg-opacity-100 md:flex'
+              >
+                <HiChevronLeft className='mr-1' />
+              </button>
+            )}
+            renderCenterRightControls={({ nextSlide }) => (
+              <button
+                onClick={nextSlide}
+                className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition hover:bg-opacity-100 md:flex'
+              >
+                <HiChevronRight className='ml-1' />
+              </button>
+            )}
+          >
+            {bannerData.map((banner, index) => {
+              const imageUrl = isMobile ? banner.image.url2 : banner.image.url1;
+
+              return (
+                <Link href={banner.url} key={banner.id}>
+                  <div className='relative h-[450px] w-full md:h-[400px]'>
+                    <Image
+                      src={imageUrl}
+                      width={isMobile ? 420 : 720}
+                      height={360}
+                      alt={banner.title}
+                      priority={index === 0}
+                      className='h-full w-full'
+                    />
+                  </div>
+                </Link>
+              );
+            })}
+          </Carousel>
+        </div>
+        {/* Form Section */}
+        <div className='col-span-1 flex items-center justify-center bg-[#005e7e] shadow-lg'>
+          <FormComponent title={'Book your Appointment'} />
+        </div>
       </div>
-      {/* Form Section */}
-      <div className='flex items-center justify-center bg-[#005e7e] shadow-lg md:w-1/3'>
-        <FormComponent title={'Book your Appointment'} />
+      <div className='flex w-full justify-center'>
+        <h2 className='w-fit rounded-md bg-brandPink2 p-5 py-1.5 text-center text-base font-bold text-white md:py-2.5 lg:text-xl'>
+          Trusted by over 11,000 couples across the Globe for over 14 years
+        </h2>
       </div>
     </div>
   );
