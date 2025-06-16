@@ -4,6 +4,10 @@ import Head from 'next/head';
 import ThemeProvider from '@/styles/theme-provider';
 import RootLayout from '@/components/Layout';
 import { Geist, Geist_Mono } from 'next/font/google';
+import SalesIQ from '@/components/SalesIQ';
+import FloatRequestCallBack from '@/components/FloatRequestCallBack';
+import FloatWhatsApp from '@/components/FloatWhatsapp';
+import FloatPhone from '@/components/FloatPhone';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -34,6 +38,12 @@ function MyApp({ Component, pageProps }) {
           className={`${geistSans.variable} ${geistMono.variable} min-h-screen font-[family-name:var(--font-geist-sans)] selection:bg-gg-500 selection:text-white dark:bg-gray-800`}
         >
           <Component {...pageProps} />
+          <div className='absolute top-0'>
+            <SalesIQ />
+          </div>
+          <FloatRequestCallBack />
+          <FloatWhatsApp />
+          <FloatPhone />
         </div>
       </ThemeProvider>
     </RootLayout>
