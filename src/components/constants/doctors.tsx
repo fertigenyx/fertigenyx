@@ -132,21 +132,6 @@ export const doctors = [
     ],
   },
   {
-    name: 'Dr Pavithra ',
-    qualification: 'MBBS, MS-OBG , FRM',
-    designation: 'Fertility Specialist',
-    image: {
-      url: 'https://media.graphassets.com/4UJ5nbpQYCRSGSuKrWJq',
-    },
-    imageAlt: null,
-    bio: [
-      'Dr. Pavithra M is an accomplished Infertility Specialist with a passion for helping couples overcome reproductive challenges. She completed her MBBS degree from VIMS & RC and pursued her MS in Obstetrics and Gynecology from the same institution. Dr. Pavithra M dedication to advancing her knowledge and skills led her to complete a Fellowship in Reproductive Medicine from Dr. Patil Fertility and Endoscopy Clinic.',
-      'With a solid academic background, Dr. Pavithra M brings a wealth of expertise to her practice. She has two years of experience in the field of infertility, during which she has worked tirelessly to support her patient’s in their journey toward parenthood. Dr. Pavithra M is well-versed in the latest advancements in Assisted Reproductive Technology (ART), including procedures like IVF and IUI.',
-      'Known for her patience, compassion, and scientific approach, Dr. Pavithra M ensures that each patient receives personalized care tailored to their specific needs. She believes in providing ethical and evidence-based treatments while maintaining open and transparent communication with her patient’s. Dr. Pavithra M is also experienced in providing counseling to couples, offering them the emotional support they need during their fertility journey.',
-      'Dr. Pavithra M goal is to empower her patient’s and guide them through the complex process of fertility treatment. With her expertise, dedication, and commitment, she strives to help couples achieve their dream of starting a family.',
-    ],
-  },
-  {
     name: 'Dr Shweta Ashok Harnal',
     qualification: 'MBBS, MS, FRM',
     designation: 'Fertility Specialist',
@@ -174,6 +159,34 @@ export const doctors = [
       'Dr. Sahana’s diverse academic and professional background equips her with the knowledge and skills to address even the most complex fertility challenges. Her goal is to provide not just medical solutions but emotional support, ensuring a seamless and comfortable experience for her patient’s.',
       'With a combination of academic brilliance, global experience, and a compassionate touch, Dr. Sahana is dedicated to turning hope into reality for couples struggling with infertility. Whether it’s advanced IVF procedures, hormonal treatments, or fertility counseling, Dr. Sahana ensures that her patient’s receive the highest standard of care.',
       'Reach out to us to schedule a consultation with Dr. Sahana and take the first step toward making your dreams come true.',
+    ],
+  },
+  {
+    name: 'Dr. Poornima M S',
+    qualification: 'MBBS, MS (OBG), FRM, FMAS',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://media.graphassets.com/VlHN58CdScaqsblmOFlp',
+    },
+    imageAlt: 'Dr. Poornima M S',
+    bio: [
+      'Dr. Poornima M S is a skilled and compassionate fertility specialist in Bangalore, with a strong background in obstetrics, gynecology, and reproductive medicine. She holds an MBBS from JSS Medical College, an MS in OBG from Yenepoya Medical College, and a Fellowship in Reproductive Medicine from Gunasheela Surgical and Maternity Hospital. With extensive experience in managing both high-risk pregnancies and complex infertility cases, she offers holistic, evidence-based care tailored to each couple &apos; unique needs.',
+      'Dr. Poornima is proficient in procedures like ovum pickup, IUI, hysteroscopy, and embryo transfer, and has handled numerous high-risk deliveries and gynecological surgeries. Her special interests include poor ovarian response, repeated IVF failures, and postmenopausal fertility concerns. She emphasizes transparency, patient comfort, and ethical practice throughout the fertility journey.',
+    ],
+  },
+  {
+    name: 'Dr. P.V. Vasavi Devi',
+    qualification: 'MBBS, DGO, FRM, FMAS',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://media.graphassets.com/gpKSKpmgQguLtfTmx5xt',
+    },
+    imageAlt: 'Dr. P.V. Vasavi Devi',
+    bio: [
+      'Dr. Vasavi (Gold Medalist) is an experienced and award-winning Obstetrician and Gynaecologist with over 6 years of expertise in managing diverse obstetric, gynaecological, and infertility cases. She is highly proficient in infertility treatments, laparoscopic procedures, antenatal care, and gynaecological surgeries.',
+      'She holds fellowships in Gynaecologic Endoscopy and Reproductive Medicine from Milann Fertility Centre, Bengaluru. She earned her DGO from Sri Venkateshwara Medical College and MBBS from SV Medical College, Tirupati.',
+      'A Gold Medalist in Anatomy and Surgery, she was also awarded Best Outgoing Student. She is skilled in IUI, IVF, embryo transfer, male infertility management, laparoscopic surgeries (tubectomy, hysterectomy, cystectomy), diagnostic procedures, and managing deliveries (normal, induced, and cesarean). She is adept in IUCD insertion, antenatal scans, D&C, and PAP smears.',
+      'Known for her strong communication skills, surgical precision, and empathetic patient care, Dr. Vasavi offers multilingual consultations in Kannada, English, Hindi, and Telugu. Her patient-centric approach and commitment to excellence make her a trusted name in reproductive health and fertility care.',
     ],
   },
 ];
