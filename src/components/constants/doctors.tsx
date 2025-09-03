@@ -75,6 +75,20 @@ export const doctors = [
     ],
   },
   {
+    name: 'Dr. Vandana Krishnaprasad M',
+    qualification: 'MBBS, DNB (OBG), FRM & Infertility Management',
+    designation: 'Senior Fertility Specialist',
+    image: {
+      url: 'https://ap-south-1.graphassets.com/cm9u8fdbt026x07po4h2fcbpc/cmaun2flr21lu07o5df9ycte9',
+    },
+    imageAlt: 'Dr. Vandana Krishnaprasad M',
+    bio: [
+      'Driven by a deep commitment to helping couples achieve parenthood, Dr. Vandana Krishnaprasad M is a Senior Fertility Specialist with over 20 years of experience in Obstetrics, Gynaecology, and Reproductive Medicine. Her specialization in infertility management and IVF is backed by extensive training and a warm, patient-focused approach - practicing at GarbhaGudi IVF Centre (Yelahanka). Dr. Vandana combines clinical expertise with genuine compassion, actively contributing to training, research, and the development of advanced reproductive medicine services.',
+      'Dr. Vandana completed her MBBS from the prestigious JNMC Medical College, Belgaum, followed by a DNB in Obstetrics and Gynaecology from Vijaya Hospital, Chennai. She further specialized with a Fellowship in Reproductive Medicine and Infertility from Madras Medical Mission under MGR Medical University, Chennai. Her extensive training includes Clinical Embryology, Cosmetic Gynaecology, Ultrasound, and Gynae Endoscopy.',
+      'Dr. Vandana’s contributions go beyond clinical care—she is an active trainer and mentor for national and international students and has presented research at reputed conferences like ISAR. Her clinical interests include cryopreservation of oocytes and ovarian tissues, low-cost IVF solutions, in-vitro oocyte maturation, gynae endoscopy, and managing high-risk pregnancies. Known for her warm approach and evidence-based practices, Dr. Vandana combines clinical acumen with compassion, empowering couples to fulfill their dream of parenthood.',
+    ],
+  },
+  {
     name: 'Dr. Vandana Ramanathan',
     qualification: 'MBBS, DNB(OBG) FRM',
     designation: 'Fertility Specialist',
@@ -89,20 +103,7 @@ export const doctors = [
       'Committed to continuous learning, Dr. Vandana actively participates in workshops and conferences, staying updated with the latest advancements in her field. With her compassionate approach and wealth of experience, Dr. Vandana strives to guide her patient’s through their fertility journey with empathy and expertise.',
     ],
   },
-  {
-    name: 'Dr. Varsha Patil',
-    qualification: 'MBBS, DGO, DNB(OBG), FRM',
-    designation: 'Fertility Specialist',
-    image: {
-      url: 'https://media.graphassets.com/PxCiYMsmTyeNv3OrzQjc',
-    },
-    imageAlt: null,
-    bio: [
-      'Dr Varsha Patil is a highly skilled Fertility Specialist, dedicated to providing the best treatment for her patient’s. She received her MBBS degree from M.R. Medical College, Gulbarga and completed her DGO from Mysore Medical College and Research Institute, Mysore. Dr Varsha Patil also completed her DNB(OBG) through the National Board of Examinations from Bangalore Baptist hospital, Bangalore.',
-      'Her desire to specialize further in infertility led her to complete her Fellowship in Reproductive Medicine from the International Institute for training and research in reproductive health (IIRRH) - Milann, Bangalore. She further honed her skills by completing Ultrasound Training at Karthik Ultrasound Scan Centre under the tutelage of Dr Chaithra Ganesh. She also completed a 6-month ICOG certification from FOGSI in Reproductive Medicine.',
-      'Dr Varsha Patil is known for her patience, knowledge, and hard work. She believes in a scientific approach to fertility treatment in an ethical manner. She is well-versed in various ART procedures like IVF, IUI, etc. and provides counselling to her patient’s with dedication. Her goal is to ensure that every patient receives personalized care and treatment that is tailored to their individual needs. Dr Varsha Patil is a skilled professional committed to helping her patient’s achieve their dream of having a child.',
-    ],
-  },
+
   {
     name: 'Dr Nikitha Murthy',
     qualification: 'MBBS, MS-OBG, DNB, FRM',
@@ -129,6 +130,20 @@ export const doctors = [
     bio: [
       'Dr. Shubha L is a fertility specialist with 5 years of experience in obstetrics and gynecology. She completed her MBBS at JJMMC, davangere and MS from father muller medical college, Mangalore. She worked as a senior registrar at St Martha’s hospital and Owing to her great desire to specialize further, she completed her fellowship in reproductive medicine from Craft hospital, Kerala. She is a skilled professional, is completely passionate about her job, and aims to provide the best treatment for her patient’s. She is well-versed in ART procedures like IVF, IUI, etc.',
       'Dr. Shubha l is known for the comfort and confidence she elicits in her patient’s, and she believes in performing fertility treatments with a scientific approach & in an ethical manner. She also offers to counsel for infertility treatment with dedication toward her patient’s. Her skills as a fertility specialist made her a valued member of the team at Garbhagudi.',
+    ],
+  },
+  {
+    name: 'Dr. Varsha Patil',
+    qualification: 'MBBS, DGO, DNB(OBG), FRM',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://media.graphassets.com/PxCiYMsmTyeNv3OrzQjc',
+    },
+    imageAlt: null,
+    bio: [
+      'Dr Varsha Patil is a highly skilled Fertility Specialist, dedicated to providing the best treatment for her patient’s. She received her MBBS degree from M.R. Medical College, Gulbarga and completed her DGO from Mysore Medical College and Research Institute, Mysore. Dr Varsha Patil also completed her DNB(OBG) through the National Board of Examinations from Bangalore Baptist hospital, Bangalore.',
+      'Her desire to specialize further in infertility led her to complete her Fellowship in Reproductive Medicine from the International Institute for training and research in reproductive health (IIRRH) - Milann, Bangalore. She further honed her skills by completing Ultrasound Training at Karthik Ultrasound Scan Centre under the tutelage of Dr Chaithra Ganesh. She also completed a 6-month ICOG certification from FOGSI in Reproductive Medicine.',
+      'Dr Varsha Patil is known for her patience, knowledge, and hard work. She believes in a scientific approach to fertility treatment in an ethical manner. She is well-versed in various ART procedures like IVF, IUI, etc. and provides counselling to her patient’s with dedication. Her goal is to ensure that every patient receives personalized care and treatment that is tailored to their individual needs. Dr Varsha Patil is a skilled professional committed to helping her patient’s achieve their dream of having a child.',
     ],
   },
   {
@@ -187,6 +202,47 @@ export const doctors = [
       'She holds fellowships in Gynaecologic Endoscopy and Reproductive Medicine from Milann Fertility Centre, Bengaluru. She earned her DGO from Sri Venkateshwara Medical College and MBBS from SV Medical College, Tirupati.',
       'A Gold Medalist in Anatomy and Surgery, she was also awarded Best Outgoing Student. She is skilled in IUI, IVF, embryo transfer, male infertility management, laparoscopic surgeries (tubectomy, hysterectomy, cystectomy), diagnostic procedures, and managing deliveries (normal, induced, and cesarean). She is adept in IUCD insertion, antenatal scans, D&C, and PAP smears.',
       'Known for her strong communication skills, surgical precision, and empathetic patient care, Dr. Vasavi offers multilingual consultations in Kannada, English, Hindi, and Telugu. Her patient-centric approach and commitment to excellence make her a trusted name in reproductive health and fertility care.',
+    ],
+  },
+  {
+    name: 'Dr. Harshitha P',
+    qualification: 'MBBS, MS (OBG), DNB,  FRM',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmcylkm0b0kw808o7m39xzz56',
+    },
+    imageAlt: 'dr-harshitha-p',
+    bio: [
+      'Dr. Harshitha P is a compassionate fertility specialist with a robust background in reproductive medicine.  She excels in infertility management and high-risk pregnancy care. She has a strong foundation in obstetrics and gynaecology. With an academic background and hands-on experience in handling both high-risk pregnancies and complex infertility cases, she brings a holistic and skilled approach to patient care. Her expertise is further enhanced by adeptness in gynaecology and hysteroscopy, showcasing a unique blend of technical proficiency. Achievements include significantly improving patient outcomes, underscoring a commitment to excellence in the field. Her journey from handling critical obstetric emergencies to mastering advanced fertility procedures demonstrates her versatility and dedication to women’s health.',
+      'Dr. Harshitha follows a compassionate and evidence-based approach to fertility care. She believes in tailoring each treatment plan to suit the unique needs of the couple, with emphasis on open communication, emotional support, and ethical practice. Her training in reproductive medicine enables her to handle both common and complex infertility scenarios effectively.',
+    ],
+  },
+  {
+    name: 'Dr. Manasa K A',
+    qualification: 'MBBS, MS, DNB (OBG), FRM',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmdzwtmjp2a9q07po2rbcj4sb',
+    },
+    imageAlt: 'Fertility Specialist Davanagere',
+    bio: [
+      'Dr. Manasa is a dedicated and compassionate fertility specialist in Davanagere with experience in obstetrics, gynecology, and reproductive medicine. With a strong academic background and specialized training in fertility care, Dr. Manasa has helped couples overcome infertility challenges and achieve successful pregnancies. Known for a patient-centered and evidence-based approach, she offers the highest standard of IVF care using cutting-edge technology.',
+      'Fluent in Kannada, English, Hindi, and Telugu, Dr. Manasa is able to connect deeply with patients from diverse linguistic backgrounds.',
+      'Dr. Manasa follows a holistic, evidence-based approach to fertility care. By combining advanced reproductive technologies with personalized treatment protocols, she ensures a high success rate while minimizing physical and emotional stress for patients.',
+    ],
+  },
+  {
+    name: 'Dr. Radha Puchalapalli',
+    qualification: 'Obstetrics, Gynecology & Reproductive Medicine',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmequvf1c58or07pl65844wc5',
+    },
+    imageAlt: 'Fertility Specialist Hosur',
+    bio: [
+      'Dr. Radha Puchalapalli is a compassionate and experienced gynecologist and fertility specialist with a strong foundation in reproductive medicine. With over 6 years of clinical experience across rural development and private hospital settings, she has dedicated her career to supporting women and couples in their journey towards parenthood.',
+      'Her multilingual ability (Telugu, Kannada, Hindi, Tamil, and English) enables her to connect deeply with patients from diverse backgrounds.',
+      'Dr. Radha believes in a holistic and empathetic approach to fertility care. She combines evidence-based medical practices with personalized treatment plans, ensuring that every couple receives compassionate guidance and advanced reproductive solutions tailored to their unique needs.',
     ],
   },
 ];
