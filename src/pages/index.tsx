@@ -30,8 +30,10 @@ export default function Home() {
   return (
     <div>
       <Head>
+        <meta name='title' content='Best IVF Centre in Bangalore | Fertigenyx Fertility Clinic' />
         <meta name='description' content={SEOData.IVFTreatment.description} />
         <meta name='keywords' content={SEOData.IVFTreatment.keywords} />
+        <title>Best IVF Centre in Bangalore | Fertigenyx Fertility Clinic</title>
       </Head>
       <Nav sectionRefs={sectionRefs} />
       <main className='grid items-center justify-items-center gap-6 bg-gray-100 lg:gap-10 lg:p-8 lg:pb-20'>
