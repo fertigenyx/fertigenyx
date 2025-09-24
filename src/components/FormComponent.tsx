@@ -9,7 +9,7 @@ const FormComponent = ({ title }) => {
   const router = useRouter();
   const path = usePathname();
   const pageVisit = router?.query?.pageVisit || path;
-
+  const utmCampaign = router.query?.utm_campaign || '';
   const {
     register,
     handleSubmit,
@@ -22,21 +22,18 @@ const FormComponent = ({ title }) => {
       Email: '',
       Lead_Source: 'Online',
       Lead_Sub_Source: 'Fertigenyx',
-      UTM_Campaign: '',
+      UTM_Campaign: utmCampaign,
       Page_Visited: pageVisit,
     },
   });
 
   const [load, setLoad] = useState(false);
-
   useEffect(() => {
-    if (router.query) {
-      const { utm_campaign } = router.query;
-      const utmValue = Array.isArray(utm_campaign) ? utm_campaign[0] : utm_campaign;
-      setValue('UTM_Campaign', utmValue || 'IVF Treatment 2023');
-    }
-    setValue('Page_Visited', `${location.origin}${path}`);
-  }, [router.query, setValue, pageVisit, path]);
+    setValue('Page_Visited', `${window.location?.origin}${pageVisit}`);
+  }, [pageVisit, setValue]);
+  useEffect(() => {
+    setValue('UTM_Campaign', utmCampaign);
+  }, [utmCampaign, setValue]);
 
   const onSubmit = async (data) => {
     setLoad(true);
