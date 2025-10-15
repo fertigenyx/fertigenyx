@@ -103,7 +103,6 @@ export const doctors = [
       'Committed to continuous learning, Dr. Vandana actively participates in workshops and conferences, staying updated with the latest advancements in her field. With her compassionate approach and wealth of experience, Dr. Vandana strives to guide her patient’s through their fertility journey with empathy and expertise.',
     ],
   },
-
   {
     name: 'Dr Nikitha Murthy',
     qualification: 'MBBS, MS-OBG, DNB, FRM',
@@ -117,19 +116,6 @@ export const doctors = [
       'After completing her residency at Moolchand Hospital, New Delhi, she worked as a Registrar at Fortis La Femme, Richmond Road & Apollo Hospitals Sheshadripuram from 2019 to 2020. In 2019, Dr Murthy also completed a Fellowship in Reproductive Medicine from Milann Fertility Centre, Bangalore.',
       'Dr Murthy passion for helping couples struggling with infertility led her to become the Chief Consultant at Caree fertility centre from 2020 to 2021. Dr Murthy areas of expertise include assisted reproductive technologies, preconception counselling, and management of complex fertility issues.',
       'With her vast knowledge and experience, Dr Nikitha Murthy is dedicated to helping her patient’s navigate the complex world of infertility and achieve their dream of having a family.',
-    ],
-  },
-  {
-    name: 'Dr Shubha L ',
-    qualification: 'MBBS, MS-OBG, DNB, FRM ',
-    designation: 'Fertility Specialist',
-    image: {
-      url: 'https://media.graphassets.com/9uwozE6LSTe53RQfEb9t',
-    },
-    imageAlt: 'Best IVF Doctor in Bangalore - Dr Shubha L',
-    bio: [
-      'Dr. Shubha L is a fertility specialist with 5 years of experience in obstetrics and gynecology. She completed her MBBS at JJMMC, davangere and MS from father muller medical college, Mangalore. She worked as a senior registrar at St Martha’s hospital and Owing to her great desire to specialize further, she completed her fellowship in reproductive medicine from Craft hospital, Kerala. She is a skilled professional, is completely passionate about her job, and aims to provide the best treatment for her patient’s. She is well-versed in ART procedures like IVF, IUI, etc.',
-      'Dr. Shubha l is known for the comfort and confidence she elicits in her patient’s, and she believes in performing fertility treatments with a scientific approach & in an ethical manner. She also offers to counsel for infertility treatment with dedication toward her patient’s. Her skills as a fertility specialist made her a valued member of the team at Garbhagudi.',
     ],
   },
   {
