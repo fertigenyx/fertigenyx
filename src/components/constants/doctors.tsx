@@ -37,7 +37,7 @@ export const doctors = [
   },
   {
     name: 'Dr Priyanka Rani',
-    qualification: 'MBBS, DNB, FRM',
+    qualification: 'MBBS, DNB (OBG), FRM',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://media.graphassets.com/kBAaY7UgQqefqgAjAvsk',
