@@ -89,18 +89,18 @@ export const doctors = [
     ],
   },
   {
-    name: 'Dr. Vandana Ramanathan',
-    qualification: 'MBBS, DNB(OBG) FRM',
-    designation: 'Fertility Specialist',
+    name: 'Dr Deepthi Venkatesh',
+    qualification: 'MBBS, MS(OBG), FRM',
+    designation: 'Senior Fertility Specialist',
     image: {
-      url: 'https://media.graphassets.com/fA2XgIz7QGwFJ2vomjQM',
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmgowk4wc26v708pkn06x6duv',
     },
-    imageAlt: 'Dr. Vandana Ramanathan',
+    imageAlt: 'IVF Specialist in Bangalore - Dr Deepthi Venkatesh',
     bio: [
-      'Meet Dr. Vandana, a dedicated Fertility Specialist committed to helping couples realize their dream of parenthood. Dr. Vandana obtained her MBBS from MIMER Medical College, followed by an MS (D.N.B) from K.G Hospital & Post Graduate Medical Institute, and a Fellowship in Reproductive Medicine from CRAFT Hospital & Research Centre.',
-      'With extensive experience spanning various prestigious institutions Dr. Vandana has honed her skills in reproductive medicine. Her expertise includes conducting all ART procedures, follicular monitoring, transvaginal ultrasound, ultrasound-related interventions and endoscopic procedures related to infertility.',
-      'Dr. Vandana passion for advancing fertility care is evident through her academic achievements, including a thesis on maternal age impact and presentations at prestigious conferences. She has also contributed to medical literature with upcoming publications.',
-      'Committed to continuous learning, Dr. Vandana actively participates in workshops and conferences, staying updated with the latest advancements in her field. With her compassionate approach and wealth of experience, Dr. Vandana strives to guide her patient’s through their fertility journey with empathy and expertise.',
+      'Dr. Deepthi Venkatesh is a dedicated and skilled fertility specialist at GarbhaGudi IVF Centre, Nagarbhavi, Bangalore, with over a decade of experience in Obstetrics & Gynaecology and more than five years in Reproductive Medicine.',
+      'She completed her MBBS from Vydehi Institute of Medical Sciences & Research Centre, MS (OBG) from Bangalore Medical College & Research Institute, and Fellowship in Reproductive Medicine (RGUHS) from Manipal Fertility. A recipient of the ICMR research award and Best Outgoing Student at Vydehi, she is a member of BSOG, IFS, ISAR, and KISAR, and holds certifications in Ultrasonography and 3D Ultrasonography. ',
+      'Dr. Deepthi has presented several papers at national conferences and published research in reputed journals. Her expertise includes IUI, IVF, fertility preservation, and gynaec hysteroscopy. Known for her compassionate and patient-centric approach, she offers tailored, evidence-based, and holistic fertility care to help couples achieve parenthood.',
+      'Actively involved in infertility awareness through TV programs and medical camps across urban and rural areas, she strives to make quality reproductive healthcare accessible to all.',
     ],
   },
   {
@@ -118,6 +118,22 @@ export const doctors = [
       'With her vast knowledge and experience, Dr Nikitha Murthy is dedicated to helping her patient’s navigate the complex world of infertility and achieve their dream of having a family.',
     ],
   },
+  {
+    name: 'Dr. Vandana Ramanathan',
+    qualification: 'MBBS, DNB(OBG) FRM',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://media.graphassets.com/fA2XgIz7QGwFJ2vomjQM',
+    },
+    imageAlt: 'Dr. Vandana Ramanathan',
+    bio: [
+      'Meet Dr. Vandana, a dedicated Fertility Specialist committed to helping couples realize their dream of parenthood. Dr. Vandana obtained her MBBS from MIMER Medical College, followed by an MS (D.N.B) from K.G Hospital & Post Graduate Medical Institute, and a Fellowship in Reproductive Medicine from CRAFT Hospital & Research Centre.',
+      'With extensive experience spanning various prestigious institutions Dr. Vandana has honed her skills in reproductive medicine. Her expertise includes conducting all ART procedures, follicular monitoring, transvaginal ultrasound, ultrasound-related interventions and endoscopic procedures related to infertility.',
+      'Dr. Vandana passion for advancing fertility care is evident through her academic achievements, including a thesis on maternal age impact and presentations at prestigious conferences. She has also contributed to medical literature with upcoming publications.',
+      'Committed to continuous learning, Dr. Vandana actively participates in workshops and conferences, staying updated with the latest advancements in her field. With her compassionate approach and wealth of experience, Dr. Vandana strives to guide her patient’s through their fertility journey with empathy and expertise.',
+    ],
+  },
+
   {
     name: 'Dr. Varsha Patil',
     qualification: 'MBBS, DGO, DNB(OBG), FRM',
