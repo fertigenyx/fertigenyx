@@ -14,15 +14,6 @@ const bannerData = [
   },
   {
     url: '/',
-    id: '2',
-    title: 'Web_Banner_2',
-    image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1746258802/FertiGenyx_-_April_Web_Banner-01_r2ofty.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1746258841/FertiGenyx_-_may_Month_Web_Banner-02_ss73ud.webp',
-    },
-  },
-  {
-    url: '/',
     id: '3',
     title: 'Web_Banner_3',
     image: {

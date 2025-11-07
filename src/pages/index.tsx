@@ -48,6 +48,24 @@ export default function Home() {
             </Suspense>
           </aside>
         </div>
+        <div className='my-3 px-2.5 sm:my-4 md:px-5'>
+          <div className='flex w-full flex-col items-center gap-2 rounded-lg bg-brandPurpleDark p-2.5 sm:gap-3'>
+            <h2 className='text-base font-semibold text-white sm:text-base md:text-lg'>
+              Big Savings, Get Flat ₹1,11,111* OFF on your IVF Treatments
+            </h2>
+            <p className='text-justify text-sm text-gray-100'>
+              This November and December 2025, celebrate the season of parenthood with PARIPOORNA —
+              a special initiative by GarbhaGudi IVF Centre, supported digitally by Fertigenyx, in
+              association with the GarbhaGnan Foundation. As part of this program, couples can avail
+              a flat ₹1,11,111/- discount on their IVF treatment cost.
+              <br />
+              We believe that the joy of parenthood should be within everyone’s reach. Many couples
+              face emotional and financial challenges on their fertility journey, and Paripoorna
+              aims to ease that burden. With world-class fertility care, compassionate doctors, and
+              advanced treatment options, we stand by every couple who dreams of holding their baby.
+            </p>
+          </div>
+        </div>
       </section>
       <main className='block items-center justify-items-center gap-6 bg-gray-100 pt-6 md:grid lg:gap-10 lg:p-8 lg:pb-20 lg:pt-10'>
         <About ref={sectionRefs['about-fertigenyx']} />
