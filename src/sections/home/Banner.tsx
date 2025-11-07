@@ -1,14 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import dynamic from 'next/dynamic';
-import useIsMobile from '@/components/useIsMobile';
-const FormComponent = dynamic(() => import('@/components/FormComponent'), { ssr: true });
-
-const Carousel = dynamic(() => import('nuka-carousel'), {
-  ssr: false,
-  loading: () => <div className='h-[450px] w-full bg-gray-200 md:h-[400px]'></div>,
-});
+import { useEffect, useRef, useState } from 'react';
 
 const bannerData = [
   {
@@ -29,68 +21,78 @@ const bannerData = [
       url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1746258841/FertiGenyx_-_may_Month_Web_Banner-02_ss73ud.webp',
     },
   },
+  {
+    url: '/',
+    id: '3',
+    title: 'Web_Banner_3',
+    image: {
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762504289/web_banners_for_our_fertigenyx_website_V2-01_zvbgw9.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762504288/web_banners_for_our_fertigenyx_website_V2-02_ztytw6.webp',
+    },
+  },
 ];
 
 const BannerComponent: React.FC = () => {
-  const defaultControlsConfig = {
-    pagingDotsStyle: {
-      display: 'none',
-    },
-  };
-  const isMobile = useIsMobile();
-  return (
-    <div className='grid grid-cols-1 gap-y-5 pb-5 md:grid-cols-3 md:pb-8'>
-      {/* Banner Section */}
-      <div className='col-span-2 h-[450px] w-full md:h-[400px]'>
-        <Carousel
-          autoplay
-          autoplayInterval={5000}
-          className='border-0 shadow-md'
-          defaultControlsConfig={defaultControlsConfig}
-          wrapAround
-          dragging
-          enableKeyboardControls
-          pauseOnHover
-          renderCenterLeftControls={({ previousSlide }) => (
-            <button
-              onClick={previousSlide}
-              className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition hover:bg-opacity-100 md:flex'
-            >
-              <HiChevronLeft className='mr-1' />
-            </button>
-          )}
-          renderCenterRightControls={({ nextSlide }) => (
-            <button
-              onClick={nextSlide}
-              className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition hover:bg-opacity-100 md:flex'
-            >
-              <HiChevronRight className='ml-1' />
-            </button>
-          )}
-        >
-          {bannerData.map((banner, index) => {
-            const imageUrl = isMobile ? banner.image.url2 : banner.image.url1;
+  const [index, setIndex] = useState(0);
+  const timerRef = useRef<number | null>(null);
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    timerRef.current = window.setInterval(() => {
+      setIndex((i) => (i + 1) % bannerData.length);
+    }, 5000);
+    return () => {
+      if (timerRef.current) window.clearInterval(timerRef.current);
+    };
+  }, [bannerData.length]);
 
-            return (
-              <Link href={banner.url} key={banner.id}>
-                <div className='relative h-[450px] w-full md:h-[400px]'>
-                  <Image
-                    src={imageUrl}
-                    width={isMobile ? 420 : 720}
-                    height={360}
-                    alt={banner.title}
-                    priority={index === 0}
-                    className='h-full w-full'
-                  />
-                </div>
-              </Link>
-            );
-          })}
-        </Carousel>
+  function prev() {
+    setIndex((i) => (i - 1 + bannerData.length) % bannerData.length);
+  }
+  function next() {
+    setIndex((i) => (i + 1) % bannerData.length);
+  }
+  return (
+    <div
+      className='relative h-full overflow-hidden'
+      aria-roledescription='carousel'
+      aria-label='Promotions'
+    >
+      {bannerData.map((banner, i) => (
+        <div
+          key={banner.image.url1}
+          aria-hidden={index !== i}
+          className={`transition-opacity duration-500 ${index === i ? 'opacity-100' : 'opacity-0'} absolute inset-0`}
+        >
+          <Image
+            src={banner.image.url1}
+            alt={banner.title}
+            fill
+            className='object-center'
+            priority={i === 0}
+            sizes='(max-width: 1024px) 100vw, 60vw'
+          />
+        </div>
+      ))}
+      <div className='relative w-full pt-[50%]' aria-live='polite'>
+        {/* aspect ratio spacer */}
       </div>
-      {/* Form Section */}
-      <div className='col-span-1 flex items-center justify-center bg-[#005e7e] shadow-lg'>
-        <FormComponent title={'Book your Appointment'} />
+      <div className='absolute inset-y-0 left-2 hidden items-center md:flex'>
+        <button
+          onClick={prev}
+          aria-label='Previous slide'
+          className='flex h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark text-4xl text-white'
+        >
+          <HiChevronLeft className='h-6 w-6' />
+        </button>
+      </div>
+      <div className='absolute inset-y-0 right-2 hidden items-center md:flex'>
+        <button
+          onClick={next}
+          aria-label='Next slide'
+          className='flex h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark text-4xl text-white'
+        >
+          <HiChevronRight className='h-8 w-8' />
+        </button>
       </div>
     </div>
   );

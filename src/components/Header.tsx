@@ -8,8 +8,6 @@ const menu = [
   { id: 2, option: 'Services', slug: 'services-offered' },
   { id: 3, option: 'Why FertiGenyx?', slug: 'why-fertigenyx' },
   { id: 4, option: 'Fertility Specialists', slug: 'fertility-specialists' },
-  { id: 5, option: 'Causes of Infertility', slug: 'causes-of-infertility' },
-  { id: 6, option: 'IVF and Its Indications', slug: 'ivf-and-its-indications' },
 ];
 
 interface NavProps {
@@ -47,7 +45,7 @@ const Nav: React.FC<NavProps> = ({ sectionRefs }) => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className='hidden space-x-2 xl:flex'>
+          <div className='hidden flex-1 justify-center space-x-2 xl:flex'>
             {menu.map((item) => (
               <button
                 key={item.id}

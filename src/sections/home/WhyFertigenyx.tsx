@@ -1,62 +1,41 @@
 import CommonCta from '@/components/CommonCta';
-import { whyFertigenyx } from '@/components/constants/whyFertigenyx';
 import Image from 'next/image';
 import { forwardRef } from 'react';
 
 const WhyFertigenyx = forwardRef<HTMLElement>((_, ref) => {
   return (
     <>
-      {' '}
       <section
         ref={ref}
         id='why-fertigenyx'
-        className='relative flex items-start justify-start overflow-hidden p-6 text-white md:p-10 lg:rounded lg:px-6 lg:pb-10'
+        className='relative flex flex-col items-center justify-center overflow-hidden md:px-12'
       >
-        {/* Background Image */}
-        <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739774813/ivf-treatment-in-bangalore-baby-right_vuml7b.webp')] lg:bg-cover lg:bg-center"></div>
+        <div className='relative z-10 mb-10 flex flex-col items-center justify-center text-center'>
+          <h2 className='mb-4 text-2xl font-bold text-brandPurpleDark md:text-3xl'>
+            Why Choose FertiGenyx?
+          </h2>
+          <p className='max-w-prose text-base'>
+            FertiGenyx, Leading the Way in Infertility Treatment
+          </p>
+        </div>
 
-        {/* Semi-transparent Color Overlay */}
-        <div className='absolute inset-0 bg-[#E6D6CD] bg-opacity-80'></div>
-
-        {/* Content */}
-        <div className='relative z-10 text-black'>
-          <div className='mb-10 flex flex-col items-center justify-center'>
-            <h2 className='mb-6 text-center text-3xl font-bold text-brandPurpleDark md:text-4xl'>
-              Why <span className='text-white'>Choose</span> FertiGenyx?
-            </h2>
-            <div className='text-center text-xl text-brandPurpleDark underline lg:text-3xl'>
-              FertiGenyx, Leading the Way in Infertility Treatment
+        <div className='relative z-10 grid w-full max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4'>
+          {whyFertigenyx.map((item, index) => (
+            <div
+              key={index}
+              className='rounded-xl bg-white p-6 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl'
+            >
+              <div className='mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100'>
+                <Image src={item.icon} alt={item.title} width={30} height={30} />
+              </div>
+              <h3 className='mb-2 text-xl font-semibold text-blue-800'>{item.title}</h3>
+              <p className='text-base text-blue-700'>{item.description}</p>
             </div>
-          </div>
-          <div className='mx-3 flex justify-between'>
-            <div className='grid grid-cols-2 gap-4 lg:w-2/3'>
-              {whyFertigenyx &&
-                whyFertigenyx?.map((menu, index) => {
-                  return (
-                    <div key={index}>
-                      <h2 className='text-xl font-bold text-brandPurpleDark hover:underline'>
-                        {menu.title}
-                      </h2>
-                      <div className='text-base'>{menu.description}</div>
-                    </div>
-                  );
-                })}
-            </div>
-            <div className='ml-4 hidden w-1/3 xl:flex'>
-              <Image
-                src={
-                  'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto/v1739774813/ivf-treatment-in-bangalore-baby-right_vuml7b.webp'
-                }
-                alt={'why-fertigenyx-image'}
-                width={600}
-                height={1000}
-                className='rounded'
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </section>
-      <CommonCta classname='my-4' />
+
+      <CommonCta classname='my-8' />
     </>
   );
 });
@@ -64,3 +43,25 @@ const WhyFertigenyx = forwardRef<HTMLElement>((_, ref) => {
 WhyFertigenyx.displayName = 'WhyFertigenyx';
 
 export default WhyFertigenyx;
+export const whyFertigenyx = [
+  {
+    icon: '/icons/lab.svg',
+    title: 'Advanced Lab',
+    description: 'Modern embryology with strict quality controls and precision tracking.',
+  },
+  {
+    icon: '/icons/expert.svg',
+    title: 'Expert Team',
+    description: 'Consultants with 10–20+ years of experience in reproductive medicine.',
+  },
+  {
+    icon: '/icons/journey.svg',
+    title: 'Guided Journey',
+    description: 'From evaluation to tailored plans — clear steps, no surprises.',
+  },
+  {
+    icon: '/icons/support.svg',
+    title: 'Human Support',
+    description: 'Compassionate counselling and ongoing support throughout your journey.',
+  },
+];
