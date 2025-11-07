@@ -49,7 +49,7 @@ export default function Home() {
           </aside>
         </div>
       </section>
-      <main className='grid items-center justify-items-center gap-6 bg-gray-100 lg:gap-10 lg:p-8 lg:pb-20'>
+      <main className='block items-center justify-items-center gap-6 bg-gray-100 pt-6 md:grid lg:gap-10 lg:p-8 lg:pb-20 lg:pt-10'>
         <About ref={sectionRefs['about-fertigenyx']} />
         <Services ref={sectionRefs['services-offered']} />
         <WhyFertigenyx ref={sectionRefs['why-fertigenyx']} />

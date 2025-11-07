@@ -7,7 +7,7 @@ import { Navigation } from 'swiper/modules';
 import Image from 'next/image';
 import { TreatmentsData } from '@/components/constants/services';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react';
+import { Dialog, Transition, TransitionChild } from '@headlessui/react';
 import dynamic from 'next/dynamic';
 
 import 'swiper/css';
@@ -18,10 +18,12 @@ const CommonCta = dynamic(() => import('@/components/CommonCta'), {
   loading: () => <div className='py-4 text-center text-white'>Loading CTA...</div>,
 });
 
+// ✅ Show full cards only — no peeking
 const breakpoints = {
-  0: { slidesPerView: 1, spaceBetween: 10 },
-  640: { slidesPerView: 2, spaceBetween: 15 },
-  1024: { slidesPerView: 3, spaceBetween: 20 },
+  0: { slidesPerView: 1, spaceBetween: 12 },
+  640: { slidesPerView: 2, spaceBetween: 20 },
+  1024: { slidesPerView: 3, spaceBetween: 25 },
+  1280: { slidesPerView: 3, spaceBetween: 30 },
 };
 
 const Services = forwardRef<HTMLElement>((_, ref) => {
@@ -47,111 +49,107 @@ const Services = forwardRef<HTMLElement>((_, ref) => {
     <section
       ref={ref}
       id='services-offered'
-      className='flex flex-col items-center justify-center px-4 pb-8'
+      className='flex flex-col items-center justify-center px-4 pb-10 md:px-8'
     >
-      <h2 className='my-6 text-2xl font-bold text-brandPurpleDark md:text-3xl'>
+      <h2 className='my-6 text-center text-2xl font-bold text-brandPurpleDark md:text-3xl'>
         Advanced Fertility Services
       </h2>
-      <div className='mx-auto max-w-7xl px-4'>
-        <div className='flex items-center justify-center'>
-          <button
-            onClick={() => swiperRef.current?.slidePrev()}
-            className='absolute left-0 z-10 ml-4 rounded-full bg-[#204C6B] p-2 text-white lg:left-10'
-          >
-            <HiChevronLeft className='text-2xl' />
-          </button>
 
-          <Swiper
-            modules={[Navigation]}
-            onBeforeInit={(swiper) => (swiperRef.current = swiper)}
-            breakpoints={breakpoints}
-            loop
-            spaceBetween={20}
-          >
-            {treatments.map((treatment) => (
-              <SwiperSlide key={treatment.id}>
-                <div
-                  className='group relative mx-auto flex h-60 w-60 flex-col items-center justify-center overflow-hidden rounded-xl bg-white shadow-md transition-transform duration-300 hover:scale-105 md:h-64 md:w-72'
-                  onMouseEnter={() => setHoveredId(treatment.id)}
-                  onMouseLeave={() => setHoveredId(null)}
-                  onClick={() => handleTreatmentClick(treatment.content)}
-                  title={treatment.name}
-                >
-                  <div className='absolute inset-0 origin-center scale-x-0 bg-brandPurpleDark transition-transform duration-700 group-hover:scale-x-110' />
+      <div className='relative w-full max-w-7xl'>
+        {/* Navigation Buttons */}
+        <button
+          onClick={() => swiperRef.current?.slidePrev()}
+          className='absolute left-2 top-1/2 z-10 flex -translate-y-1/2 items-center justify-center rounded-full bg-[#204C6B] p-2 text-white shadow-md transition hover:bg-[#163a53] sm:p-3'
+        >
+          <HiChevronLeft className='text-xl sm:text-2xl' />
+        </button>
 
-                  <Image
-                    src={hoveredId === treatment.id ? treatment.icon : treatment.icon1}
-                    alt={treatment.name}
-                    width={104}
-                    height={104}
-                    className='z-10 transition-transform duration-500 group-hover:scale-110'
-                    loading='lazy'
-                  />
-
-                  <p className='relative z-10 mt-3 text-center text-base font-semibold text-brandPurpleDark transition-colors duration-500 group-hover:text-white'>
-                    {treatment.name}
-                  </p>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          <button
-            onClick={() => swiperRef.current?.slideNext()}
-            className='absolute right-0 z-10 mr-4 rounded-full bg-[#204C6B] p-2 text-white lg:right-10'
-          >
-            <HiChevronRight className='text-2xl' />
-          </button>
-        </div>
-
-        {isOpen && (
-          <Transition appear show={isOpen} as='div'>
-            <Dialog as='div' className='relative z-10' onClose={closeModal}>
-              <TransitionChild
-                as='div'
-                enter='ease-out duration-300'
-                enterFrom='opacity-0'
-                enterTo='opacity-100'
-                leave='ease-in duration-200'
-                leaveFrom='opacity-100'
-                leaveTo='opacity-0'
+        <Swiper
+          modules={[Navigation]}
+          onBeforeInit={(swiper) => (swiperRef.current = swiper)}
+          breakpoints={breakpoints}
+          loop={false} // ✅ Disable loop to prevent partial overlap
+          centeredSlides={false}
+          spaceBetween={20}
+          className='px-2 py-4'
+        >
+          {treatments.map((treatment) => (
+            <SwiperSlide key={treatment.id}>
+              <div
+                className='group relative mx-auto flex h-48 w-48 cursor-pointer flex-col items-center justify-center overflow-hidden rounded-xl bg-white shadow-md transition-transform duration-300 hover:scale-105 sm:h-56 sm:w-56 md:h-60 md:w-64 lg:h-64 lg:w-72'
+                onMouseEnter={() => setHoveredId(treatment.id)}
+                onMouseLeave={() => setHoveredId(null)}
+                onClick={() => handleTreatmentClick(treatment.content)}
+                title={treatment.name}
               >
-                <div className='fixed inset-0 bg-black bg-opacity-25' />
-              </TransitionChild>
+                {/* Hover overlay (only on larger screens) */}
+                <div className='absolute inset-0 hidden origin-center scale-x-0 bg-brandPurpleDark transition-transform duration-700 group-hover:scale-x-110 sm:block' />
 
-              <div className='fixed inset-0 overflow-y-auto'>
-                <div className='mx-auto mt-20 flex max-w-3xl items-center justify-center px-4 text-center'>
-                  <TransitionChild
-                    as='div'
-                    enter='ease-out duration-300'
-                    enterFrom='opacity-0 scale-95'
-                    enterTo='opacity-100 scale-100'
-                    leave='ease-in duration-200'
-                    leaveFrom='opacity-100 scale-100'
-                    leaveTo='opacity-0 scale-95'
-                  >
-                    <DialogPanel className='transform overflow-hidden rounded-lg bg-gray-50 px-4 py-6 text-left shadow-xl transition-all md:px-6'>
-                      <div>
-                        {content.map((item, index) => (
-                          <div key={index} className='my-3 text-gray-700'>
-                            {item}
-                          </div>
-                        ))}
-                      </div>
-                      <button
-                        className='mx-auto mt-6 block w-24 rounded bg-brandPurpleDark px-4 py-2 text-sm font-semibold text-white hover:bg-brandPurple'
-                        onClick={closeModal}
-                      >
-                        Close
-                      </button>
-                    </DialogPanel>
-                  </TransitionChild>
-                </div>
+                <Image
+                  src={hoveredId === treatment.id ? treatment.icon : treatment.icon1}
+                  alt={treatment.name}
+                  width={104}
+                  height={104}
+                  className='z-10 transition-transform duration-500 group-hover:scale-110'
+                  loading='lazy'
+                />
+
+                <p className='relative z-10 mt-3 text-center text-sm font-semibold text-brandPurpleDark transition-colors duration-500 group-hover:text-white sm:text-base sm:group-hover:text-white'>
+                  {treatment.name}
+                </p>
               </div>
-            </Dialog>
-          </Transition>
-        )}
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <button
+          onClick={() => swiperRef.current?.slideNext()}
+          className='absolute right-2 top-1/2 z-10 flex -translate-y-1/2 items-center justify-center rounded-full bg-[#204C6B] p-2 text-white shadow-md transition hover:bg-[#163a53] sm:p-3'
+        >
+          <HiChevronRight className='text-xl sm:text-2xl' />
+        </button>
       </div>
+
+      {/* Modal */}
+      {isOpen && (
+        <Transition appear show={isOpen} as='div'>
+          <Dialog as='div' className='relative z-20' onClose={closeModal}>
+            <TransitionChild
+              as='div'
+              enter='ease-out duration-300'
+              enterFrom='opacity-0'
+              enterTo='opacity-100'
+              leave='ease-in duration-200'
+              leaveFrom='opacity-100'
+              leaveTo='opacity-0'
+            >
+              <div className='fixed inset-0 bg-black bg-opacity-40' />
+            </TransitionChild>
+
+            <div className='fixed inset-0 overflow-y-auto p-4 sm:p-6'>
+              <div className='mx-auto mt-16 w-full max-w-md rounded-lg bg-white p-6 text-left shadow-lg sm:max-w-lg'>
+                <div className='max-h-[70vh] overflow-y-auto pr-1 sm:pr-2'>
+                  {content.map((item, index) => (
+                    <div
+                      key={index}
+                      className='my-3 text-sm leading-relaxed text-gray-700 sm:text-base'
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+
+                <button
+                  className='mx-auto mt-6 block w-28 rounded bg-brandPurpleDark px-4 py-2 text-sm font-semibold text-white transition hover:bg-brandPurple'
+                  onClick={closeModal}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
+      )}
 
       <CommonCta classname='mt-10' />
     </section>

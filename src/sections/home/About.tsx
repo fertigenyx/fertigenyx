@@ -13,7 +13,7 @@ const About = forwardRef<HTMLElement>((_, ref) => {
       <section
         ref={ref}
         id='about-fertigenyx'
-        className='flex w-full items-start justify-start rounded bg-cover bg-center p-4 text-white sm:p-6 md:p-10'
+        className='mb-5 flex w-full items-start justify-start rounded bg-cover bg-center p-4 text-white sm:p-6 md:p-10'
         style={{
           backgroundImage:
             "url('https://res.cloudinary.com/garbhagudiivf/image/upload/v1700052783/paripoorna/mother-with-daughter-lie-bed-dog-looking-them-min_uecuvg.webp')",

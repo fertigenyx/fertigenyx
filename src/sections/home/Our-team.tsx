@@ -9,6 +9,7 @@ import ContentModal from '@/components/contentModal';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import dynamic from 'next/dynamic';
+
 const CommonCta = dynamic(() => import('@/components/CommonCta'), {
   ssr: false,
   loading: () => <div className='py-4 text-center text-white'>Loading CTA...</div>,
@@ -23,24 +24,27 @@ const breakpoints = {
 const FertilitySpecialists = forwardRef<HTMLElement>((_, ref) => {
   const swiperRef = useRef<SwiperClass | null>(null);
   const doctorsData = useMemo(() => doctors, []);
+
   return (
     <section
-      className='w-[20em] bg-gradient-to-br to-purple-100 pb-6 lg:w-full'
+      className='w-full bg-gradient-to-br to-purple-100 pb-12'
       ref={ref}
       id='fertility-specialists'
     >
       <div className='mx-auto max-w-7xl px-3 pb-12'>
+        {/* Heading */}
         <div className='pb-12 text-center'>
-          <h1 className='my-8 font-heading text-3xl font-bold text-brandPurpleDark sm:text-4xl'>
+          <h1 className='my-6 font-heading text-3xl font-bold text-brandPurpleDark sm:text-4xl'>
             Meet our Fertility Specialists
           </h1>
-          <p className='mx-auto max-w-prose'>
+          <p className='mx-auto max-w-2xl text-gray-700'>
             Our team of fertility specialists have been known for their extensive clinical
             experience and research contributions, as well as for their success in treating the most
             challenging fertility cases.
           </p>
         </div>
 
+        {/* Swiper Section */}
         <div className='mx-auto flex max-w-7xl flex-row items-center justify-center'>
           <button
             onClick={() => swiperRef.current?.slidePrev()}
@@ -55,23 +59,25 @@ const FertilitySpecialists = forwardRef<HTMLElement>((_, ref) => {
             breakpoints={breakpoints}
             loop
             spaceBetween={20}
+            className='w-full max-w-6xl'
           >
             {doctorsData.map((item, index) => (
               <SwiperSlide key={item.name}>
-                <div className='flex flex-col items-center justify-center rounded-xl px-2 text-center'>
+                <div className='flex flex-col items-center justify-center rounded-xl p-4 text-center'>
                   <div className='relative h-52 w-52'>
-                    <div className='absolute inset-0 animate-rotate rounded-full bg-gradient-to-br from-brandBrown/80 to-[#204C6B]/40 bg-[length:400%]' />
+                    <div className='absolute inset-0 animate-pulse rounded-full bg-gradient-to-br from-brandBrown/60 to-[#204C6B]/30' />
                     <Image
-                      className='z-10 rounded-full shadow-xl drop-shadow-xl'
+                      className='relative z-10 rounded-full shadow-xl'
                       src={item.image.url}
                       alt={item.imageAlt || item.name}
                       width={208}
                       height={208}
                       loading={index === 0 ? 'eager' : 'lazy'}
-                      quality={25}
+                      quality={50}
                       priority={index === 0}
                     />
                   </div>
+
                   <div className='mt-4 h-28 space-y-1'>
                     <h3 className='text-brandDark text-lg font-medium'>{item.name}</h3>
                     <p className='text-xs text-brandPurpleDark'>{item.qualification}</p>
@@ -80,6 +86,7 @@ const FertilitySpecialists = forwardRef<HTMLElement>((_, ref) => {
                       <p className='text-sm text-brandPurpleDark'>{item.position}</p>
                     )}
                   </div>
+
                   <ContentModal
                     title='Read More'
                     classname='font-content text-brandPurpleDark text-base px-3 py-1.5 rounded-lg font-medium hover:text-brandBrown border-2 border-brandPurpleDark hover:border-brandBrown transition-all duration-300 ease-linear'
@@ -103,5 +110,6 @@ const FertilitySpecialists = forwardRef<HTMLElement>((_, ref) => {
     </section>
   );
 });
+
 FertilitySpecialists.displayName = 'FertilitySpecialists';
 export default FertilitySpecialists;

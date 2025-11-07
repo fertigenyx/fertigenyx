@@ -8,7 +8,7 @@ const WhyFertigenyx = forwardRef<HTMLElement>((_, ref) => {
       <section
         ref={ref}
         id='why-fertigenyx'
-        className='relative flex flex-col items-center justify-center overflow-hidden md:px-12'
+        className='relative flex flex-col items-center justify-center overflow-hidden px-5 md:px-12'
       >
         <div className='relative z-10 mb-10 flex flex-col items-center justify-center text-center'>
           <h2 className='mb-4 text-2xl font-bold text-brandPurpleDark md:text-3xl'>
@@ -19,7 +19,7 @@ const WhyFertigenyx = forwardRef<HTMLElement>((_, ref) => {
           </p>
         </div>
 
-        <div className='relative z-10 grid w-full max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4'>
+        <div className='relative z-10 grid w-full max-w-6xl grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-4'>
           {whyFertigenyx.map((item, index) => (
             <div
               key={index}
