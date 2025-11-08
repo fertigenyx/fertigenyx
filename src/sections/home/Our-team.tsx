@@ -1,7 +1,7 @@
 import { forwardRef, useMemo, useRef } from 'react';
 import { Swiper as SwiperClass } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import Image from '@/components/image';
 import { doctors } from '@/components/constants/doctors';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
@@ -54,12 +54,13 @@ const FertilitySpecialists = forwardRef<HTMLElement>((_, ref) => {
           </button>
 
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             onBeforeInit={(swiper) => (swiperRef.current = swiper)}
             breakpoints={breakpoints}
             loop
             spaceBetween={20}
             className='w-full max-w-6xl'
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
           >
             {doctorsData.map((item, index) => (
               <SwiperSlide key={item.name}>

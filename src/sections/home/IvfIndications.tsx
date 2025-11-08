@@ -8,9 +8,6 @@ const CommonCta = dynamic(() => import('@/components/CommonCta'), {
   loading: () => <div className='h-10 text-center text-brandPurpleDark'>Loading CTA…</div>,
 });
 
-const WhatIsIvf = dynamic(() => import('./WhatIsIvf'), {
-  ssr: false,
-});
 
 const IvfIndications = forwardRef<HTMLElement>((_, ref) => {
   const infertilityData = useMemo(
@@ -103,10 +100,6 @@ const IvfIndications = forwardRef<HTMLElement>((_, ref) => {
 
       <div className='mt-12'>
         <CommonCta classname='mx-auto' />
-      </div>
-
-      <div className='mt-10'>
-        <WhatIsIvf />
       </div>
     </section>
   );

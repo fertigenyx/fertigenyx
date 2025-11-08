@@ -2,7 +2,6 @@
 import { Suspense, useRef } from 'react';
 import Nav from '@/components/Header';
 import Footer from '@/components/Footer';
-import About from '@/sections/home/About';
 import Services from '@/sections/home/Services';
 import WhyFertigenyx from '@/sections/home/WhyFertigenyx';
 import FertilitySpecialists from '@/sections/home/Our-team';
@@ -15,10 +14,11 @@ import { IVF_RelatedSearches } from '@/db/relatedSearchesDB';
 import Head from 'next/head';
 import { SEOData } from '@/db/SEOData';
 import FormComponent from '@/components/FormComponent';
+import IvfIndications from '@/sections/home/IvfIndications';
 
 export default function Home() {
   const sectionRefs = {
-    'about-fertigenyx': useRef<HTMLElement>(null),
+    'ivf-and-its-indications': useRef<HTMLElement>(null),
     'services-offered': useRef<HTMLElement>(null),
     'why-fertigenyx': useRef<HTMLElement>(null),
     'fertility-specialists': useRef<HTMLElement>(null),
@@ -68,7 +68,7 @@ export default function Home() {
         </div>
       </section>
       <main className='block items-center justify-items-center gap-6 bg-gray-100 pt-6 md:grid lg:gap-10 lg:p-8 lg:pb-20 lg:pt-10'>
-        <About ref={sectionRefs['about-fertigenyx']} />
+        <IvfIndications ref={sectionRefs['ivf-and-its-indications']} />
         <Services ref={sectionRefs['services-offered']} />
         <WhyFertigenyx ref={sectionRefs['why-fertigenyx']} />
         <FertilitySpecialists ref={sectionRefs['fertility-specialists']} />

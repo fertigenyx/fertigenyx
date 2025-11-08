@@ -6,7 +6,6 @@ import RootLayout from '@/components/Layout';
 import { Geist, Geist_Mono } from 'next/font/google';
 import SalesIQ from '@/components/SalesIQ';
 import FloatRequestCallBack from '@/components/FloatRequestCallBack';
-import FloatWhatsApp from '@/components/FloatWhatsapp';
 import FloatPhone from '@/components/FloatPhone';
 
 const geistSans = Geist({
@@ -42,7 +41,6 @@ function MyApp({ Component, pageProps }) {
             <SalesIQ />
           </div>
           <FloatRequestCallBack />
-          <FloatWhatsApp />
           <FloatPhone />
         </div>
       </ThemeProvider>

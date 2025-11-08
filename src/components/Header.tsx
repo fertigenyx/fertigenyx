@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const menu = [
-  { id: 1, option: 'About', slug: 'about-fertigenyx' },
+  { id: 1, option: 'IVF and Its Indications', slug: 'ivf-and-its-indications' },
   { id: 2, option: 'Services', slug: 'services-offered' },
   { id: 3, option: 'Why FertiGenyx?', slug: 'why-fertigenyx' },
   { id: 4, option: 'Fertility Specialists', slug: 'fertility-specialists' },

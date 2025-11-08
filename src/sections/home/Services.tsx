@@ -3,7 +3,7 @@
 import { forwardRef, useMemo, useRef, useState, useCallback } from 'react';
 import { Swiper as SwiperClass } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 import { TreatmentsData } from '@/components/constants/services';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
@@ -65,13 +65,14 @@ const Services = forwardRef<HTMLElement>((_, ref) => {
         </button>
 
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           onBeforeInit={(swiper) => (swiperRef.current = swiper)}
           breakpoints={breakpoints}
-          loop={false} // ✅ Disable loop to prevent partial overlap
+          loop={false}
           centeredSlides={false}
           spaceBetween={20}
           className='px-2 py-4'
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
         >
           {treatments.map((treatment) => (
             <SwiperSlide key={treatment.id}>
