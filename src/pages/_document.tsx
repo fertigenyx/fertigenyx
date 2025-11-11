@@ -7,12 +7,15 @@ export default function Document() {
         <link
           rel='preload'
           as='image'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1740047981/FertiGenyx_Web_Banner-02_iaam6l.webp'
-        />
-        <link
-          rel='preload'
-          as='image'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1746258827/FertiGenyx_-_may_Month_Web_Banner-04_iodwpr.webp'
+          fetchPriority='high'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto,w_720,h_360,c_fill/v1740047981/FertiGenyx_Web_Banner-02_iaam6l.webp'
+          imageSrcSet='
+            https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto,w_360,h_180,c_fill/v1740047981/FertiGenyx_Web_Banner-02_iaam6l.webp 360w,
+            https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto,w_515,h_258,c_fill/v1740047981/FertiGenyx_Web_Banner-02_iaam6l.webp 515w,
+            https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto,w_720,h_360,c_fill/v1740047981/FertiGenyx_Web_Banner-02_iaam6l.webp 720w,
+            https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto,w_1080,h_540,c_fill/v1740047981/FertiGenyx_Web_Banner-02_iaam6l.webp 1080w
+          '
+          imageSizes='(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 515px'
         />
         <script
           dangerouslySetInnerHTML={{
