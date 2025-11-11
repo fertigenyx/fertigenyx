@@ -38,7 +38,9 @@ const About = forwardRef<HTMLElement>((_, ref) => {
           </p>
         </div>
       </section>
-      <CommonCta classname={''} />
+      <div className='mb-5 md:mb-0'>
+        <CommonCta classname={''} />
+      </div>
     </>
   );
 });
