@@ -27,10 +27,10 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <meta name='title' content='Best IVF Centre in Bangalore | Fertigenyx Fertility Clinic' />
+        <meta name='title' content='Fertigenyx - GarbhaGudi IVF Marketing Partner Bangalore' />
         <meta name='description' content={SEOData.IVFTreatment.description} />
         <meta name='keywords' content={SEOData.IVFTreatment.keywords} />
-        <title>Best IVF Centre in Bangalore | Fertigenyx Fertility Clinic</title>
+        <title>Fertigenyx - GarbhaGudi IVF Marketing Partner Bangalore</title>
       </Head>
       <Nav sectionRefs={sectionRefs} />
       <section aria-label='Hero' className='w-full'>
