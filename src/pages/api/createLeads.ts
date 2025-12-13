@@ -1,3 +1,5 @@
+import { sendNotificationEmail } from '@/lib/sendMail';
+
 let accessToken = null;
 
 const getAccessToken = async () => {
@@ -6,10 +8,9 @@ const getAccessToken = async () => {
   try {
     const tokenParams = `refresh_token=${process.env.ZOHO_REFRESH_TOKEN}&client_id=${process.env.ZOHO_CLIENT_ID}&client_secret=${process.env.ZOHO_CLIENT_SECRET}&grant_type=refresh_token`;
 
-    const tokenResponse = await fetch(
-      `${process.env.ZOHO_0AUTH_URL}?${tokenParams}`,
-      { method: 'POST' },
-    );
+    const tokenResponse = await fetch(`${process.env.ZOHO_0AUTH_URL}?${tokenParams}`, {
+      method: 'POST',
+    });
 
     const tokenData = await tokenResponse.json();
 
@@ -52,6 +53,9 @@ export default async function handler(req, res) {
     }
 
     const responseData = await response.json();
+    // ✅ Send email notification
+    await sendNotificationEmail(req.body.data);
+
     return res.status(200).json(responseData);
   } catch (error) {
     console.error('Error processing request:', error.message);
